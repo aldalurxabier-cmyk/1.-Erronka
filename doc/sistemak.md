@@ -76,26 +76,26 @@ Windows Server-en instalazioan, aukeratu gabeko espazioan (Unallocated Space) zu
 
 ### 1.5. Hasierako Konfigurazioa
 
-* Administratzaileari Pasahitza Ezarri:
+1. Administratzaileari Pasahitza Ezarri:
 
-o	System Administrator (Administrator) kontuarentzat pasahitz sendo bat ezarri (letra maiuskulak, minuskulak, zenbakiak eta ikurrak erabiliz). Gure kasuan, honela utzi dugu:
+System Administrator (Administrator) kontuarentzat pasahitz sendo bat ezarri (letra maiuskulak, minuskulak, zenbakiak eta ikurrak erabiliz). Gure kasuan, honela utzi dugu:
 
-**Erabiltzailea**: administrador
-**Pasahitza**: A1234@
+* **Erabiltzailea**: administrador
+* **Pasahitza**: A1234@
 
-* Ekipoaren izena aldatu:
+2. Ekipoaren izena aldatu:
 
 Ekipoak defektuz ekartzen duen izena aldatu dugu, zerbitzari-ingurune batean erraz identifikatu ahal izateko (adibidez, zerbitzuak, IIS edo kudeaketa-lanak egiterakoan zein makina den argi jakiteko) eta sareko beste ekipoekin izen-gatazkarik egon ez dadin:
 
 **Ekipoaren Izena**: 1ERRONKASERVER
 
-* Guest Additions Instalatu:
+2. Guest Additions Instalatu:
 
     1. VirtualBox-eko goiko menuan: Devices > Insert Guest Additions CD image....
     2. Windows Server barruan, ireki unitate optikoa eta exekutatu VBoxWindowsAdditions.exe.
     3. Berrabiarazi makina birtuala pantailaren erresoluzioa eta integrazioa optimizatzeko.
 
-* Sistema eguneratu:
+3. Sistema eguneratu:
 
 Sistemaren lehen instalazioa dugunez, sistema eguneratu gabe dago. Oraingo pausoa, eguneraketa guztiak aplikatzea izango dugu. Azken finean, sistemaren eguneraketa egiteak azken segurtasun-adabakiak eta kontrolatzaileen eguneratzeak aplikatzen direla bermatzen du, ezagututako ahultasunak babestuz. Horrez gain, ondoren egingo ditugun urrats guztiak (webgunea igotzea, pasahitz eta segurtasun politikak, etab.) ingurune fidagarri baten gainean eraikiko direla bermatzen du.
 

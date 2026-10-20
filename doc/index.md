@@ -4,7 +4,7 @@ title: Hasiera
 ---
 ## Aurkezpena
 
-Gu SISA1 eko 4 ikasle gaituzue, **X,X,X** eta **X** hain zuzen, eta lehen erronka hau egiteko taldea osatzen dugu. Ikastetxearen partetik erronka hau burutzeko hainbat baliabide jaso ondoren, erronka honen dokumentazioa aurkezteari ekingo diogu.
+Gu SISA1 eko 4 ikasle gaituzue, **Oier Ortuzar, Iker Ortega, Iñaki De la Flor** eta **Xabier Aldalur** hain zuzen, eta lehen erronka hau egiteko taldea osatzen dugu. Ikastetxearen partetik erronka hau burutzeko hainbat baliabide jaso ondoren, erronka honen dokumentazioa aurkezteari ekingo diogu.
 
 ## Sarrera
 

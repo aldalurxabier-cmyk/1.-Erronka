@@ -8,7 +8,7 @@ Gu SISA1 eko 4 ikasle gaituzue, **X,X,X** eta **X** hain zuzen, eta lehen erronk
 
 ## Sarrera
 
-Lehen erronka honetan enpresa baten azpiegitura informatikoa osatzeko eta digitalizazio-prozesua bultzatzen ikasteko helburuarekin, Informazioaren digitalizazio webgunea izeneko erronkari ekin diogu. Proiektu honetan hainbat arlo tekniko uztartuko ditugu (Sistemak, Sareak, Datu-baseak, Markatze-lengoaiak eta Digitalizazioa):
+Lehen erronka honetan enpresa baten azpiegitura informatikoa osatzeko eta digitalizazio-prozesua bultzatzen ikasteko helburuarekin, **Informazioaren digitalizazio webgunea** izeneko erronkari ekin diogu. Proiektu honetan hainbat arlo tekniko uztartuko ditugu (Sistemak, Sareak, Datu-baseak, Markatze-lengoaiak eta Digitalizazioa):
 
 * **Sistemak**: Windows Server zerbitzaria konfiguratu, bolumenak (RAID) kudeatu eta segurtasun-politikak ezarriko ditugu.
 * **Sareak**: Sareko transmisioak, pasahitzak ASCIIra igaro eta CRC-6 kalkuluak egingo ditugu, seinaleen kodifikazioa eta modulazioa marraztuz.

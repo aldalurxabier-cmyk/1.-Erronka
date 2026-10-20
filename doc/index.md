@@ -2,11 +2,11 @@
 layout: home
 title: Hasiera
 ---
-# Aurkezpena
+## Aurkezpena
 
 Kaixo. Gu X,X,X eta X gara, eta lehen erronka hau egiteko taldea osatzen dugu. Ikastetxearen partetik erronka hau burutzeko hainbat baliabide jaso ondoren, erronka honen dokumentazioa aurkezteari ekingo diogu.
 
-# Sarrera
+## Sarrera
 
 Lehen erronka honetan enpresa baten azpiegitura informatikoa osatzeko eta digitalizazio-prozesua bultzatzen ikasteko helburuarekin, Informazioaren digitalizazio webgunea izeneko erronkari ekin diogu. Proiektu honetan hainbat arlo tekniko uztartuko ditugu (Sistemak, Sareak, Datu-baseak, Markatze-lengoaiak eta Digitalizazioa):
 

@@ -81,7 +81,7 @@ Windows Server-en instalazioan, aukeratu gabeko espazioan (Unallocated Space) zu
 System Administrator (Administrator) kontuarentzat pasahitz sendo bat ezarri (letra maiuskulak, minuskulak, zenbakiak eta ikurrak erabiliz). Gure kasuan, honela utzi dugu:
 
 * **Erabiltzailea**: administrador
-* **Pasahitza**: A1234@
+* **Pasahitza**: 3T_123
 
 2. Ekipoaren izena aldatu:
 

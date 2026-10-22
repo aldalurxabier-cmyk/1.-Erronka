@@ -175,9 +175,15 @@ Diskoan soberan geratu den memoriarekin behar adina bolumen egin ditzakegu, disk
 
 ## 5. RAID
 
-## 6. Erabiltzaileak eta taldeak (Baimenak)
+## 6. Sistemaren Rol-ak eta ezaugarriak gehitu (IIS, iSCSI eta Segurtasun kopiak)
+
+## 7. Erabiltzaileak eta taldeak (Baimenak + Kuotak)
+
+## 8. Segurtasun Kopiak
+
+##
 
 
 
-## 7. Sistemaren Rol-ak eta ezaugarriak gehitu (IIS)
+
 

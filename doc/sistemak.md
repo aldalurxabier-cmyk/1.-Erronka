@@ -175,9 +175,111 @@ Diskoan soberan geratu den memoriarekin behar adina bolumen egin ditzakegu, disk
 
 ## 5. RAID
 
-## 6. Erabiltzaileak eta taldeak (Baimenak)
+## 6. Sistemaren Rol-ak eta ezaugarriak gehitu (IIS, iSCSI eta Segurtasun kopiak)
+
+Atal honetan, zerbitzariak izango dituen rolak esleitu eta guk nahi ditugun zereginak egiteko beharrezko izango dituen ezaugarriak gehituko dizkiogu. Gure kasuan, web zerbitzari bat izatea behar dugu (IIS web zerbitzaria), aurrerago sortuko ditugun karpeten bolumenak esleituko ditugu (iSCSI) eta segurtasun kopiak (Windows server backup) gehitu dizkiogu.
+
+Rolak eta ezaugarriak gehitzeko onako urrats hauek jarraitu ditugu:
+
+* **Administrador de servidor** sartu.
+* **Agregar roles y caracteristicas** aukeratu.
+* Beharrezko ditugun rolak hautatu.
+* Beharrezko ditugun ezaugarriak hautatu.
+* Instalatu.
+* Behar duguna zuzen instalatua izan dela konprobatu.
+
+## 7. Erabiltzaileak eta taldeak (Baimenak + Kuotak)
+
+Beharrezko diren rolak eta ezaugarriak instalatu ostean, gure enpresako fitxategien baimenak eta kuotak zehazteko ordua iritsi da. Enpresa batean, hauek ondo zehaztea ezinbestekoa dugu, lana egoki egin ahal izateko eta inolako segurtasun arazorik ez izateko. Horretarako, lan taldeak eta erabiltzaileak zeintzuk izango diren finkatu ditugu, fitxategi sistema bat sortu eta hauetan talde bakoitzak ze eskubide izango dituen zehaztu dugu eta azkenik, sortu den karpeta bakoitzak okupatu ahal izango duen memoria kopuru maximoa zein izango den zehaztu dugu.
+
+### 7.1 Erabiltzaileak eta taldeak
+
+Hasteko, zein talde eta zein erabiltzaile izango diren beharrezkoak izendatu ditugu. Gure kasuan, lau erabiltzaile izango dira (Taldeko lau kideok hain zuzen). Erabiltzaileen izenaren formatua **abizena.izena** izango da.
+
+Hauek sortu ondoren, lan taldeak sortu ditugu. 3 talde egin ditugu: Kontabilitatea, Zuzendaritza eta Giza baliabideak. Jarraian, erabiltzaile bakoitza bere taldean sartu dugu. Taldeak sortzea ezinbestekoa dugu, honi esker, fitxategiei baimenak ematerako garaian, ez dugulako erabiltzailez erabiltzaile banaka baimenak ematen ibili behar, talde osoari baimenak esleituta nahikoa izango da.
+
+Erabiltzaileak eta taldeak sortzeko pausoak onako hauek dira:
+
+* **Administrador de Equipos** sartu.
+* **Usuarios y grupos locales** hautatu.
+* Bertan, sortu nahi dena aukeratu: **Usuario** (Erabiltzailea) edo **Grupo** (Taldea)
+* Amaitzeko, erabiltzaileak beren taldeetan sartu.
+
+Hauek dira talde bakoitzean sartu diren erabiltzaileak:
+* Kontabilitatea: DeLaFlor.Iñaki
+* Giza Baliabideak: Aldalur.Xabier
+* Zuzendaritza: Ortuzar.Oier eta Ortega.Iker
+
+### 7.2 Baimenak
+
+Baimenak ematen hasi aurretik, lana egiteko beharrezko izango ditugun karpetak sortu ditugu. Honen ondoren, karpeta bakoitzari beharrezko baimenak ezarri dizkiogu.
+
+Karpeten baimenak zehazteko urratsak honako hauek dira:
+
+* **Karpetaren propietatean** sartu eta **segurtasuna** atalera joan.
+* Karpetak bere ama karpetaren baimenak hartu ez ditzan (Carpeta raíz), baimenak aldatu aurretik Herentzia desaktibatu behar dugu.
+* Amaitzeko, beharrezkoak ez diren baimenak kendu eta taldeak sartuko ditugu, bakoitzak behar dituen baimenekin.
+
+**Gogoratu bi baimen elkar kontrajarrita badaude (Bata idazteko baimena ematen eta bestea kontrol osoa kentzen adibidez), beti baimenik murriztatzaileena aplikatuko dela**
+
+Honako hau da gure enpresan ezarri dugun karpeten estruktura eta baimenen azalpena:
+
+* Orokorra: Zuzendaritzak aldaketak egin ditzake (Lectura y escritura) baina beste talde guztiek karpetako edukia ikusi bakarrik egin dezakete (Lectura).
+* Kontabilitatea: Kontabilitate taldekoek kontrol osoa daukate (Lectura y escritura) eta beste taldeek ezin dute karpeta honetara sartu (Deny).
+* Giza Baliabideak: Giza baliabidea taldekoek kontrol osoa daukate (Lectura y escritura) eta beste taldeek ezin dute karpeta honetara sartu (Deny).
+* Zuzendaritza: Zuzendaritza taldekoek kontrol osoa daukate (Lectura y escritura) eta beste taldeek ezin dute karpeta honetara sartu (Deny).
+
+Zuzendaritza karpetaren kasuan badugu berezitasun bat. Bi zuzendari ditugunez, zuzendari bakoitzai karpeta bana esleitu diogu zuzendaritza karpetaren barruan. Ez dugu nahi ordea, zuzendari den batek, berea ez den karpetara sartzeko baimenik izatea. Horregaitik, Ikerren karpetara Oierrek sarbide baimen guztiak ukatuta izango ditu (deny) eta Oierren karpetara ere Ikerrek baimenak ukatuta izango ditu (deny).
+
+### 7.3 Kuotak
+
+Baimenak ezarri ondoren erabili daitezkeen memoria mugak ezarriko dizkiegu erabiltzaileei. Muga hauek **Kuotak** deitzen dira. Bi kuota mota daude:
+
+* NTFS: Bolumenei aplikatzen zaizkie. Memoria kopuru bat betetzera iristen denean abisu bat eman ezake eta bolumena aurrez ezarritako memoria kopurutik gora betetzen ez du utziko kuota mota honek. Hau ezartzeko urratsak hauek dira:
+
+    1. Bolumena aukeratu eta propietateetan sartu.
+    2. Kuotak aukeratu.
+    3. Aktibatu.
+    4. Nahi duzun memoria limitea eta abisua zein memoria kopurutan eman zehaztu.
+
+Gure kasuan bolumen bakarra dugu. Bolumen honek, 85GB okupatzen duenean abixua emateko jarri dugu. Limitea memoria 100GB tan jarri dugu.
+
+* FSRM: Karpetei aplikatzen zaizkie. Memoria kopuru batetik gora betetzean abisu bat baino gehiago ezartzeko aukera (%85, %90, 100%...) ematen du eta karpeta aurrez ezarritako memoria kopurutik gora betetzen ez du utziko kuota mota honek. Hauek ezartzeko urratsak honako hauek dira:
+
+    1. **Administrador de recursos del servidor de archivos** ireki.
+    2. **Administración de cuotas** sartu.
+    3. Behar bada, kuoten plantilla bat sortu (gomendagarria limite berdina karpeta askotan jarri nahi bada).
+    4. Kuota sortu (Aukeratu zein ruta-tan aurkitzen den limitea jarri nahi zaion karpeta eta esleitu behar ben konfigurazioa).
+
+Gure kasuan, Giza baliabideen, Kontabilitatearen eta Orokorraren kuotak 5GB koak dira. Zuendaritza karpetari 15Gb ezarri dizkiogu (Fitxategi gehiago erabiliko direlako bertan). Zuzendaritza karpetaren barruan aurkitzen diren zuzendarien karpeta bakoitzari 5GB ko limitea ezarri diogu.
+
+## 8. Web Zerbitzaria (IIS)
+
+Erronka honetako helburuetako bat, Web zerbitzari erabilgarri bat martxan jartzea izan da. Horretarako 6. atalean martxan jarritako IIS ezaugarria erabili dugu.
+
+### 8.1 Karpetaren baimenak
+
+Lehenbizi, gure web orriko html eta css fitxategi guztiak prestatu eta disko gogorrera kopiatu ditugu, Web orria gordetzeko sortu dugun **1.Erronka Web** karpetara hain zuzen. Jarraian, karpeta honen baimenak aldatu behar izan ditugu. Baimen hauek aldatuko ez bagenitu, edozein erabiltzailek, karpetara sarbidea izango luke edo nahi gabe zerbaitz ezabatu eta gure web orria ez erabiltzeko moduan utzi dezake. Hau ekiditeko, aurreko atalean sortutako taldeei, karpeta honetara dituzten baimen guztiei **deny** jarri diegu. Horrela, ezingo du inork karpeta honetara sartu (administratzaileak sartu ahalko du, honi ez dizkiogu eta baimenak kendu).
+
+Baimenekin amaitzeko sarean dauden kanpoko erabiltzaileei web orria iksuteko aukera emateko, IUSR erabiltzaileei karpeta ikusteko eta irakurtzeko baimena eman behar izan digo. Bestela, administratzaileak bakarrik ikusi ahal zezakeen eta web orria.
+
+### 8.2 Web zerbitzaria martxan jarri
+
+Web zerbitzaria martxan jartzeko pauso hauek jarraitu ditugu.
+
+* **Administrador de Internet Information Service** sartu.
+* Eskuineko klik + agregar sitio web.
+* Izena jarri
+* Ruta sartu (Web orriko fitxategiak kopiatu ditugun karpeta)
+* IP-a eta portua ezarri (Gure kasuan, 192.168.70.1:8080)
+
+### 8.3 Firewall arazoak
+
+Gure taldeak, gutzi hau konfiguratu ondoren, arazoak izan ditu web orri hau gailu inalambriko batetik wifi bidez ikusteko. Web orria alojatu dugun gailuan ondo ikusten zen gure web-a baina beste gailuetatik ezin genuen ikusi nahiz eta sare berdinean egon. Azkenean, firewall-ak lanpoko beste gailuei sarbidea mozten ziela konturatu gara. Firewall-ean 8080 portuari salbuespen bat jarri diogunean konpondu da gure arazoa.
+
+## 9. Segurtasun Kopiak
 
 
 
-## 7. Sistemaren Rol-ak eta ezaugarriak gehitu (IIS)
+
 

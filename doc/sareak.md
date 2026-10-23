@@ -43,9 +43,12 @@ Emaitza lortu ondoren hurrengo bitak jaitsi ditugu eta prozesu bera errepikatu d
 Pasahitza ondo dagoen egiaztatzeko konprobaketa egin dugu. Hasierako bit-kateari 6 zero gehitu beharrean, lortutako emaitza sartu dugu. Ondoren, berriro zatiketa bitarra egin dugu polinomio berarekin. Hondarra (000000) denez, egiaztapena zuzena da eta ez da errorik detektatzen. 
 
 ## CRC ARIKETA
+
+![Mi foto](img/Sareak/IMG_9329.jpg)
+
+
 ![Mi foto](img/Sareak/CRC.png)
 
-![Mi foto](img/Sareak/crc.png)
 
 # PSK(2),ASK(2),FSK(2)
 PSK(2),ASK(2) eta FSK(2) egin baino lehen guk aukeratutako pasahitza bitarrera aldatu dugu, behin bitarrean izan dugunean zatiketa egin dugu CRC6 formularekin $$(X^6+X^5+X^3+X^2+X+1)$$

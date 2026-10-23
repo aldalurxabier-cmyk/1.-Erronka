@@ -154,7 +154,7 @@ Enpresa batek, egunerokotasunean hainbat fitxategi eta datu garrantzitsu sortzen
 
 Memoria berri bat erosi eta sartu aurretik, kontuan hartu beharreko hainbat gauza ditugu. Lehenbizi, zenbat memoria behar dugun kalkulatu behar dugu eta honetaz aparte, aurrerago izango den datuen hazkundea ere zenbatekoa izango den jakitea oso garrantzitsua da, oso denbora gutxian, memoria beteta gelditu eta berriro diskoak aldatzen ibili beharrik ez izateko. Diskoen abiadura ere zenbatekoa den kontuan hartu beharrekoa izan ohi da.
 
-Gure kasuan, 3 disko gogor gehitu ditugu, bakoitza 50GB koa. (Urrengo ataleak azalduko dugu 3 disko gogor hautatzearen erabakia zergatik hartu dugun.).
+Gure kasuan, 3 disko gogor gehitu ditugu, bakoitza 50GB koa. (Urrengo ataleak azalduko dugu 3 disko gogor hautatzearen erabakia zergatik hartu dugun).
 
 Disko hauek, gure makina birtualean dugun zerbitzariari gehitzeko pauso hauek jarraitu ditugu.
 
@@ -196,19 +196,19 @@ Beharrezko diren rolak eta ezaugarriak instalatu ostean, gure enpresako fitxateg
 
 ### 7.1 Enpresaren aurkezpena eta karpeten egitura
 
-Gure enpresa ikus-entzunezkoen streaming edukiak eta multimedia zerbitzu digitalak linean eskaintzean datza. Gure bezeroek mota askotako edukiak (filmak, serieak eta dokumentalak) modu arin, seguru eta etengabean kontsumitu ditzaten bermatzen dugu. Negozio-eredu honek zerbitzarien erabilera intentsiboa eta departamentu ezberdinen arteko lankidetza estua eskatzen du. Horregatik, langileen profil eta eginkizun zehatzen arabera, karpeten eta baimenen egitura hau definitu dugu gure sisteman:
+Gure enpresa ikus-entzunezkoen streaming edukiak eta multimedia zerbitzu digitalak online eskaintzean datza. Gure bezeroek mota askotako edukiak (filmak, serieak eta dokumentalak) modu arin, seguru eta etengabean kontsumitzea bermatzen dugu. Negozio-eredu honek zerbitzarien erabilera intentsiboa eta departamentu ezberdinen arteko lankidetza estua eskatzen du. Horregatik, langileen profil eta eginkizun zehatzen arabera, karpeten eta baimenen egitura hau definitu dugu gure sisteman:
 
-Zuzendaritza (eta barruko zuzendarien karpetak): Plataformaren estrategia orokorra, nazioarteko lizentzia-kontratuak eta enpresaren norabidea kudeatzeko gunea. Barruan zuzendari bakoitzak (edukiak, finantzak, teknologia eta marketina) bere direktorio pribatua du. Bertan sartzeko baimena zuzendariei eta profil bakoitzeko arduradunari soilik dagokie, informazio estrategikoa babesteko.
+* Zuzendaritza (eta barruko zuzendarien karpetak): Plataformaren estrategia orokorra, nazioarteko lizentzia-kontratuak eta enpresaren norabidea kudeatzeko gunea. Barruan zuzendari bakoitzak (edukiak, finantzak, teknologia eta marketina) bere direktorio pribatua du.
 
-Kontabilitatea: Enpresaren diru-sarrerak, harpidedunen kuoten ordainketak, hornitzaileen fakturak eta aurrekontuak kudeatzeko karpeta. Ekonomia eta finantza departamentuko langileek baino ez dute bertan idazteko eta irakurtzeko baimena.
+* Kontabilitatea: Enpresaren diru-sarrerak, harpidedunen kuoten ordainketak, hornitzaileen fakturak eta aurrekontuak kudeatzeko karpeta. Ekonomia eta finantza departamentuko langileek baino ez dute bertan idazteko eta irakurtzeko baimena.
 
-Giza Baliabideak: Langileen kontratuak, nomina-aurreikuspenak, barne-prestakuntzak eta hautaketa-prozesuak kudeatzen diren lekua. Datu pertsonal eta sentikorrak direnez, HR saileko arduradunek soilik daukate sarbidea.
+* Giza Baliabideak: Langileen kontratuak, nomina-aurreikuspenak, barne-prestakuntzak eta hautaketa-prozesuak kudeatzen diren lekua. Datu pertsonal eta sentikorrak direnez, GB saileko arduradunek soilik daukate sarbidea.
 
-Orokorra: Enpresa osoko langile guztiek partekatzeko eta kontsultatzeko karpeta komuna. Bertan dokumentu orokorrak, enpresaren oharrak, egutegiak eta baliabide orokorrak gordetzen dira, eta langile guztiek dute irakurtzeko (eta dagokionean idazteko) baimena.
+* Orokorra: Enpresa osoko langile guztiek kontsultatzeko karpeta komuna. Bertan dokumentu orokorrak, enpresaren oharrak, egutegiak eta baliabide orokorrak gordetzen dira, eta langile guztiek dute irakurtzeko baimena.
 
 Egitura honi esker, zerbitzarian bakoitzak bere lanerako behar dituen fitxategietara soilik dauka sarbidea, datuen konfidentzialtasuna eta segurtasuna bermatuz.
 
-### 7.1 Erabiltzaileak eta taldeak
+### 7.2 Erabiltzaileak eta taldeak
 
 Hasteko, zein talde eta zein erabiltzaile izango diren beharrezkoak izendatu ditugu. Gure kasuan, lau erabiltzaile izango dira (Taldeko lau kideok hain zuzen). Erabiltzaileen izenaren formatua **abizena.izena** izango da (Adibidez, Ortuzar.Oier).
 
@@ -226,7 +226,7 @@ Hauek dira talde bakoitzean sartu diren erabiltzaileak:
 * Giza Baliabideak: Aldalur.Xabier
 * Zuzendaritza: Ortuzar.Oier eta Ortega.Iker
 
-### 7.2 Baimenak
+### 7.3 Baimenak
 
 Baimenak ematen hasi aurretik, lana egiteko beharrezko izango ditugun karpetak sortu ditugu. Honen ondoren, karpeta bakoitzari beharrezko baimenak ezarri dizkiogu.
 
@@ -247,7 +247,7 @@ Honako hau da gure enpresan ezarri dugun karpeten estruktura eta baimenen azalpe
 
 Zuzendaritza karpetaren kasuan badugu berezitasun bat. Bi zuzendari ditugunez, zuzendari bakoitzari karpeta bana esleitu diogu zuzendaritza karpetaren barruan. Ez dugu nahi ordea, zuzendari den batek, berea ez den karpetara sartzeko baimenik izatea. Horregatik, Ikerren karpetara Oierrek sarbide baimen guztiak ukatuta izango ditu (deny) eta Oierren karpetara ere Ikerrek baimenak ukatuta izango ditu (deny).
 
-### 7.3 Kuotak
+### 7.4 Kuotak
 
 Baimenak ezarri ondoren erabili daitezkeen memoria mugak ezarriko dizkiegu erabiltzaileei. Muga hauek **Kuotak** deitzen dira. Bi kuota mota daude:
 
@@ -293,29 +293,23 @@ Web zerbitzaria martxan jartzeko pauso hauek jarraitu ditugu.
 
 Gure taldeak, guzti hau konfiguratu ondoren, arazoak izan ditu web orri hau gailu inalambriko batetik wifi bidez ikusteko. Web orria alojatu dugun gailuan ondo ikusten zen gure web-a baina beste gailuetatik ezin genuen ikusi nahiz eta sare berdinean egon. Azkenean, firewall-ak kanpoko beste gailuei sarbidea mozten ziela konturatu gara. Firewall-ean 8080 portuari salbuespen bat jarri diogunean konpondu da gure arazoa.
 
-## 9. Segurtasun Kopiak
-
-Hona hemen emandako eskema zehatz-mehatz jarraituz prestatutako testua, web orrian edo dokumentuan txertatzeko prest:
-
----
-
-# 10 Segurtasun Kopiak (Backups)
+## 9 Segurtasun Kopiak
 
 Segurtasun-kopiak (backup-ak) egitea ezinbesteko neurria da edozein enpresatan. Gaur egun, informazioa da erakunde baten aktibo garrantzitsuenetako bat. Zibereraso baten aurrean (adibidez, ransomware-a), giza akats baten ondorioz, sistema-hutsegite bategatik edo hondamendi natural bategatik datuak galtzeak ondorio kritikoak izan ditzake (lan-geldialdiak, galerak ekonomikoak edo enpresaren izen onaren kaltea). Segurtasun-kopiak egitearen helburu nagusia negozioaren jarraitutasuna bermatzea da, edozein intzidentzia gertatuta ere datuak berreskuratu ahal izateko.
 
-### 10.1. RAID teknologia eta Segurtasun Kopiak
+### 9.1 RAID teknologia eta Segurtasun Kopiak
 
 Nahiz eta RAID konfigurazio bat izateak gure zerbitzarian datuak ez galtzeko hardware-mailako segurtasuna eta erredundantzia eman, **RAID bat ez da segurtasun-kopia bat**.
 
 RAID-ak fitxategi-sistema edo disko fisiko baten akatsen aurrean babesten gaitu (adibidez, disko bat hondatzen bada, martxan jarraitzea ahalbidetzen du), baina ez gaitu babesten ustekabeko ezabaketen, fitxategi korruptuen, malware/ransomware bidezko enkriptazioen edo hondamendi fisikoen aurrean. RAID batean fitxategi bat ezabatzen bada, berehala ezabatzen da disko guztietan. Horregatik, RAID-a izanda ere, segurtasun-kopiak egitea guztiz beharrezkoa da.
 
-### 10.2. RPO (Recovery Point Objective) zer da?
+### 9.2 RPO (Recovery Point Objective) zer da?
 
 **RPO (Recovery Point Objective)** edo Berreskuratze puntua dugu. Honekin enpresak bere jardueran onartu dezakeen gehienezko datu-galera denbora neurtzen dugu. Adibidez, azken kopia egin zenetik sistema erori den unera arte igarotako denbora adierazten du.
 
 * **Gure enpresaren kasuan:** Gure enpresak **RPO = 24 ordu** ezarri du, hau da, **egunero** egingo ditugu segurtasun-kopiak. Modu honetan, intzidentzia bat gertatuz gero, gehienez ere egun bakarreko lana galduko litzateke.
 
-### 10.3. Segurtasun-kopia motak eta ezberdintasunak
+### 9.3 Segurtasun-kopia motak eta ezberdintasunak
 
 Segurtasun-kopiak egiteko hiru estrategia nagusi daude:
 
@@ -333,7 +327,7 @@ Segurtasun-kopiak egiteko hiru estrategia nagusi daude:
 
 **Gure enpresaren estrategia**: Gure enpresak hasieran kopia oso bat (Full) egingo du, eta hortik aurrera egunero kopia inkrementala egingo du. Horrela, biltegiratze-lekua eta kopia egiteko denbora optimizatzen ditugu eguneroko datuak gal ez daitezen.
 
-### 10.4 Zergatik aukeratu dugu Inkrementala eta ez Diferentziala?
+### 9.4 Zergatik aukeratu dugu Inkrementala eta ez Diferentziala?
 
 * Zerbitzarian segurtasun-kopietarako bideratutako bolumena 100 GB-koa da. Kopia diferentzial bat egitean, azken kopia osoaz geroztik aldatutako DENA berriro kopiatzen dira egunero; beraz, ostiraleko kopia diferentziala astelehenekoa baino askoz handiagoa izaten da. Kopia Inkrementalarekin, aldiz, egun horretan bertan aldatutakoa soilik kopiatzen denez, diskoko espazioa gutxien kargatzen duen metodoa da.
 
@@ -343,7 +337,7 @@ Segurtasun-kopiak egiteko hiru estrategia nagusi daude:
 
 *(Aipatu beharra dago: berreskuratze-denbora zertxobait luzeagoa izan daitekeen arren (kopia osoa + inkremental guztiak kargatu behar direlako), gure enpresaren lehentasuna eguneroko biltegiratze-lekua ez saturatzea eta kopia azkarrak egitea dela eta horregatik hautatu dugula metodo hau).*
 
-### 10.4. 3-2-1 Araua
+### 9.5 3-2-1 Araua
 
 Datuen segurtasun osoa bermatze aldera, industrian estandarra den **3-2-1 segurtasun-araua** aplikatuko dugu:
 
@@ -357,7 +351,7 @@ Datuen segurtasun osoa bermatze aldera, industrian estandarra den **3-2-1 segurt
 * Beste bi kopiak **kanpoko bi disko gogor ateragarri desberdinetan (HDD extraible)** gordeko dira.
 * Kanpoko disko gogor hauetako bat enpresan bertan gordeko da, zerbitzaria bera hondatuko balitz adibidez, arazori ez izateko babes kopia hartzerako garaian. Bestea berriz, **enpresatik kanpora eramango da (zuzendarietako baten etxean gordeko da)**. Hau egiteko arrazoia honako hau dugu: Enpresan intzidentzia larri bat gertatzen bada (adibidez, sute bat, uholde bat edo lapurreta bat), enpresako gailu fisiko guztiak suntsituta ere, kanpoan dagoen kopiaren bidez datu guztiak berreskuratu ahal izango dira.
 
-### 10.5. Gure enpresaren ezarpena (Konfigurazio zehatza)
+### 9.6 Gure enpresaren ezarpena (Konfigurazio zehatza)
 
 Gure sisteman segurtasun-kopien plana honela geratuko da ezarrita:
 
@@ -371,7 +365,7 @@ Gure sisteman segurtasun-kopien plana honela geratuko da ezarrita:
 * **Maiztasuna:** Kopiak **egunero** egingo dira automatikoki. Goizeko 03:00 tan egingo dira kopiak, enpresako langileak lanean ari diren bitartean egitea baino egokiagoa da ordu hauetan egitea, zerbitzariaren errendimenduan eragina izan dezakeelako segurtasun kopia egiteak (kopia egiten ari den bitartean makalago ibili ahal da zerbitzaria).
 * **Mantentze-lana:** Informatikariak **egunero errebisatu eta egiaztatuko du** kopiak zuzen eta egitura egokiarekin egin direla.
 
-### 10.6. Nola automatizatu zegurtasun kopiak
+### 9.7 Nola automatizatu zegurtasun kopiak
 
 Windows Server-en segurtasun-kopiak automatizatzeko, sistemak berak dakarren jatorrizko tresna erabiliko dugu: Windows Server Backup.
 
@@ -386,6 +380,3 @@ Segurtasun kopiak nola automatizatu?
 * Maiztasuna eta Euskarria: Zehaztu kopiak egunero ordu jakin batean egiteko (adibidez, gauean bulegoa itxitakoan) eta esleitu helmuga gisa gure 100 GB-ko bolumen finkoa eta kanpoko disko gogorrak (HDD extraible).
 
 * Exekuzioa: Behin konfiguratuta, sistema eragileak berak automatikoki egingo ditu kopiak egunero, eta informatikariak soilik eguneroko log-ak edo emaitzak egiaztatu beharko ditu.
-
-
-

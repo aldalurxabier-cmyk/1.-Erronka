@@ -85,7 +85,7 @@ System Administrator (Administrator) kontuarentzat pasahitz sendo bat ezarri (le
 
 2. Ekipoaren izena aldatu:
 
-Ekipoak defektuz ekartzen duen izena aldatu dugu, zerbitzari-ingurune batean erraz identifikatu ahal izateko (adibidez, zerbitzuak, IIS edo kudeaketa-lanak egiterakoan zein makina den argi jakiteko) eta sareko beste ekipoekin izen-gatazkarik egon ez dadin:
+Ekipoak defektuz ekartzen duen izena aldatu dugu, zerbitzari-ingurune batean erraz identifikatu ahal izateko (adibidez, zerbitzuak, IIS edo kudeaketa-lanak egiterakoan zein makina den argi jakiteko) eta sareko beste gailuekin izen-gatazkarik egon ez dadin:
 
 **Ekipoaren Izena**: 1ERRONKASERVER
 
@@ -109,13 +109,13 @@ Gure zerbitzariarekin lan egin ahal izateko eta sistemaren kanpo aldetik konekta
 
 Gure kasuan, beste ikaskideek ere beraien IP-ak beharko dituztelako, ezin izan dugu edozein jarri, zeren beste norbaitek gure IP berdina erabiliko badu, makinekin konektatzeko garaian, arazoak izango ditugu. Horrenbestez, gelako kideen artean IP-ak banatu ditugu, gelako zerrendako ordenaren arabera. Guk erabiliko dugun IP-a 192.168.70.1 izango da (Maskara 255.255.255.0). 70 zenbakia, SISA1 gelari dagokion sarea da eta 1 zenbakia, Xabier gelako zerrendako lehena dugunez, berak libre duen IP-etako bat a hori da.
 
-IP-en banaketa gelako zerrendako zenbakien arabera egin dugu. Pertsona bakoitzak, bere zerrendako zenbakia izango du bere IP bezala eta, gehiago behar baditu +50 egin beharko da. 
+IP-en banaketa gelako zerrendako zenbakien arabera egin dugu. Pertsona bakoitzak, bere zerrendako zenbakia izango du bere IP bezala eta, gehiago behar baditu +50 egin beharko da.
 
 Gure gailuari IP finkoa ezartzeko urratsak ondorengo hauek dira:
 
 * Administrador de servidor sartu.
 * Servidor Local aukeratu.
-* Enthernet atalean sartu.
+* Ethernet atalean sartu.
 * IP eta maskara jarri.
 
 IP manualki jarri dugunez, gure interneteko sarreraren IP-a ere jarri behar dugu. Informatikako SISA1 gelako kasuan, IP hau 192.168.70.254 dugu.
@@ -124,13 +124,13 @@ Jarri dugun IP-a hau da:
 
 * IP zerbitzaria: 192.168.70.1
 * Maskara: 255.255.255.0
-* Ateribidea (Puerta de enlace): 192.168.70.254
+* Aterabidea (Puerta de enlace): 192.168.70.254
 
 Hauek idatzi ondoren, ez dugu arazorik izango gure zerbitzaria sarean aurkitzeko.
 
 ## 3. Segurtasun politikak (Pasahitzak)
 
-Enpresa batean, oso garrantzitsuak dira segurtasun politikak zehatz eta egoki betetzea. Azken finean, oso informazio garratzitsua egon ohi da enpresetako zerbitzarietan eta pasaitz desegoki batek, informazioa galtzea edo norbaitek ostea ekar diezaioke. Kontu honek, arazo larriak ekarri ahal dizkio enpresa bati. Arazo hauek ekiditeko, segurtasun politikak ezarri ohi dira.
+Enpresa batean, oso garrantzitsuak dira segurtasun politikak zehatz eta egoki betetzea. Azken finean, oso informazio garrantzitsua egon ohi da enpresetako zerbitzarietan eta pasahitz desegoki batek, informazioa galtzea edo norbaitek ostea ekar diezaioke. Kontu honek, arazo larriak ekarri ahal dizkio enpresa bati. Arazo hauek ekiditeko, segurtasun politikak ezarri ohi dira.
 
 Hauek dira jarraitu ditugun pausoak politika hauek ezartzeko:
 
@@ -142,7 +142,7 @@ Bertan bi aukera ditugu. Alde batetik, pasahitzek izan behar dituzten ezaugarria
 * Gutxienez 8 karaktereko pasahitzak.
 * Azken 12 pasahitz gogoratuko dira (Historial de contraseñas).
 * Konplexutasuna bai (Karaktere berezien erabilera, maiuskulak eta zenbakiak erabili beharra).
-* 60 eguean behin pasahitza aldatu behar da.
+* 60 egunean behin pasahitza aldatu behar da.
 * Pasahitza 5 aldiz jarraian gaizki sartzen bada, kontua 30 minutuz blokeatuta izango da.
 * Administratzailearen kontuan ere politika hauek eragina izatea ahalbidetu egin dugu.
 
@@ -150,13 +150,13 @@ Bertan bi aukera ditugu. Alde batetik, pasahitzek izan behar dituzten ezaugarria
 
 ### 4.1 Diskoak
 
-Enpresa batek, egunerokotasuean hainbat fitxategi eta datu garrantzitsu sortzen eta erabiltzen ditu. Guzti hauek, memorietan gordeta egon behar izaten dira normalean (Disko gogorrak, SSD...). Horrenbestez, sistema eragilea instalatu dugun disko gogorraz aparte, disko gehiago sartzea erabaki dugu.
+Enpresa batek, egunerokotasunean hainbat fitxategi eta datu garrantzitsu sortzen eta erabiltzen ditu. Guzti hauek, memorietan gordeta egon behar izaten dira normalean (Disko gogorrak, SSD...). Horrenbestez, sistema eragilea instalatu dugun disko gogorraz aparte, disko gehiago sartzea erabaki dugu.
 
-Memoria berri bat erosi eta sartu aurretik, kontuan hartu beharreko hainbat gauza ditugu. Lehenbizi, zenbat memoria behar dugun kalkulatu behar dugu eta honetaz aparte, aurrerago izango den datuen azkundea ere zenbatekoa izango den jakitea oso garrantzitsua da, oso denbora gutxian, memoria beteta gelditu eta berriro diskoak aldatzen ibili beharrik ez izateko. Diskoen abiadura ere zenbatekoa den kontuan hartu beharrekoa izan ohi da.
+Memoria berri bat erosi eta sartu aurretik, kontuan hartu beharreko hainbat gauza ditugu. Lehenbizi, zenbat memoria behar dugun kalkulatu behar dugu eta honetaz aparte, aurrerago izango den datuen hazkundea ere zenbatekoa izango den jakitea oso garrantzitsua da, oso denbora gutxian, memoria beteta gelditu eta berriro diskoak aldatzen ibili beharrik ez izateko. Diskoen abiadura ere zenbatekoa den kontuan hartu beharrekoa izan ohi da.
 
 Gure kasuan, 3 disko gogor gehitu ditugu, bakoitza 50GB koa. (Urrengo ataleak azalduko dugu 3 disko gogor hautatzearen erabakia zergatik hartu dugun.).
 
-Disko hauek, gure makina birtualean dugun zerbitzariadi gehitzeko pasuo hauek jarraitu ditugu.
+Disko hauek, gure makina birtualean dugun zerbitzariari gehitzeko pauso hauek jarraitu ditugu.
 
 * VirtualBox-eko makina birtualaren konfigurazioan, ""Almacenamiento"" atalean, disko gogorrak gehitzeko aukerari eman.
 * Jarraian, diskoak hautatzeko menuan, disco berriak sortu ditugu.
@@ -192,11 +192,11 @@ Rolak eta ezaugarriak gehitzeko onako urrats hauek jarraitu ditugu:
 
 ## 7. Erabiltzaileak eta taldeak (Baimenak + Kuotak)
 
-Beharrezko diren rolak eta ezaugarriak instalatu ostean, gure enpresako fitxategien baimenak eta kuotak zehazteko ordua iritsi da. Enpresa batean, hauek ondo zehaztea ezinbestekoa dugu, lana egoki egin ahal izateko eta inolako segurtasun arazorik ez izateko. Horretarako, lan taldeak eta erabiltzaileak zeintzuk izango diren finkatu ditugu, fitxategi sistema bat sortu eta hauetan talde bakoitzak ze eskubide izango dituen zehaztu dugu eta azkenik, sortu den karpeta bakoitzak okupatu ahal izango duen memoria kopuru maximoa zein izango den zehaztu dugu.
+Beharrezko diren rolak eta ezaugarriak instalatu ostean, gure enpresako fitxategien baimenak eta kuotak zehazteko ordua iritsi da. Enpresa batean, hauek ondo zehaztea ezinbestekoa dugu, lana egoki egin ahal izateko eta inolako segurtasun arazorik ez izateko. Horretarako, lan taldeak eta erabiltzaileak zeintzuk izango diren finkatu ditugu, fitxategi sistema bat sortu eta hauetan talde bakoitzak zein eskubide izango dituen zehaztu dugu eta azkenik, sortu den karpeta bakoitzak okupatu ahal izango duen memoria kopuru maximoa zein izango den zehaztu dugu.
 
 ### 7.1 Erabiltzaileak eta taldeak
 
-Hasteko, zein talde eta zein erabiltzaile izango diren beharrezkoak izendatu ditugu. Gure kasuan, lau erabiltzaile izango dira (Taldeko lau kideok hain zuzen). Erabiltzaileen izenaren formatua **abizena.izena** izango da.
+Hasteko, zein talde eta zein erabiltzaile izango diren beharrezkoak izendatu ditugu. Gure kasuan, lau erabiltzaile izango dira (Taldeko lau kideok hain zuzen). Erabiltzaileen izenaren formatua **abizena.izena** izango da (Adibidez, Ortuzar.Oier).
 
 Hauek sortu ondoren, lan taldeak sortu ditugu. 3 talde egin ditugu: Kontabilitatea, Zuzendaritza eta Giza baliabideak. Jarraian, erabiltzaile bakoitza bere taldean sartu dugu. Taldeak sortzea ezinbestekoa dugu, honi esker, fitxategiei baimenak ematerako garaian, ez dugulako erabiltzailez erabiltzaile banaka baimenak ematen ibili behar, talde osoari baimenak esleituta nahikoa izango da.
 
@@ -231,7 +231,7 @@ Honako hau da gure enpresan ezarri dugun karpeten estruktura eta baimenen azalpe
 * Giza Baliabideak: Giza baliabidea taldekoek kontrol osoa daukate (Lectura y escritura) eta beste taldeek ezin dute karpeta honetara sartu (Deny).
 * Zuzendaritza: Zuzendaritza taldekoek kontrol osoa daukate (Lectura y escritura) eta beste taldeek ezin dute karpeta honetara sartu (Deny).
 
-Zuzendaritza karpetaren kasuan badugu berezitasun bat. Bi zuzendari ditugunez, zuzendari bakoitzai karpeta bana esleitu diogu zuzendaritza karpetaren barruan. Ez dugu nahi ordea, zuzendari den batek, berea ez den karpetara sartzeko baimenik izatea. Horregaitik, Ikerren karpetara Oierrek sarbide baimen guztiak ukatuta izango ditu (deny) eta Oierren karpetara ere Ikerrek baimenak ukatuta izango ditu (deny).
+Zuzendaritza karpetaren kasuan badugu berezitasun bat. Bi zuzendari ditugunez, zuzendari bakoitzari karpeta bana esleitu diogu zuzendaritza karpetaren barruan. Ez dugu nahi ordea, zuzendari den batek, berea ez den karpetara sartzeko baimenik izatea. Horregatik, Ikerren karpetara Oierrek sarbide baimen guztiak ukatuta izango ditu (deny) eta Oierren karpetara ere Ikerrek baimenak ukatuta izango ditu (deny).
 
 ### 7.3 Kuotak
 
@@ -263,7 +263,7 @@ Erronka honetako helburuetako bat, Web zerbitzari erabilgarri bat martxan jartze
 
 Lehenbizi, gure web orriko html eta css fitxategi guztiak prestatu eta disko gogorrera kopiatu ditugu, Web orria gordetzeko sortu dugun **1.Erronka Web** karpetara hain zuzen. Jarraian, karpeta honen baimenak aldatu behar izan ditugu. Baimen hauek aldatuko ez bagenitu, edozein erabiltzailek, karpetara sarbidea izango luke edo nahi gabe zerbaitz ezabatu eta gure web orria ez erabiltzeko moduan utzi dezake. Hau ekiditeko, aurreko atalean sortutako taldeei, karpeta honetara dituzten baimen guztiei **deny** jarri diegu. Horrela, ezingo du inork karpeta honetara sartu (administratzaileak sartu ahalko du, honi ez dizkiogu eta baimenak kendu).
 
-Baimenekin amaitzeko sarean dauden kanpoko erabiltzaileei web orria iksuteko aukera emateko, IUSR erabiltzaileei karpeta ikusteko eta irakurtzeko baimena eman behar izan digo. Bestela, administratzaileak bakarrik ikusi ahal zezakeen eta web orria.
+Baimenekin amaitzeko sarean dauden kanpoko erabiltzaileei web orria ikusteko aukera emateko, IUSR erabiltzaileei karpeta ikusteko eta irakurtzeko baimena eman behar izan digo. Bestela, administratzaileak bakarrik ikusi ahal zezakeen eta web orria.
 
 ### 8.2 Web zerbitzaria martxan jarri
 
@@ -277,7 +277,7 @@ Web zerbitzaria martxan jartzeko pauso hauek jarraitu ditugu.
 
 ### 8.3 Firewall arazoak
 
-Gure taldeak, gutzi hau konfiguratu ondoren, arazoak izan ditu web orri hau gailu inalambriko batetik wifi bidez ikusteko. Web orria alojatu dugun gailuan ondo ikusten zen gure web-a baina beste gailuetatik ezin genuen ikusi nahiz eta sare berdinean egon. Azkenean, firewall-ak lanpoko beste gailuei sarbidea mozten ziela konturatu gara. Firewall-ean 8080 portuari salbuespen bat jarri diogunean konpondu da gure arazoa.
+Gure taldeak, guzti hau konfiguratu ondoren, arazoak izan ditu web orri hau gailu inalambriko batetik wifi bidez ikusteko. Web orria alojatu dugun gailuan ondo ikusten zen gure web-a baina beste gailuetatik ezin genuen ikusi nahiz eta sare berdinean egon. Azkenean, firewall-ak kanpoko beste gailuei sarbidea mozten ziela konturatu gara. Firewall-ean 8080 portuari salbuespen bat jarri diogunean konpondu da gure arazoa.
 
 ## 9. Segurtasun Kopiak
 

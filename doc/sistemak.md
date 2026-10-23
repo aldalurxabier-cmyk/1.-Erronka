@@ -4,7 +4,7 @@ title: Sistemak
 ---
 ## Sarrera
 
-Ikasgai honetan, sistema gure sistema eragilearen funtzioak eta bere osagaiak zeintzuk diren zehaztu, Windows familiako sistema instalatu eta konfiguratu, disko gogorren bolumenak kudeatu eta RAID egiturak sortu eta disko gogorretako informazioen galeren aurrean ahalik eta informazio gutxien galtzeko prestatu dugu gure sistema. Hauetaz aparte, zerbitzarian lan egingo duten erabiltzaileak eta taldeaK zein diren zehaztu, hauen baimenak prestatu, pasahitzen segurtasun politikak zeintzuk izango diren zehaztu, web zerbitzaia martxan jarri eta segurtasun kopiak egitea ere ahalbidetu ditugu. Jarraian, hauek lortzeko emandako pausoak azalduko ditugu.
+Ikasgai honetan, sistema gure sistema eragilearen funtzioak eta bere osagaiak zeintzuk diren zehaztu, Windows familiako sistema instalatu eta konfiguratu, disko gogorren bolumenak kudeatu eta RAID egiturak sortu eta disko gogorretako informazioen galeren aurrean ahalik eta informazio gutxien galtzeko prestatu dugu gure sistema. Hauetaz aparte, zerbitzarian lan egingo duten erabiltzaileak eta taldeak zein diren zehaztu, hauen baimenak prestatu, pasahitzen segurtasun politikak zeintzuk izango diren zehaztu, web zerbitzaria martxan jarri eta segurtasun kopiak egitea ere ahalbidetu ditugu. Jarraian, hauek lortzeko emandako pausoak azalduko ditugu.
 
 ## 1. Gida Teknikoa: Windows Server-en Instalazioa eta Oinarrizko Konfigurazioa (VirtualBox)
 
@@ -31,7 +31,7 @@ Instalazioari ekin aurretik, honako baliabide hauek behar ditugu:
     3. **Izena**: 1. Erronka
     4. **Mota (Type)**: Microsoft Windows
     5. **Bertsioa (Version)**: Windows Server 2022 x64 es-ES
-    6. **Proceed with Unattended instalation, MARKATU GABE** utziko dugu, virtualbox-ek administratzailearen izenak eta pasahitzak automatikoki sortu partez, geuk manualki aldatu ahal izateko instalazio garaian.
+    6. **Proceed with Unattended installation, MARKATU GABE** utziko dugu, virtualbox-ek administratzailearen izenak eta pasahitzak automatikoki sortu partez, geuk manualki aldatu ahal izateko instalazio garaian.
 
 * Hardware Baliabideak Esleitu:
 
@@ -107,7 +107,7 @@ Azken pauso honekin, gure Windows server-a prest utzi dugu berarekin lanean hasi
 
 Gure zerbitzariarekin lan egin ahal izateko eta sistemaren kanpo aldetik konektatzeko, IP estatiko bat eman diogu. Izatez, DHCP-ak berak automatikoki esleitu ahal dio, baina gerta daiteke, zerbitzaria abiarazi bakoitzean IP ezberdina aurkitzea eta honek zerbitzaria gure sarean aurkitzerakoan arazoak ematea. Horrenbestez, IP finko bat ezarri diogu. 
 
-Gure kasuan, beste ikaskideek ere beraien IP-ak beharko dituztelako, ezin izan dugu edozein jarri, zeren beste norbaitek gure IP berdina erabiliko badu, makinekin konektatzeko garaian, arazoak izango ditugu. Horrenbestez, gelako kideen artean IP-ak banatu ditugu, gelako zerrendako ordenaren arabera. Guk erabiliko dugun IP-a 192.168.70.1 izango da (Maskara 255.255.255.0). 70 zenbakia, SISA1 gelari dagokion sarea da eta 1 zenbakia, Xabier gelako zerrendako lehena dugunez, berak libre duen IP-etako bat a hori da.
+Gure kasuan, beste ikaskideek ere beraien IP-ak beharko dituztelako, ezin izan dugu edozein jarri, zeren beste norbaitek gure IP berdina erabiliko badu, makinekin konektatzeko garaian, arazoak izango ditugu. Horrenbestez, gelako kideen artean IP-ak banatu ditugu, gelako zerrendako ordenaren arabera. Guk erabiliko dugun IP-a 192.168.70.1 izango da (Maskara 255.255.255.0). 70 zenbakia, SISA1 gelari dagokion sarea da eta 1 zenbakia, Xabier gelako zerrendako lehena dugunez, berak libre duen IP-etako bat hori da.
 
 IP-en banaketa gelako zerrendako zenbakien arabera egin dugu. Pertsona bakoitzak, bere zerrendako zenbakia izango du bere IP bezala eta, gehiago behar baditu +50 egin beharko da.
 
@@ -173,7 +173,7 @@ Disko bakoitza, bolumen bat edo gehiagotan zatitu ahal da. Gaitasun honi esker, 
 * Bolumenari eman nahi zaion memoria kantitatea haukeratu.
 * Formatua (FAT32, NTFS...) eta eman nahi zaion letra (C: / D:/ E:/) aukeratu.
 
-Diskoan soberan geratu den memoriarekin behar adina bolumen egin ditzakegu, diskoko memoria osoa bete harte. Gure kasuan, 50GB-ko bolumen bakarra utzi dugu, emango diogun erabilerarrako ez dugulako bolumen ezberdinak egiteko beharrik ikusten.
+Diskoan soberan geratu den memoriarekin behar adina bolumen egin ditzakegu, diskoko memoria osoa bete arte. Gure kasuan, 50GB-ko bolumen bakarra utzi dugu, emango diogun erabilerarako ez dugulako bolumen ezberdinak egiteko beharrik ikusten.
 
 ## 5. RAID
 
@@ -244,7 +244,7 @@ Baimenak ezarri ondoren erabili daitezkeen memoria mugak ezarriko dizkiegu erabi
     3. Aktibatu.
     4. Nahi duzun memoria limitea eta abisua zein memoria kopurutan eman zehaztu.
 
-Gure kasuan bolumen bakarra dugu. Bolumen honek, 85GB okupatzen duenean abixua emateko jarri dugu. Limitea memoria 100GB tan jarri dugu.
+Gure kasuan bolumen bakarra dugu. Bolumen honek, 85GB okupatzen duenean abisua emateko jarri dugu. Limitea memoria 100GB tan jarri dugu.
 
 * FSRM: Karpetei aplikatzen zaizkie. Memoria kopuru batetik gora betetzean abisu bat baino gehiago ezartzeko aukera (%85, %90, 100%...) ematen du eta karpeta aurrez ezarritako memoria kopurutik gora betetzen ez du utziko kuota mota honek. Hauek ezartzeko urratsak honako hauek dira:
 
@@ -261,9 +261,9 @@ Erronka honetako helburuetako bat, Web zerbitzari erabilgarri bat martxan jartze
 
 ### 8.1 Karpetaren baimenak
 
-Lehenbizi, gure web orriko html eta css fitxategi guztiak prestatu eta disko gogorrera kopiatu ditugu, Web orria gordetzeko sortu dugun **1.Erronka Web** karpetara hain zuzen. Jarraian, karpeta honen baimenak aldatu behar izan ditugu. Baimen hauek aldatuko ez bagenitu, edozein erabiltzailek, karpetara sarbidea izango luke edo nahi gabe zerbaitz ezabatu eta gure web orria ez erabiltzeko moduan utzi dezake. Hau ekiditeko, aurreko atalean sortutako taldeei, karpeta honetara dituzten baimen guztiei **deny** jarri diegu. Horrela, ezingo du inork karpeta honetara sartu (administratzaileak sartu ahalko du, honi ez dizkiogu eta baimenak kendu).
+Lehenbizi, gure web orriko html eta css fitxategi guztiak prestatu eta disko gogorrera kopiatu ditugu, Web orria gordetzeko sortu dugun **1.Erronka Web** karpetara hain zuzen. Jarraian, karpeta honen baimenak aldatu behar izan ditugu. Baimen hauek aldatuko ez bagenitu, edozein erabiltzailek, karpetara sarbidea izango luke edo nahi gabe zerbait ezabatu eta gure web orria ez erabiltzeko moduan utzi dezake. Hau ekiditeko, aurreko atalean sortutako taldeei, karpeta honetara dituzten baimen guztiei **deny** jarri diegu. Horrela, ezingo du inork karpeta honetara sartu (administratzaileak sartu ahalko du, honi ez dizkiogu eta baimenak kendu).
 
-Baimenekin amaitzeko sarean dauden kanpoko erabiltzaileei web orria ikusteko aukera emateko, IUSR erabiltzaileei karpeta ikusteko eta irakurtzeko baimena eman behar izan digo. Bestela, administratzaileak bakarrik ikusi ahal zezakeen eta web orria.
+Baimenekin amaitzeko sarean dauden kanpoko erabiltzaileei web orria ikusteko aukera emateko, IUSR erabiltzaileei karpeta ikusteko eta irakurtzeko baimena eman behar izan diogu. Bestela, administratzaileak bakarrik ikusi ahal zezakeen eta web orria.
 
 ### 8.2 Web zerbitzaria martxan jarri
 

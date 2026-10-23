@@ -19,10 +19,10 @@ _ = 95
 
 3 = 51
 
-Ondoren, zenbaki bakoitza bitarrera pasatu dugu, CRC-a egiteko. Horretarako zenbaki bakoitza zati 2 egin dugu, hondarra lortu arte. Gero, hondarrak behetik gora irrakurri ditugu, eta 8 bit-eko zenbaki bat lortu dugu. 
+Ondoren, zenbaki bakoitza bitarrera pasatu dugu, CRC-a egiteko. Horretarako zenbaki bakoitza zati 2 egin dugu, hondarra lortu arte. Gero, hondarrak behetik gora irakurri ditugu, eta 8 bit-eko zenbaki bat lortu dugu. 
 
 ## ASCII ARIKETA 
-
+![Mi foto](img/Sareak/ASCII.png)
 
 # CRC
 CRC-a egiteko ASCII bidez lortutako 6 karaktereak bitar sistemara pasatu ditugu eta 8 biteko zenbaki bakoitza elkartuz 48 biteko bit-kate bat osatu dugu. Ondoren, 6 zero gehitu dizkiogu CRC-6 delako.
@@ -43,6 +43,9 @@ Emaitza lortu ondoren hurrengo bitak jaitsi ditugu eta prozesu bera errepikatu d
 Pasahitza ondo dagoen egiaztatzeko konprobaketa egin dugu. Hasierako bit-kateari 6 zero gehitu beharrean, lortutako emaitza sartu dugu. Ondoren, berriro zatiketa bitarra egin dugu polinomio berarekin. Hondarra (000000) denez, egiaztapena zuzena da eta ez da errorik detektatzen. 
 
 ## CRC ARIKETA
+![Mi foto](img/Sareak/CRC.png)
+
+![Mi foto](img/Sareak/crc.png)
 
 # PSK(2),ASK(2),FSK(2)
 PSK(2),ASK(2) eta FSK(2) egin baino lehen guk aukeratutako pasahitza bitarrera aldatu dugu, behin bitarrean izan dugunean zatiketa egin dugu CRC6 formularekin $$(X^6+X^5+X^3+X^2+X+1)$$

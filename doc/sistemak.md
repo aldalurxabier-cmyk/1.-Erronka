@@ -4,7 +4,7 @@ title: Sistemak
 ---
 ## Sarrera
 
-Ikasgai honetan, sistema gure sistema eragilearen funtzioak eta bere osagaiak zeintzuk diren zehaztu, windows familiako sistema instalatu eta konfiguratu, disko gogorren bolumenak kudeatu eta RAID egiturak sortu eta disko gogorretako informazioen galeren aurrean ahalik eta informazio gutxien galtzeko prestatu dugu gure sistema. Hauetaz aparte, zerbitzarian lan egingo duten erabiltzaileak eta taldea zein diren zehaztu, hauen baimenak prestatu, pasahitzen segurtasun politikak zeintzuk izango diren zehaztu, web zerbitzaia martxan jarri eta segurtasun kopiak egitea ere ahalbidetu ditugu. Jarraian, hauek lortzako emandako pausoak azalduko ditugu.
+Ikasgai honetan, sistema gure sistema eragilearen funtzioak eta bere osagaiak zeintzuk diren zehaztu, Windows familiako sistema instalatu eta konfiguratu, disko gogorren bolumenak kudeatu eta RAID egiturak sortu eta disko gogorretako informazioen galeren aurrean ahalik eta informazio gutxien galtzeko prestatu dugu gure sistema. Hauetaz aparte, zerbitzarian lan egingo duten erabiltzaileak eta taldeaK zein diren zehaztu, hauen baimenak prestatu, pasahitzen segurtasun politikak zeintzuk izango diren zehaztu, web zerbitzaia martxan jarri eta segurtasun kopiak egitea ere ahalbidetu ditugu. Jarraian, hauek lortzeko emandako pausoak azalduko ditugu.
 
 ## 1. Gida Teknikoa: Windows Server-en Instalazioa eta Oinarrizko Konfigurazioa (VirtualBox)
 
@@ -60,7 +60,7 @@ Instalazioari ekin aurretik, honako baliabide hauek behar ditugu:
 
 * Bertsio Hautaketa:
 
-    1. Aukeratu **Windows Server Standar Edition (Desktop Experience) / Experiencia de escritorio** bertsioa (Interfaze grafikoa eduki ahal izateko).
+    1. Aukeratu **Windows Server Standard Edition (Desktop Experience) / Experiencia de escritorio** bertsioa (Interfaze grafikoa eduki ahal izateko).
     2. Onartu lizentzia-baldintzak.
 
 * Partizioak Kudeatzea:
@@ -71,7 +71,7 @@ Instalazioari ekin aurretik, honako baliabide hauek behar ditugu:
 Windows Server-en instalazioan, aukeratu gabeko espazioan (Unallocated Space) zuzenean **"Next"** sakatzean, sistemak automatikoki sortzen ditu sistema abiarazteko eta kudeatzeko beharrezkoak diren partizio bereziak. honako hauek dira:
 
 * **System Partition** (Sistemaren partizioa) Formatua: NTFS: Windows-ek bere zereginetarako erreserbatzen duen partizio bat da.
-* **Recovery Partition** (Berreskuratze Partizioa) Formatua: NTFS: Windows-en Berreskuratze Ingurunea (WinRE - Windows Recovery Environment) gordetzen du. Sistema crahseatzen denean edo abiarazi ezin denean, konpontzeko tresnak bertatik exekutatzen dira.
+* **Recovery Partition** (Berreskuratze Partizioa) Formatua: NTFS: Windows-en Berreskuratze Ingurunea (WinRE - Windows Recovery Environment) gordetzen du. Sistemak huts egiten duenean (crash) denean edo abiarazi ezin denean, konpontzeko tresnak bertatik exekutatzen dira.
 * **Primary Partition** (Partizio Nagusia - C: Unitatea) Formatua: NTFS: Windows Server sistema eragile osoa, programak, zerbitzuak (IIS, etab.) eta erabiltzaileen datuak biltegiratzen dituen partizio nagusia da.
 
 ### 1.5. Hasierako Konfigurazioa
@@ -97,17 +97,19 @@ Ekipoak defektuz ekartzen duen izena aldatu dugu, zerbitzari-ingurune batean err
 
 3. Sistema eguneratu:
 
-Sistemaren lehen instalazioa dugunez, sistema eguneratu gabe dago. Oraingo pausoa, eguneraketa guztiak aplikatzea izango dugu. Azken finean, sistemaren eguneraketa egiteak azken segurtasun-adabakiak eta kontrolatzaileen eguneratzeak aplikatzen direla bermatzen du, ezagututako ahultasunak babestuz. Horrez gain, ondoren egingo ditugun urrats guztiak (webgunea igotzea, pasahitz eta segurtasun politikak, etab.) ingurune fidagarri baten gainean eraikiko direla bermatzen du.
+Sistemaren lehen instalazioa dugunez, sistema eguneratu gabe dago. Hurrengo pausoa, eguneraketa guztiak aplikatzea izango dugu. Azken finean, sistemaren eguneraketa egiteak azken segurtasun-adabakiak eta kontrolatzaileen eguneratzeak aplikatzen direla bermatzen du, ezagututako ahultasunak babestuz. Horrez gain, ondoren egingo ditugun urrats guztiak (webgunea igotzea, pasahitzak eta segurtasun politikak, etab.) ingurune fidagarri baten gainean eraikiko direla bermatzen du.
 
 Hau egiteko, Sistemaren konfiguraziora sartu eta **Windows Update** hautatuko dugu. Jarraian eskatzen dituen eguneraketak aplikatzeko eskatuko diogu. Hauek amaitutakoan, makina berrabiarazi eta eguneraketa guztiak zuzen aplikatu direla bermatuko dugu.
 
-Azken pauso honekin, gure Windows server-a prest utzi dugu berarekin lanean hasi ahal izateko. Hau egin ondoren, beste lan batzuekin jarraitu ahal dugu (Beharrezko Rolak eta herramintak instalatu, erabiltzaileak, pasahitza eta politikak sortu, baimenak kudeatu…)
+Azken pauso honekin, gure Windows server-a prest utzi dugu berarekin lanean hasi ahal izateko. Hau egin ondoren, beste lan batzuekin jarraitu ahal dugu (Beharrezko Rolak eta herramintak instalatu, erabiltzaileak, pasahitzak eta politikak sortu, baimenak kudeatu…)
 
 ## 2. IP-a konfiguratu
 
-Gure zerbitzariarekin lan egin ahal izateko eta sistemaren kanpo aldetik konektatzeko, IP estatiko bat eman diogu. Izatez, DHCP-ak berak automatikoki asignatu ahal dio, baina gerta daikete, zerbitzaria abiarazi bakoitzean IP ezberdina aurkitzea eta honek zerbitzaria gure sarean aurkitzerakoan arazoak ematea. Horrenbestez, IP finko bat ezarri diogu. 
+Gure zerbitzariarekin lan egin ahal izateko eta sistemaren kanpo aldetik konektatzeko, IP estatiko bat eman diogu. Izatez, DHCP-ak berak automatikoki esleitu ahal dio, baina gerta daiteke, zerbitzaria abiarazi bakoitzean IP ezberdina aurkitzea eta honek zerbitzaria gure sarean aurkitzerakoan arazoak ematea. Horrenbestez, IP finko bat ezarri diogu. 
 
-Gure kasuan, beste ikaskideek ere beraien IP-ak beharko dituztelako, ezin izan dugu edozein jarri, zeren beste norbaitek gure IP berdina erabiliko badu, makinekin konektatzeko garaian, arazoak izango ditugu. Horrenbestez, gelako kideen artean IP-ak banatu ditugu, gelako zerrendako ordenaren arabera. Guk erabiliko dugun IP-a 192.168.70.1 izango da (Maskara 255.255.255.0). 70 zenbakia, SISA1 gelari dagokion sarea da eta 1 zenbakia, Xabier gelako zerrenda gelako lehena dugunez, berak libre duen IP-etako bat a hori da.
+Gure kasuan, beste ikaskideek ere beraien IP-ak beharko dituztelako, ezin izan dugu edozein jarri, zeren beste norbaitek gure IP berdina erabiliko badu, makinekin konektatzeko garaian, arazoak izango ditugu. Horrenbestez, gelako kideen artean IP-ak banatu ditugu, gelako zerrendako ordenaren arabera. Guk erabiliko dugun IP-a 192.168.70.1 izango da (Maskara 255.255.255.0). 70 zenbakia, SISA1 gelari dagokion sarea da eta 1 zenbakia, Xabier gelako zerrendako lehena dugunez, berak libre duen IP-etako bat a hori da.
+
+IP-en banaketa gelako zerrendako zenbakien arabera egin dugu. Pertsona bakoitzak, bere zerrendako zenbakia izango du bere IP bezala eta, gehiago behar baditu +50 egin beharko da. 
 
 Gure gailuari IP finkoa ezartzeko urratsak ondorengo hauek dira:
 
@@ -135,12 +137,12 @@ Hauek dira jarraitu ditugun pausoak politika hauek ezartzeko:
 * Directiva de seguridad Local sartu.
 * Directiva de cuentas aukeratu.
 
-Bertan bi aukera ditugu. Alde batetik, pasahitzek izan behar dituzten ezaugarriak zehazten dira (Gutxieneko luzera, erabili beharreko gutxieneko karaktereak...). Bestaldetik berriz, pasahitzen erabilera desegoki baten aurrean gure zerbitzariak nola jokatu asignatzen da (Hainbat aldiz jarraian pasahitza gaizki sartuko balitz, kontua blokeatu adibidez). Hauek dira guk ezarri ditugun politikak:
+Bertan bi aukera ditugu. Alde batetik, pasahitzek izan behar dituzten ezaugarriak zehazten dira (Gutxieneko luzera, erabili beharreko gutxieneko karaktereak...). Bestaldetik berriz, pasahitzen erabilera desegoki baten aurrean gure zerbitzariak nola jokatu esleitzen da (Hainbat aldiz jarraian pasahitza gaizki sartuko balitz, kontua blokeatu adibidez). Hauek dira guk ezarri ditugun politikak:
 
-* Gutxienez 8 karaktereko pasaitzak
-* Azken 12 pasahitz gogoratuko dira (Historial de contraseñas)
-* Konplexutasuna bai (Karaktere berezien erabilera, maiuskulak eta zenbakiak erabili beharra)
-* 60 eguean behin pasahitza aldatu behar da
+* Gutxienez 8 karaktereko pasahitzak.
+* Azken 12 pasahitz gogoratuko dira (Historial de contraseñas).
+* Konplexutasuna bai (Karaktere berezien erabilera, maiuskulak eta zenbakiak erabili beharra).
+* 60 eguean behin pasahitza aldatu behar da.
 * Pasahitza 5 aldiz jarraian gaizki sartzen bada, kontua 30 minutuz blokeatuta izango da.
 * Administratzailearen kontuan ere politika hauek eragina izatea ahalbidetu egin dugu.
 

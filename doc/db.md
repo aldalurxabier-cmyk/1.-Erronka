@@ -2,4 +2,5 @@
 layout: page
 title: Datu Baseak
 ---
-# Image Example Page
+# ER - ARIKETA
+![Mi foto](imG/DB/ER,3TALDEA.png)

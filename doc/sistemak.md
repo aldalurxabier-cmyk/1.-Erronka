@@ -71,7 +71,7 @@ Instalazioari ekin aurretik, honako baliabide hauek behar ditugu:
 Windows Server-en instalazioan, aukeratu gabeko espazioan (Unallocated Space) zuzenean **"Next"** sakatzean, sistemak automatikoki sortzen ditu sistema abiarazteko eta kudeatzeko beharrezkoak diren partizio bereziak. honako hauek dira:
 
 * **System Partition** (Sistemaren partizioa) Formatua: NTFS: Windows-ek bere zereginetarako erreserbatzen duen partizio bat da.
-* **Recovery Partition** (Berreskuratze Partizioa) Formatua: NTFS: Windows-en Berreskuratze Ingurunea (WinRE - Windows Recovery Environment) gordetzen du. Sistemak huts egiten duenean (crash) denean edo abiarazi ezin denean, konpontzeko tresnak bertatik exekutatzen dira.
+* **Recovery Partition** (Berreskuratze Partizioa) Formatua: NTFS: Windows-en Berreskuratze Ingurunea (WinRE - Windows Recovery Environment) gordetzen du. Sistemak huts egiten duenean (crash) edo abiarazi ezin denean, konpontzeko tresnak bertatik exekutatzen dira.
 * **Primary Partition** (Partizio Nagusia - C: Unitatea) Formatua: NTFS: Windows Server sistema eragile osoa, programak, zerbitzuak (IIS, etab.) eta erabiltzaileen datuak biltegiratzen dituen partizio nagusia da.
 
 ### 1.5. Hasierako Konfigurazioa
@@ -253,7 +253,7 @@ Gure kasuan bolumen bakarra dugu. Bolumen honek, 85GB okupatzen duenean abisua e
     3. Behar bada, kuoten plantilla bat sortu (gomendagarria limite berdina karpeta askotan jarri nahi bada).
     4. Kuota sortu (Aukeratu zein ruta-tan aurkitzen den limitea jarri nahi zaion karpeta eta esleitu behar ben konfigurazioa).
 
-Gure kasuan, Giza baliabideen, Kontabilitatearen eta Orokorraren kuotak 5GB koak dira. Zuendaritza karpetari 15Gb ezarri dizkiogu (Fitxategi gehiago erabiliko direlako bertan). Zuzendaritza karpetaren barruan aurkitzen diren zuzendarien karpeta bakoitzari 5GB ko limitea ezarri diogu.
+Gure kasuan, Giza baliabideen, Kontabilitatearen eta Orokorraren kuotak 5GB koak dira. Zuzendaritza karpetari 15Gb ezarri dizkiogu (Fitxategi gehiago erabiliko direlako bertan). Zuzendaritza karpetaren barruan aurkitzen diren zuzendarien karpeta bakoitzari 5GB ko limitea ezarri diogu.
 
 ## 8. Web Zerbitzaria (IIS)
 
@@ -281,7 +281,97 @@ Gure taldeak, guzti hau konfiguratu ondoren, arazoak izan ditu web orri hau gail
 
 ## 9. Segurtasun Kopiak
 
+Hona hemen emandako eskema zehatz-mehatz jarraituz prestatutako testua, web orrian edo dokumentuan txertatzeko prest:
 
+---
+
+# 10 Segurtasun Kopiak (Backups)
+
+Segurtasun-kopiak (backup-ak) egitea ezinbesteko neurria da edozein enpresatan. Gaur egun, informazioa da erakunde baten aktibo garrantzitsuenetako bat. Zibereraso baten aurrean (adibidez, ransomware-a), giza akats baten ondorioz, sistema-hutsegite bategatik edo hondamendi natural bategatik datuak galtzeak ondorio kritikoak izan ditzake (lan-geldialdiak, galerak ekonomikoak edo enpresaren izen onaren kaltea). Segurtasun-kopiak egitearen helburu nagusia negozioaren jarraitutasuna bermatzea da, edozein intzidentzia gertatuta ere datuak berreskuratu ahal izateko.
+
+### 10.1. RAID teknologia eta Segurtasun Kopiak
+
+Nahiz eta RAID konfigurazio bat izateak gure zerbitzarian datuak ez galtzeko hardware-mailako segurtasuna eta erredundantzia eman, **RAID bat ez da segurtasun-kopia bat**.
+
+RAID-ak fitxategi-sistema edo disko fisiko baten akatsen aurrean babesten gaitu (adibidez, disko bat hondatzen bada, martxan jarraitzea ahalbidetzen du), baina ez gaitu babesten ustekabeko ezabaketen, fitxategi korruptuen, malware/ransomware bidezko enkriptazioen edo hondamendi fisikoen aurrean. RAID batean fitxategi bat ezabatzen bada, berehala ezabatzen da disko guztietan. Horregatik, RAID-a izanda ere, segurtasun-kopiak egitea guztiz beharrezkoa da.
+
+### 10.2. RPO (Recovery Point Objective) zer da?
+
+**RPO (Recovery Point Objective)** edo Berreskuratze puntua dugu. Honekin enpresak bere jardueran onartu dezakeen gehienezko datu-galera denbora neurtzen dugu. Adibidez, azken kopia egin zenetik sistema erori den unera arte igarotako denbora adierazten du.
+
+* **Gure enpresaren kasuan:** Gure enpresak **RPO = 24 ordu** ezarri du, hau da, **egunero** egingo ditugu segurtasun-kopiak. Modu honetan, intzidentzia bat gertatuz gero, gehienez ere egun bakarreko lana galduko litzateke.
+
+### 10.3. Segurtasun-kopia motak eta ezberdintasunak
+
+Segurtasun-kopiak egiteko hiru estrategia nagusi daude:
+
+* **Osoa (Full):** Aukeratutako fitxategi eta sistema guztien kopia oso bat egiten da, lehenago kopiatuta dauden kontuan hartu gabe.
+* **Kopia egiteko denbora:** Oso altua (fitxategi guztiak kopiatzen direlako).
+* **Berreskuratzeko denbora:** Oso azkarra (kopia bakarra atzitu eta berreskuratu behar delako).
+
+* **Inkrementala (Incremental):** Azken segurtasun-kopiatik (osoa edo inkrementala) aldatu edo sortu diren datuak bakarrik kopiatzen dira.
+* **Kopia egiteko denbora:** Oso azkarra eta leku gutxi hartzen du.
+* **Berreskuratzeko denbora:** Motela. Berreskuratzeko azken kopia osoa LEHENIK eta ondoren egindako kopia inkremental GUZTIAK segida ordenatuan kargatu behar dira.
+
+* **Diferentziala (Differential):** Azken kopia OSOAZ geroztik aldatu diren fitxategi guztiak kopiatzen dira.
+* **Kopia egiteko denbora:** Tartekoa (egunak aurrera egin ahala kopiaren tamaina handituz doa).
+* **Berreskuratzeko denbora:** Tartekoa/Azkarra (azken kopia osoa + azken kopia diferentziala bakarrik behar dira).
+
+**Gure enpresaren estrategia**: Gure enpresak hasieran kopia oso bat (Full) egingo du, eta hortik aurrera egunero kopia inkrementala egingo du. Horrela, biltegiratze-lekua eta kopia egiteko denbora optimizatzen ditugu eguneroko datuak gal ez daitezen.
+
+### 10.4 Zergatik aukeratu dugu Inkrementala eta ez Diferentziala?
+
+* Zerbitzarian segurtasun-kopietarako bideratutako bolumena 100 GB-koa da. Kopia diferentzial bat egitean, azken kopia osoaz geroztik aldatutako DENA berriro kopiatzen dira egunero; beraz, ostiraleko kopia diferentziala astelehenekoa baino askoz handiagoa izaten da. Kopia Inkrementalarekin, aldiz, egun horretan bertan aldatutakoa soilik kopiatzen denez, diskoko espazioa gutxien kargatzen duen metodoa da.
+
+* Eguneroko kopiak egiteko denbora ahalik eta laburrena izatea lortzen dugu. Lan-jarduna ez da moteltzen eta kopiak azkar eta arin burutzen dira.
+
+* RPO (24 ordu) betetzea: Gure helburua eguneroko datuak ez galtzea denez eta kopia inkrementalak azkarrak direnez, gauero atzera pausorik gabe kopiak osotasunean egingo direla ziurtatzen digu.
+
+*(Aipatu beharra dago: berreskuratze-denbora zertxobait luzeagoa izan daitekeen arren (kopia osoa + inkremental guztiak kargatu behar direlako), gure enpresaren lehentasuna eguneroko biltegiratze-lekua ez saturatzea eta kopia azkarrak egitea dela eta horregatik hautatu dugula metodo hau).*
+
+### 10.4. 3-2-1 Araua
+
+Datuen segurtasun osoa bermatze aldera, industrian estandarra den **3-2-1 segurtasun-araua** aplikatuko dugu:
+
+* **3 kopia gutxienez:** Datuen 3 kopia izatea (1 jatorrizkoa/produkziokoa + 2 babes-kopia).
+* **2 euskarri ezberdinetan:** Kopiak gutxienez bi gailu edo euskarri mota ezberdinetan gorde behar dira (adibidez, zerbitzariaren barne-bolumenean eta kanpoko disko gogorretan).
+* **1 kopia enpresatik kanpo (Offsite):** Kopia gutxienez leku fisiko ezberdin baten gorde behar da.
+
+**Nola aplikatuko dugu gure kasuan?**
+
+* Kopia bat **zerbitzarian bertan** gordeko da (laster berreskuratzeko).
+* Beste bi kopiak **kanpoko bi disko gogor ateragarri desberdinetan (HDD extraible)** gordeko dira.
+* Kanpoko disko gogor hauetako bat enpresan bertan gordeko da, zerbitzaria bera hondatuko balitz adibidez, arazori ez izateko babes kopia hartzerako garaian. Bestea berriz, **enpresatik kanpora eramango da (zuzendarietako baten etxean gordeko da)**. Hau egiteko arrazoia honako hau dugu: Enpresan intzidentzia larri bat gertatzen bada (adibidez, sute bat, uholde bat edo lapurreta bat), enpresako gailu fisiko guztiak suntsituta ere, kanpoan dagoen kopiaren bidez datu guztiak berreskuratu ahal izango dira.
+
+### 10.5. Gure enpresaren ezarpena (Konfigurazio zehatza)
+
+Gure sisteman segurtasun-kopien plana honela geratuko da ezarrita:
+
+* **Zerbitzariko bolumena:** 100 GB-ko bolumen finko bat erabiliko da zerbitzarian segurtasun-kopiak gordetzeko.
+* **Sarbide-muga eta baimenak:** Bolumen honetarako sarbidea **zerbitzariko administratzaileak bakarrik** izango du, sistemako baimenen bidez (Permissions/ACL) murriztuta, baimenik gabeko erabiltzaileek edo malwareak kopiak ez manipulatzeko.
+* **Kopiatuko diren elementuak:**
+* `C:` Diskoa (Zerbitzariaren sistema eragilea eta konfigurazioak).
+* `E:` Diskoa (Enpresako fitxategi guztiak eta web orria gordetzen diren bolumena).
+
+
+* **Maiztasuna:** Kopiak **egunero** egingo dira automatikoki. Goizeko 03:00 tan egingo dira kopiak, enpresako langileak lanean ari diren bitartean egitea baino egokiagoa da ordu hauetan egitea, zerbitzariaren errendimenduan eragina izan dezakeelako segurtasun kopia egiteak (kopia egiten ari den bitartean makalago ibili ahal da zerbitzaria).
+* **Mantentze-lana:** Informatikariak **egunero errebisatu eta egiaztatuko du** kopiak zuzen eta egitura egokiarekin egin direla.
+
+### 10.6. Nola automatizatu zegurtasun kopiak
+
+Windows Server-en segurtasun-kopiak automatizatzeko, sistemak berak dakarren jatorrizko tresna erabiliko dugu: Windows Server Backup.
+
+Segurtasun kopiak nola automatizatu?
+
+* Instalazioa: 6. Puntuan aipatu dugun bezala, Server Manager (Zerbitzuen Kudeatzailea) atalean sartu eta Add roles and features aukeratik Windows Server Backup instalatu.
+
+* Konfigurazioa: Ireki Windows Server Backup kontsola eta hautatu Backup Schedule (Kopien Programazioa) abiarazteko.
+
+* Pertsonalizazioa: Aukeratu Custom (Pertsonalizatua) modua, eta bertan markatu guk zehaztutako diskoak kopiatzeko: C: diskoa (sistema) eta E: diskoa (fitxategiak eta web orria).
+
+* Maiztasuna eta Euskarria: Zehaztu kopiak egunero ordu jakin batean egiteko (adibidez, gauean bulegoa itxitakoan) eta esleitu helmuga gisa gure 100 GB-ko bolumen finkoa eta kanpoko disko gogorrak (HDD extraible).
+
+* Exekuzioa: Behin konfiguratuta, sistema eragileak berak automatikoki egingo ditu kopiak egunero, eta informatikariak soilik eguneroko log-ak edo emaitzak egiaztatu beharko ditu.
 
 
 

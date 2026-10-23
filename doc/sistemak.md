@@ -194,6 +194,20 @@ Rolak eta ezaugarriak gehitzeko onako urrats hauek jarraitu ditugu:
 
 Beharrezko diren rolak eta ezaugarriak instalatu ostean, gure enpresako fitxategien baimenak eta kuotak zehazteko ordua iritsi da. Enpresa batean, hauek ondo zehaztea ezinbestekoa dugu, lana egoki egin ahal izateko eta inolako segurtasun arazorik ez izateko. Horretarako, lan taldeak eta erabiltzaileak zeintzuk izango diren finkatu ditugu, fitxategi sistema bat sortu eta hauetan talde bakoitzak zein eskubide izango dituen zehaztu dugu eta azkenik, sortu den karpeta bakoitzak okupatu ahal izango duen memoria kopuru maximoa zein izango den zehaztu dugu.
 
+### 7.1 Enpresaren aurkezpena eta karpeten egitura
+
+Gure enpresa ikus-entzunezkoen streaming edukiak eta multimedia zerbitzu digitalak linean eskaintzean datza. Gure bezeroek mota askotako edukiak (filmak, serieak eta dokumentalak) modu arin, seguru eta etengabean kontsumitu ditzaten bermatzen dugu. Negozio-eredu honek zerbitzarien erabilera intentsiboa eta departamentu ezberdinen arteko lankidetza estua eskatzen du. Horregatik, langileen profil eta eginkizun zehatzen arabera, karpeten eta baimenen egitura hau definitu dugu gure sisteman:
+
+Zuzendaritza (eta barruko zuzendarien karpetak): Plataformaren estrategia orokorra, nazioarteko lizentzia-kontratuak eta enpresaren norabidea kudeatzeko gunea. Barruan zuzendari bakoitzak (edukiak, finantzak, teknologia eta marketina) bere direktorio pribatua du. Bertan sartzeko baimena zuzendariei eta profil bakoitzeko arduradunari soilik dagokie, informazio estrategikoa babesteko.
+
+Kontabilitatea: Enpresaren diru-sarrerak, harpidedunen kuoten ordainketak, hornitzaileen fakturak eta aurrekontuak kudeatzeko karpeta. Ekonomia eta finantza departamentuko langileek baino ez dute bertan idazteko eta irakurtzeko baimena.
+
+Giza Baliabideak: Langileen kontratuak, nomina-aurreikuspenak, barne-prestakuntzak eta hautaketa-prozesuak kudeatzen diren lekua. Datu pertsonal eta sentikorrak direnez, HR saileko arduradunek soilik daukate sarbidea.
+
+Orokorra: Enpresa osoko langile guztiek partekatzeko eta kontsultatzeko karpeta komuna. Bertan dokumentu orokorrak, enpresaren oharrak, egutegiak eta baliabide orokorrak gordetzen dira, eta langile guztiek dute irakurtzeko (eta dagokionean idazteko) baimena.
+
+Egitura honi esker, zerbitzarian bakoitzak bere lanerako behar dituen fitxategietara soilik dauka sarbidea, datuen konfidentzialtasuna eta segurtasuna bermatuz.
+
 ### 7.1 Erabiltzaileak eta taldeak
 
 Hasteko, zein talde eta zein erabiltzaile izango diren beharrezkoak izendatu ditugu. Gure kasuan, lau erabiltzaile izango dira (Taldeko lau kideok hain zuzen). Erabiltzaileen izenaren formatua **abizena.izena** izango da (Adibidez, Ortuzar.Oier).

@@ -2,10 +2,56 @@
 layout: page
 title: Sareak
 ---
-# Image Example Page
+# PASAHITZA ASCII-RA 
+Lehenik eta behin, zerbitzarian erabiltzeko pasahitz bat erabaki dugu: 3T_123. Pasahitz hau ASCII bidez karaktere bakoitzari dagokion zenbakia adierazten da. Horrela pasahitzaren karaktere bakoitza zenbaki batez irudika daiteke.         
+
+ASCII :
+
+3 = 51
+
+T = 84
+
+_ = 95
+
+1 = 49
+
+2 = 50
+
+3 = 51
+
+Ondoren, zenbaki bakoitza bitarrera pasatu dugu, CRC-a egiteko. Horretarako zenbaki bakoitza zati 2 egin dugu, hondarra lortu arte. Gero, hondarrak behetik gora irakurri ditugu, eta 8 bit-eko zenbaki bat lortu dugu. 
+
+## ASCII ARIKETA 
+![Mi foto](img/Sareak/ASCII.png)
+
+# CRC
+CRC-a egiteko ASCII bidez lortutako 6 karaktereak bitar sistemara pasatu ditugu eta 8 biteko zenbaki bakoitza elkartuz 48 biteko bit-kate bat osatu dugu. Ondoren, 6 zero gehitu dizkiogu CRC-6 delako.
+Erabili dugun polinomioa hau da: $$(X^6+X^5+X^3+X^2+X+1)$$
+
+Polinomio hori bitar sistemara pasatuta, 110111 lortzen da. Ondoren, gure kasuan lehenengo bi bitak 0 direnez hurrengo posiziora pasatuko gara bit-kate horren hurrengo 7 bitak hartuz eta XOR eragiketa egingo dugu. Horretarako kontuan izan behar da : 
+
+0+0 = 0
+
+1+0 = 1
+
+0+1 = 1
+
+1+1 = 0
+
+Emaitza lortu ondoren hurrengo bitak jaitsi ditugu eta prozesu bera errepikatu dugu bit guztiak erabili arte. Azkenik lortutako hondarra 6 bitekoa (101001) izan da, eta hori da pasahitzaren CRC-a da.
+
+Pasahitza ondo dagoen egiaztatzeko konprobaketa egin dugu. Hasierako bit-kateari 6 zero gehitu beharrean, lortutako emaitza sartu dugu. Ondoren, berriro zatiketa bitarra egin dugu polinomio berarekin. Hondarra (000000) denez, egiaztapena zuzena da eta ez da errorik detektatzen. 
+
+## CRC ARIKETA
+
+![Mi foto](img/Sareak/IMG_9329.jpg)
+
+
+![Mi foto](img/Sareak/CRC.png)
+
 
 # PSK(2),ASK(2),FSK(2)
-PSK(2),ASK(2) eta FSK(2) egin baino lehen guk aukeratutako pasahitza bitarrera aldatu dugu, behin bitarrean izan dugunean zatiketa egin dugu CRC6 formularekin $$(X^6+X^5+X^3+X^2+X+1)$$.
+PSK(2),ASK(2) eta FSK(2) egin baino lehen guk aukeratutako pasahitza bitarrera aldatu dugu, behin bitarrean izan dugunean zatiketa egin dugu CRC6 formularekin $$(X^6+X^5+X^3+X^2+X+1)$$
 
 Zatiketaren hondarra lortu eta gero (PSK2,ASK2,FSK2) grafikoak egin ditugu.
 Grafikoak egiteko lortu ditugun 54 bit-ak sei-naka banatu ditugu.

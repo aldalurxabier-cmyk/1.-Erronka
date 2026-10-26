@@ -4,7 +4,7 @@ title: Sistemak
 ---
 ## Sarrera
 
-Ikasgai honetan, sistema gure sistema eragilearen funtzioak eta bere osagaiak zeintzuk diren zehaztu, Windows familiako sistema instalatu eta konfiguratu, disko gogorren bolumenak kudeatu eta RAID egiturak sortu eta disko gogorretako informazioen galeren aurrean ahalik eta informazio gutxien galtzeko prestatu dugu gure sistema. Hauetaz aparte, zerbitzarian lan egingo duten erabiltzaileak eta taldeaK zein diren zehaztu, hauen baimenak prestatu, pasahitzen segurtasun politikak zeintzuk izango diren zehaztu, web zerbitzaia martxan jarri eta segurtasun kopiak egitea ere ahalbidetu ditugu. Jarraian, hauek lortzeko emandako pausoak azalduko ditugu.
+Ikasgai honetan, sistema gure sistema eragilearen funtzioak eta bere osagaiak zeintzuk diren zehaztu, Windows familiako sistema instalatu eta konfiguratu, disko gogorren bolumenak kudeatu eta RAID egiturak sortu eta disko gogorretako informazioen galeren aurrean ahalik eta informazio gutxien galtzeko prestatu dugu gure sistema. Hauetaz aparte, zerbitzarian lan egingo duten erabiltzaileak eta taldeak zein diren zehaztu, hauen baimenak prestatu, pasahitzen segurtasun politikak zeintzuk izango diren zehaztu, web zerbitzaria martxan jarri eta segurtasun kopiak egitea ere ahalbidetu ditugu. Jarraian, hauek lortzeko emandako pausoak azalduko ditugu.
 
 ## 1. Gida Teknikoa: Windows Server-en Instalazioa eta Oinarrizko Konfigurazioa (VirtualBox)
 
@@ -31,7 +31,7 @@ Instalazioari ekin aurretik, honako baliabide hauek behar ditugu:
     3. **Izena**: 1. Erronka
     4. **Mota (Type)**: Microsoft Windows
     5. **Bertsioa (Version)**: Windows Server 2022 x64 es-ES
-    6. **Proceed with Unattended instalation, MARKATU GABE** utziko dugu, virtualbox-ek administratzailearen izenak eta pasahitzak automatikoki sortu partez, geuk manualki aldatu ahal izateko instalazio garaian.
+    6. **Proceed with Unattended installation, MARKATU GABE** utziko dugu, virtualbox-ek administratzailearen izenak eta pasahitzak automatikoki sortu partez, geuk manualki aldatu ahal izateko instalazio garaian.
 
 * Hardware Baliabideak Esleitu:
 
@@ -71,7 +71,7 @@ Instalazioari ekin aurretik, honako baliabide hauek behar ditugu:
 Windows Server-en instalazioan, aukeratu gabeko espazioan (Unallocated Space) zuzenean **"Next"** sakatzean, sistemak automatikoki sortzen ditu sistema abiarazteko eta kudeatzeko beharrezkoak diren partizio bereziak. honako hauek dira:
 
 * **System Partition** (Sistemaren partizioa) Formatua: NTFS: Windows-ek bere zereginetarako erreserbatzen duen partizio bat da.
-* **Recovery Partition** (Berreskuratze Partizioa) Formatua: NTFS: Windows-en Berreskuratze Ingurunea (WinRE - Windows Recovery Environment) gordetzen du. Sistemak huts egiten duenean (crash) denean edo abiarazi ezin denean, konpontzeko tresnak bertatik exekutatzen dira.
+* **Recovery Partition** (Berreskuratze Partizioa) Formatua: NTFS: Windows-en Berreskuratze Ingurunea (WinRE - Windows Recovery Environment) gordetzen du. Sistemak huts egiten duenean (crash) edo abiarazi ezin denean, konpontzeko tresnak bertatik exekutatzen dira.
 * **Primary Partition** (Partizio Nagusia - C: Unitatea) Formatua: NTFS: Windows Server sistema eragile osoa, programak, zerbitzuak (IIS, etab.) eta erabiltzaileen datuak biltegiratzen dituen partizio nagusia da.
 
 ### 1.5. Hasierako Konfigurazioa
@@ -107,7 +107,7 @@ Azken pauso honekin, gure Windows server-a prest utzi dugu berarekin lanean hasi
 
 Gure zerbitzariarekin lan egin ahal izateko eta sistemaren kanpo aldetik konektatzeko, IP estatiko bat eman diogu. Izatez, DHCP-ak berak automatikoki esleitu ahal dio, baina gerta daiteke, zerbitzaria abiarazi bakoitzean IP ezberdina aurkitzea eta honek zerbitzaria gure sarean aurkitzerakoan arazoak ematea. Horrenbestez, IP finko bat ezarri diogu. 
 
-Gure kasuan, beste ikaskideek ere beraien IP-ak beharko dituztelako, ezin izan dugu edozein jarri, zeren beste norbaitek gure IP berdina erabiliko badu, makinekin konektatzeko garaian, arazoak izango ditugu. Horrenbestez, gelako kideen artean IP-ak banatu ditugu, gelako zerrendako ordenaren arabera. Guk erabiliko dugun IP-a 192.168.70.1 izango da (Maskara 255.255.255.0). 70 zenbakia, SISA1 gelari dagokion sarea da eta 1 zenbakia, Xabier gelako zerrendako lehena dugunez, berak libre duen IP-etako bat a hori da.
+Gure kasuan, beste ikaskideek ere beraien IP-ak beharko dituztelako, ezin izan dugu edozein jarri, zeren beste norbaitek gure IP berdina erabiliko badu, makinekin konektatzeko garaian, arazoak izango ditugu. Horrenbestez, gelako kideen artean IP-ak banatu ditugu, gelako zerrendako ordenaren arabera. Guk erabiliko dugun IP-a 192.168.70.1 izango da (Maskara 255.255.255.0). 70 zenbakia, SISA1 gelari dagokion sarea da eta 1 zenbakia, Xabier gelako zerrendako lehena dugunez, berak libre duen IP-etako bat hori da.
 
 IP-en banaketa gelako zerrendako zenbakien arabera egin dugu. Pertsona bakoitzak, bere zerrendako zenbakia izango du bere IP bezala eta, gehiago behar baditu +50 egin beharko da.
 
@@ -154,7 +154,7 @@ Enpresa batek, egunerokotasunean hainbat fitxategi eta datu garrantzitsu sortzen
 
 Memoria berri bat erosi eta sartu aurretik, kontuan hartu beharreko hainbat gauza ditugu. Lehenbizi, zenbat memoria behar dugun kalkulatu behar dugu eta honetaz aparte, aurrerago izango den datuen hazkundea ere zenbatekoa izango den jakitea oso garrantzitsua da, oso denbora gutxian, memoria beteta gelditu eta berriro diskoak aldatzen ibili beharrik ez izateko. Diskoen abiadura ere zenbatekoa den kontuan hartu beharrekoa izan ohi da.
 
-Gure kasuan, 3 disko gogor gehitu ditugu, bakoitza 50GB koa. (Urrengo ataleak azalduko dugu 3 disko gogor hautatzearen erabakia zergatik hartu dugun.).
+Gure kasuan, 3 disko gogor gehitu ditugu, bakoitza 50GB koa. (Urrengo ataleak azalduko dugu 3 disko gogor hautatzearen erabakia zergatik hartu dugun).
 
 Disko hauek, gure makina birtualean dugun zerbitzariari gehitzeko pauso hauek jarraitu ditugu.
 
@@ -173,7 +173,7 @@ Disko bakoitza, bolumen bat edo gehiagotan zatitu ahal da. Gaitasun honi esker, 
 * Bolumenari eman nahi zaion memoria kantitatea haukeratu.
 * Formatua (FAT32, NTFS...) eta eman nahi zaion letra (C: / D:/ E:/) aukeratu.
 
-Diskoan soberan geratu den memoriarekin behar adina bolumen egin ditzakegu, diskoko memoria osoa bete harte. Gure kasuan, 50GB-ko bolumen bakarra utzi dugu, emango diogun erabilerarrako ez dugulako bolumen ezberdinak egiteko beharrik ikusten.
+Diskoan soberan geratu den memoriarekin behar adina bolumen egin ditzakegu, diskoko memoria osoa bete arte. Gure kasuan, 50GB-ko bolumen bakarra utzi dugu, emango diogun erabilerarako ez dugulako bolumen ezberdinak egiteko beharrik ikusten.
 
 ## 5. RAID
 
@@ -194,7 +194,21 @@ Rolak eta ezaugarriak gehitzeko onako urrats hauek jarraitu ditugu:
 
 Beharrezko diren rolak eta ezaugarriak instalatu ostean, gure enpresako fitxategien baimenak eta kuotak zehazteko ordua iritsi da. Enpresa batean, hauek ondo zehaztea ezinbestekoa dugu, lana egoki egin ahal izateko eta inolako segurtasun arazorik ez izateko. Horretarako, lan taldeak eta erabiltzaileak zeintzuk izango diren finkatu ditugu, fitxategi sistema bat sortu eta hauetan talde bakoitzak zein eskubide izango dituen zehaztu dugu eta azkenik, sortu den karpeta bakoitzak okupatu ahal izango duen memoria kopuru maximoa zein izango den zehaztu dugu.
 
-### 7.1 Erabiltzaileak eta taldeak
+### 7.1 Enpresaren aurkezpena eta karpeten egitura
+
+Gure enpresa ikus-entzunezkoen streaming edukiak eta multimedia zerbitzu digitalak online eskaintzean datza. Gure bezeroek mota askotako edukiak (filmak, serieak eta dokumentalak) modu arin, seguru eta etengabean kontsumitzea bermatzen dugu. Negozio-eredu honek zerbitzarien erabilera intentsiboa eta departamentu ezberdinen arteko lankidetza estua eskatzen du. Horregatik, langileen profil eta eginkizun zehatzen arabera, karpeten eta baimenen egitura hau definitu dugu gure sisteman:
+
+* Zuzendaritza (eta barruko zuzendarien karpetak): Plataformaren estrategia orokorra, nazioarteko lizentzia-kontratuak eta enpresaren norabidea kudeatzeko gunea. Barruan zuzendari bakoitzak (edukiak, finantzak, teknologia eta marketina) bere direktorio pribatua du.
+
+* Kontabilitatea: Enpresaren diru-sarrerak, harpidedunen kuoten ordainketak, hornitzaileen fakturak eta aurrekontuak kudeatzeko karpeta. Ekonomia eta finantza departamentuko langileek baino ez dute bertan idazteko eta irakurtzeko baimena.
+
+* Giza Baliabideak: Langileen kontratuak, nomina-aurreikuspenak, barne-prestakuntzak eta hautaketa-prozesuak kudeatzen diren lekua. Datu pertsonal eta sentikorrak direnez, GB saileko arduradunek soilik daukate sarbidea.
+
+* Orokorra: Enpresa osoko langile guztiek kontsultatzeko karpeta komuna. Bertan dokumentu orokorrak, enpresaren oharrak, egutegiak eta baliabide orokorrak gordetzen dira, eta langile guztiek dute irakurtzeko baimena.
+
+Egitura honi esker, zerbitzarian bakoitzak bere lanerako behar dituen fitxategietara soilik dauka sarbidea, datuen konfidentzialtasuna eta segurtasuna bermatuz.
+
+### 7.2 Erabiltzaileak eta taldeak
 
 Hasteko, zein talde eta zein erabiltzaile izango diren beharrezkoak izendatu ditugu. Gure kasuan, lau erabiltzaile izango dira (Taldeko lau kideok hain zuzen). Erabiltzaileen izenaren formatua **abizena.izena** izango da (Adibidez, Ortuzar.Oier).
 
@@ -212,7 +226,7 @@ Hauek dira talde bakoitzean sartu diren erabiltzaileak:
 * Giza Baliabideak: Aldalur.Xabier
 * Zuzendaritza: Ortuzar.Oier eta Ortega.Iker
 
-### 7.2 Baimenak
+### 7.3 Baimenak
 
 Baimenak ematen hasi aurretik, lana egiteko beharrezko izango ditugun karpetak sortu ditugu. Honen ondoren, karpeta bakoitzari beharrezko baimenak ezarri dizkiogu.
 
@@ -233,7 +247,7 @@ Honako hau da gure enpresan ezarri dugun karpeten estruktura eta baimenen azalpe
 
 Zuzendaritza karpetaren kasuan badugu berezitasun bat. Bi zuzendari ditugunez, zuzendari bakoitzari karpeta bana esleitu diogu zuzendaritza karpetaren barruan. Ez dugu nahi ordea, zuzendari den batek, berea ez den karpetara sartzeko baimenik izatea. Horregatik, Ikerren karpetara Oierrek sarbide baimen guztiak ukatuta izango ditu (deny) eta Oierren karpetara ere Ikerrek baimenak ukatuta izango ditu (deny).
 
-### 7.3 Kuotak
+### 7.4 Kuotak
 
 Baimenak ezarri ondoren erabili daitezkeen memoria mugak ezarriko dizkiegu erabiltzaileei. Muga hauek **Kuotak** deitzen dira. Bi kuota mota daude:
 
@@ -244,7 +258,7 @@ Baimenak ezarri ondoren erabili daitezkeen memoria mugak ezarriko dizkiegu erabi
     3. Aktibatu.
     4. Nahi duzun memoria limitea eta abisua zein memoria kopurutan eman zehaztu.
 
-Gure kasuan bolumen bakarra dugu. Bolumen honek, 85GB okupatzen duenean abixua emateko jarri dugu. Limitea memoria 100GB tan jarri dugu.
+Gure kasuan bolumen bakarra dugu. Bolumen honek, 85GB okupatzen duenean abisua emateko jarri dugu. Limitea memoria 100GB tan jarri dugu.
 
 * FSRM: Karpetei aplikatzen zaizkie. Memoria kopuru batetik gora betetzean abisu bat baino gehiago ezartzeko aukera (%85, %90, 100%...) ematen du eta karpeta aurrez ezarritako memoria kopurutik gora betetzen ez du utziko kuota mota honek. Hauek ezartzeko urratsak honako hauek dira:
 
@@ -253,7 +267,7 @@ Gure kasuan bolumen bakarra dugu. Bolumen honek, 85GB okupatzen duenean abixua e
     3. Behar bada, kuoten plantilla bat sortu (gomendagarria limite berdina karpeta askotan jarri nahi bada).
     4. Kuota sortu (Aukeratu zein ruta-tan aurkitzen den limitea jarri nahi zaion karpeta eta esleitu behar ben konfigurazioa).
 
-Gure kasuan, Giza baliabideen, Kontabilitatearen eta Orokorraren kuotak 5GB koak dira. Zuendaritza karpetari 15Gb ezarri dizkiogu (Fitxategi gehiago erabiliko direlako bertan). Zuzendaritza karpetaren barruan aurkitzen diren zuzendarien karpeta bakoitzari 5GB ko limitea ezarri diogu.
+Gure kasuan, Giza baliabideen, Kontabilitatearen eta Orokorraren kuotak 5GB koak dira. Zuzendaritza karpetari 15Gb ezarri dizkiogu (Fitxategi gehiago erabiliko direlako bertan). Zuzendaritza karpetaren barruan aurkitzen diren zuzendarien karpeta bakoitzari 5GB ko limitea ezarri diogu.
 
 ## 8. Web Zerbitzaria (IIS)
 
@@ -261,9 +275,9 @@ Erronka honetako helburuetako bat, Web zerbitzari erabilgarri bat martxan jartze
 
 ### 8.1 Karpetaren baimenak
 
-Lehenbizi, gure web orriko html eta css fitxategi guztiak prestatu eta disko gogorrera kopiatu ditugu, Web orria gordetzeko sortu dugun **1.Erronka Web** karpetara hain zuzen. Jarraian, karpeta honen baimenak aldatu behar izan ditugu. Baimen hauek aldatuko ez bagenitu, edozein erabiltzailek, karpetara sarbidea izango luke edo nahi gabe zerbaitz ezabatu eta gure web orria ez erabiltzeko moduan utzi dezake. Hau ekiditeko, aurreko atalean sortutako taldeei, karpeta honetara dituzten baimen guztiei **deny** jarri diegu. Horrela, ezingo du inork karpeta honetara sartu (administratzaileak sartu ahalko du, honi ez dizkiogu eta baimenak kendu).
+Lehenbizi, gure web orriko html eta css fitxategi guztiak prestatu eta disko gogorrera kopiatu ditugu, Web orria gordetzeko sortu dugun **1.Erronka Web** karpetara hain zuzen. Jarraian, karpeta honen baimenak aldatu behar izan ditugu. Baimen hauek aldatuko ez bagenitu, edozein erabiltzailek, karpetara sarbidea izango luke edo nahi gabe zerbait ezabatu eta gure web orria ez erabiltzeko moduan utzi dezake. Hau ekiditeko, aurreko atalean sortutako taldeei, karpeta honetara dituzten baimen guztiei **deny** jarri diegu. Horrela, ezingo du inork karpeta honetara sartu (administratzaileak sartu ahalko du, honi ez dizkiogu eta baimenak kendu).
 
-Baimenekin amaitzeko sarean dauden kanpoko erabiltzaileei web orria ikusteko aukera emateko, IUSR erabiltzaileei karpeta ikusteko eta irakurtzeko baimena eman behar izan digo. Bestela, administratzaileak bakarrik ikusi ahal zezakeen eta web orria.
+Baimenekin amaitzeko sarean dauden kanpoko erabiltzaileei web orria ikusteko aukera emateko, IUSR erabiltzaileei karpeta ikusteko eta irakurtzeko baimena eman behar izan diogu. Bestela, administratzaileak bakarrik ikusi ahal zezakeen eta web orria.
 
 ### 8.2 Web zerbitzaria martxan jarri
 
@@ -279,9 +293,90 @@ Web zerbitzaria martxan jartzeko pauso hauek jarraitu ditugu.
 
 Gure taldeak, guzti hau konfiguratu ondoren, arazoak izan ditu web orri hau gailu inalambriko batetik wifi bidez ikusteko. Web orria alojatu dugun gailuan ondo ikusten zen gure web-a baina beste gailuetatik ezin genuen ikusi nahiz eta sare berdinean egon. Azkenean, firewall-ak kanpoko beste gailuei sarbidea mozten ziela konturatu gara. Firewall-ean 8080 portuari salbuespen bat jarri diogunean konpondu da gure arazoa.
 
-## 9. Segurtasun Kopiak
+## 9 Segurtasun Kopiak
+
+Segurtasun-kopiak (backup-ak) egitea ezinbesteko neurria da edozein enpresatan. Gaur egun, informazioa da erakunde baten aktibo garrantzitsuenetako bat. Zibereraso baten aurrean (adibidez, ransomware-a), giza akats baten ondorioz, sistema-hutsegite bategatik edo hondamendi natural bategatik datuak galtzeak ondorio kritikoak izan ditzake (lan-geldialdiak, galerak ekonomikoak edo enpresaren izen onaren kaltea). Segurtasun-kopiak egitearen helburu nagusia negozioaren jarraitutasuna bermatzea da, edozein intzidentzia gertatuta ere datuak berreskuratu ahal izateko.
+
+### 9.1 RAID teknologia eta Segurtasun Kopiak
+
+Nahiz eta RAID konfigurazio bat izateak gure zerbitzarian datuak ez galtzeko hardware-mailako segurtasuna eta erredundantzia eman, **RAID bat ez da segurtasun-kopia bat**.
+
+RAID-ak fitxategi-sistema edo disko fisiko baten akatsen aurrean babesten gaitu (adibidez, disko bat hondatzen bada, martxan jarraitzea ahalbidetzen du), baina ez gaitu babesten ustekabeko ezabaketen, fitxategi korruptuen, malware/ransomware bidezko enkriptazioen edo hondamendi fisikoen aurrean. RAID batean fitxategi bat ezabatzen bada, berehala ezabatzen da disko guztietan. Horregatik, RAID-a izanda ere, segurtasun-kopiak egitea guztiz beharrezkoa da.
+
+### 9.2 RPO (Recovery Point Objective) zer da?
+
+**RPO (Recovery Point Objective)** edo Berreskuratze puntua dugu. Honekin enpresak bere jardueran onartu dezakeen gehienezko datu-galera denbora neurtzen dugu. Adibidez, azken kopia egin zenetik sistema erori den unera arte igarotako denbora adierazten du.
+
+* **Gure enpresaren kasuan:** Gure enpresak **RPO = 24 ordu** ezarri du, hau da, **egunero** egingo ditugu segurtasun-kopiak. Modu honetan, intzidentzia bat gertatuz gero, gehienez ere egun bakarreko lana galduko litzateke.
+
+### 9.3 Segurtasun-kopia motak eta ezberdintasunak
+
+Segurtasun-kopiak egiteko hiru estrategia nagusi daude:
+
+* **Osoa (Full):** Aukeratutako fitxategi eta sistema guztien kopia oso bat egiten da, lehenago kopiatuta dauden kontuan hartu gabe.
+* **Kopia egiteko denbora:** Oso altua (fitxategi guztiak kopiatzen direlako).
+* **Berreskuratzeko denbora:** Oso azkarra (kopia bakarra atzitu eta berreskuratu behar delako).
+
+* **Inkrementala (Incremental):** Azken segurtasun-kopiatik (osoa edo inkrementala) aldatu edo sortu diren datuak bakarrik kopiatzen dira.
+* **Kopia egiteko denbora:** Oso azkarra eta leku gutxi hartzen du.
+* **Berreskuratzeko denbora:** Motela. Berreskuratzeko azken kopia osoa LEHENIK eta ondoren egindako kopia inkremental GUZTIAK segida ordenatuan kargatu behar dira.
+
+* **Diferentziala (Differential):** Azken kopia OSOAZ geroztik aldatu diren fitxategi guztiak kopiatzen dira.
+* **Kopia egiteko denbora:** Tartekoa (egunak aurrera egin ahala kopiaren tamaina handituz doa).
+* **Berreskuratzeko denbora:** Tartekoa/Azkarra (azken kopia osoa + azken kopia diferentziala bakarrik behar dira).
+
+**Gure enpresaren estrategia**: Gure enpresak hasieran kopia oso bat (Full) egingo du, eta hortik aurrera egunero kopia inkrementala egingo du. Horrela, biltegiratze-lekua eta kopia egiteko denbora optimizatzen ditugu eguneroko datuak gal ez daitezen.
+
+### 9.4 Zergatik aukeratu dugu Inkrementala eta ez Diferentziala?
+
+* Zerbitzarian segurtasun-kopietarako bideratutako bolumena 100 GB-koa da. Kopia diferentzial bat egitean, azken kopia osoaz geroztik aldatutako DENA berriro kopiatzen dira egunero; beraz, ostiraleko kopia diferentziala astelehenekoa baino askoz handiagoa izaten da. Kopia Inkrementalarekin, aldiz, egun horretan bertan aldatutakoa soilik kopiatzen denez, diskoko espazioa gutxien kargatzen duen metodoa da.
+
+* Eguneroko kopiak egiteko denbora ahalik eta laburrena izatea lortzen dugu. Lan-jarduna ez da moteltzen eta kopiak azkar eta arin burutzen dira.
+
+* RPO (24 ordu) betetzea: Gure helburua eguneroko datuak ez galtzea denez eta kopia inkrementalak azkarrak direnez, gauero atzera pausorik gabe kopiak osotasunean egingo direla ziurtatzen digu.
+
+*(Aipatu beharra dago: berreskuratze-denbora zertxobait luzeagoa izan daitekeen arren (kopia osoa + inkremental guztiak kargatu behar direlako), gure enpresaren lehentasuna eguneroko biltegiratze-lekua ez saturatzea eta kopia azkarrak egitea dela eta horregatik hautatu dugula metodo hau).*
+
+### 9.5 3-2-1 Araua
+
+Datuen segurtasun osoa bermatze aldera, industrian estandarra den **3-2-1 segurtasun-araua** aplikatuko dugu:
+
+* **3 kopia gutxienez:** Datuen 3 kopia izatea (1 jatorrizkoa/produkziokoa + 2 babes-kopia).
+* **2 euskarri ezberdinetan:** Kopiak gutxienez bi gailu edo euskarri mota ezberdinetan gorde behar dira (adibidez, zerbitzariaren barne-bolumenean eta kanpoko disko gogorretan).
+* **1 kopia enpresatik kanpo (Offsite):** Kopia gutxienez leku fisiko ezberdin baten gorde behar da.
+
+**Nola aplikatuko dugu gure kasuan?**
+
+* Kopia bat **zerbitzarian bertan** gordeko da (laster berreskuratzeko).
+* Beste bi kopiak **kanpoko bi disko gogor ateragarri desberdinetan (HDD extraible)** gordeko dira.
+* Kanpoko disko gogor hauetako bat enpresan bertan gordeko da, zerbitzaria bera hondatuko balitz adibidez, arazori ez izateko babes kopia hartzerako garaian. Bestea berriz, **enpresatik kanpora eramango da (zuzendarietako baten etxean gordeko da)**. Hau egiteko arrazoia honako hau dugu: Enpresan intzidentzia larri bat gertatzen bada (adibidez, sute bat, uholde bat edo lapurreta bat), enpresako gailu fisiko guztiak suntsituta ere, kanpoan dagoen kopiaren bidez datu guztiak berreskuratu ahal izango dira.
+
+### 9.6 Gure enpresaren ezarpena (Konfigurazio zehatza)
+
+Gure sisteman segurtasun-kopien plana honela geratuko da ezarrita:
+
+* **Zerbitzariko bolumena:** 100 GB-ko bolumen finko bat erabiliko da zerbitzarian segurtasun-kopiak gordetzeko.
+* **Sarbide-muga eta baimenak:** Bolumen honetarako sarbidea **zerbitzariko administratzaileak bakarrik** izango du, sistemako baimenen bidez (Permissions/ACL) murriztuta, baimenik gabeko erabiltzaileek edo malwareak kopiak ez manipulatzeko.
+* **Kopiatuko diren elementuak:**
+* `C:` Diskoa (Zerbitzariaren sistema eragilea eta konfigurazioak).
+* `E:` Diskoa (Enpresako fitxategi guztiak eta web orria gordetzen diren bolumena).
 
 
+* **Maiztasuna:** Kopiak **egunero** egingo dira automatikoki. Goizeko 03:00 tan egingo dira kopiak, enpresako langileak lanean ari diren bitartean egitea baino egokiagoa da ordu hauetan egitea, zerbitzariaren errendimenduan eragina izan dezakeelako segurtasun kopia egiteak (kopia egiten ari den bitartean makalago ibili ahal da zerbitzaria).
+* **Mantentze-lana:** Informatikariak **egunero errebisatu eta egiaztatuko du** kopiak zuzen eta egitura egokiarekin egin direla.
 
+### 9.7 Nola automatizatu zegurtasun kopiak
 
+Windows Server-en segurtasun-kopiak automatizatzeko, sistemak berak dakarren jatorrizko tresna erabiliko dugu: Windows Server Backup.
 
+Segurtasun kopiak nola automatizatu?
+
+* Instalazioa: 6. Puntuan aipatu dugun bezala, Server Manager (Zerbitzuen Kudeatzailea) atalean sartu eta Add roles and features aukeratik Windows Server Backup instalatu.
+
+* Konfigurazioa: Ireki Windows Server Backup kontsola eta hautatu Backup Schedule (Kopien Programazioa) abiarazteko.
+
+* Pertsonalizazioa: Aukeratu Custom (Pertsonalizatua) modua, eta bertan markatu guk zehaztutako diskoak kopiatzeko: C: diskoa (sistema) eta E: diskoa (fitxategiak eta web orria).
+
+* Maiztasuna eta Euskarria: Zehaztu kopiak egunero ordu jakin batean egiteko (adibidez, gauean bulegoa itxitakoan) eta esleitu helmuga gisa gure 100 GB-ko bolumen finkoa eta kanpoko disko gogorrak (HDD extraible).
+
+* Exekuzioa: Behin konfiguratuta, sistema eragileak berak automatikoki egingo ditu kopiak egunero, eta informatikariak soilik eguneroko log-ak edo emaitzak egiaztatu beharko ditu.

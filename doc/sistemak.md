@@ -63,16 +63,25 @@ Instalazioari ekin aurretik, honako baliabide hauek behar ditugu:
     1. Aukeratu **Windows Server Standard Edition (Desktop Experience) / Experiencia de escritorio** bertsioa (Interfaze grafikoa eduki ahal izateko).
     2. Onartu lizentzia-baldintzak.
 
+    
+![Mi foto](img/Sistemak/01/01.png)
+    
+
 * Partizioak Kudeatzea:
 
     1. Aukeratu sortutako disko nagusia (Unallocated Space) eta sakatu **Next**.
     2. Instalazio prozesua hasiko da (fitxategiak kopiatu, prestatu eta instalatu). Amaitzean makina birtuala berrabiaraziko da.
+
+    
+![Mi foto](img/Sistemak/01/02.png)
 
 Windows Server-en instalazioan, aukeratu gabeko espazioan (Unallocated Space) zuzenean **"Next"** sakatzean, sistemak automatikoki sortzen ditu sistema abiarazteko eta kudeatzeko beharrezkoak diren partizio bereziak. honako hauek dira:
 
 * **System Partition** (Sistemaren partizioa) Formatua: NTFS: Windows-ek bere zereginetarako erreserbatzen duen partizio bat da.
 * **Recovery Partition** (Berreskuratze Partizioa) Formatua: NTFS: Windows-en Berreskuratze Ingurunea (WinRE - Windows Recovery Environment) gordetzen du. Sistemak huts egiten duenean (crash) edo abiarazi ezin denean, konpontzeko tresnak bertatik exekutatzen dira.
 * **Primary Partition** (Partizio Nagusia - C: Unitatea) Formatua: NTFS: Windows Server sistema eragile osoa, programak, zerbitzuak (IIS, etab.) eta erabiltzaileen datuak biltegiratzen dituen partizio nagusia da.
+
+![Mi foto](img/Sistemak/01/07.png)
 
 ### 1.5. Hasierako Konfigurazioa
 
@@ -89,17 +98,25 @@ Ekipoak defektuz ekartzen duen izena aldatu dugu, zerbitzari-ingurune batean err
 
 **Ekipoaren Izena**: 1ERRONKASERVER
 
+![Mi foto](img/Sistemak/01/04.png)
+
 2. Guest Additions Instalatu:
 
     1. VirtualBox-eko goiko menuan: Devices > Insert Guest Additions CD image....
     2. Windows Server barruan, ireki unitate optikoa eta exekutatu VBoxWindowsAdditions.exe.
     3. Berrabiarazi makina birtuala pantailaren erresoluzioa eta integrazioa optimizatzeko.
 
+![Mi foto](img/Sistemak/01/05.png)
+
+![Mi foto](img/Sistemak/01/06.png)
+
 3. Sistema eguneratu:
 
 Sistemaren lehen instalazioa dugunez, sistema eguneratu gabe dago. Hurrengo pausoa, eguneraketa guztiak aplikatzea izango dugu. Azken finean, sistemaren eguneraketa egiteak azken segurtasun-adabakiak eta kontrolatzaileen eguneratzeak aplikatzen direla bermatzen du, ezagututako ahultasunak babestuz. Horrez gain, ondoren egingo ditugun urrats guztiak (webgunea igotzea, pasahitzak eta segurtasun politikak, etab.) ingurune fidagarri baten gainean eraikiko direla bermatzen du.
 
 Hau egiteko, Sistemaren konfiguraziora sartu eta **Windows Update** hautatuko dugu. Jarraian eskatzen dituen eguneraketak aplikatzeko eskatuko diogu. Hauek amaitutakoan, makina berrabiarazi eta eguneraketa guztiak zuzen aplikatu direla bermatuko dugu.
+
+![Mi foto](img/Sistemak/01/03.png)
 
 Azken pauso honekin, gure Windows server-a prest utzi dugu berarekin lanean hasi ahal izateko. Hau egin ondoren, beste lan batzuekin jarraitu ahal dugu (Beharrezko Rolak eta herramintak instalatu, erabiltzaileak, pasahitzak eta politikak sortu, baimenak kudeatu…)
 
@@ -117,6 +134,7 @@ Gure gailuari IP finkoa ezartzeko urratsak ondorengo hauek dira:
 * Servidor Local aukeratu.
 * Ethernet atalean sartu.
 * IP eta maskara jarri.
+* DNS jarri.
 
 IP manualki jarri dugunez, gure interneteko sarreraren IP-a ere jarri behar dugu. Informatikako SISA1 gelako kasuan, IP hau 192.168.70.254 dugu.
 
@@ -125,6 +143,9 @@ Jarri dugun IP-a hau da:
 * IP zerbitzaria: 192.168.70.1
 * Maskara: 255.255.255.0
 * Aterabidea (Puerta de enlace): 192.168.70.254
+* Servidor DNS preferido: 8.8.8.8 (Google-rena da hau)
+
+![Mi foto](img/Sistemak/02/01.png)
 
 Hauek idatzi ondoren, ez dugu arazorik izango gure zerbitzaria sarean aurkitzeko.
 
@@ -136,6 +157,8 @@ Hauek dira jarraitu ditugun pausoak politika hauek ezartzeko:
 
 * Directiva de seguridad Local sartu.
 * Directiva de cuentas aukeratu.
+
+![Mi foto](img/Sistemak/03/01.png)
 
 Bertan bi aukera ditugu. Alde batetik, pasahitzek izan behar dituzten ezaugarriak zehazten dira (Gutxieneko luzera, erabili beharreko gutxieneko karaktereak...). Bestaldetik berriz, pasahitzen erabilera desegoki baten aurrean gure zerbitzariak nola jokatu esleitzen da (Hainbat aldiz jarraian pasahitza gaizki sartuko balitz, kontua blokeatu adibidez). Hauek dira guk ezarri ditugun politikak:
 
@@ -249,6 +272,12 @@ Rolak eta ezaugarriak gehitzeko onako urrats hauek jarraitu ditugu:
 * Instalatu.
 * Behar duguna zuzen instalatua izan dela konprobatu.
 
+![Mi foto](img/Sistemak/06/01.png)
+
+![Mi foto](img/Sistemak/06/02.png)
+
+![Mi foto](img/Sistemak/06/03.png)
+
 ## 7. Erabiltzaileak eta taldeak (Baimenak + Kuotak)
 
 Beharrezko diren rolak eta ezaugarriak instalatu ostean, gure enpresako fitxategien baimenak eta kuotak zehazteko ordua iritsi da. Enpresa batean, hauek ondo zehaztea ezinbestekoa dugu, lana egoki egin ahal izateko eta inolako segurtasun arazorik ez izateko. Horretarako, lan taldeak eta erabiltzaileak zeintzuk izango diren finkatu ditugu, fitxategi sistema bat sortu eta hauetan talde bakoitzak zein eskubide izango dituen zehaztu dugu eta azkenik, sortu den karpeta bakoitzak okupatu ahal izango duen memoria kopuru maximoa zein izango den zehaztu dugu.
@@ -257,7 +286,7 @@ Beharrezko diren rolak eta ezaugarriak instalatu ostean, gure enpresako fitxateg
 
 Gure enpresa ikus-entzunezkoen streaming edukiak eta multimedia zerbitzu digitalak online eskaintzean datza. Gure bezeroek mota askotako edukiak (filmak, serieak eta dokumentalak) modu arin, seguru eta etengabean kontsumitzea bermatzen dugu. Negozio-eredu honek zerbitzarien erabilera intentsiboa eta departamentu ezberdinen arteko lankidetza estua eskatzen du. Horregatik, langileen profil eta eginkizun zehatzen arabera, karpeten eta baimenen egitura hau definitu dugu gure sisteman:
 
-* Zuzendaritza (eta barruko zuzendarien karpetak): Plataformaren estrategia orokorra, nazioarteko lizentzia-kontratuak eta enpresaren norabidea kudeatzeko gunea. Barruan zuzendari bakoitzak (edukiak, finantzak, teknologia eta marketina) bere direktorio pribatua du.
+* Zuzendaritza (eta barruko zuzendarien karpetak): Plataformaren estrategia orokorra, nazioarteko lizentzia-kontratuak eta enpresaren norabidea kudeatzeko gunea. Barruan zuzendari bakoitzak (edukiak, finantzak, teknologia, bezeroak eta marketina) bere direktorio pribatua du.
 
 * Kontabilitatea: Enpresaren diru-sarrerak, harpidedunen kuoten ordainketak, hornitzaileen fakturak eta aurrekontuak kudeatzeko karpeta. Ekonomia eta finantza departamentuko langileek baino ez dute bertan idazteko eta irakurtzeko baimena.
 

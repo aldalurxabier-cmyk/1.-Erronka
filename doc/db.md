@@ -18,10 +18,10 @@ Telesail bakoitzak denboraldi bat edo gehiago izan ditzake, eta denboraldi bakoi
 Bukatzeko denboraldi bakoitzak kapitulu bat edo gehiago ditu, eta kapitulu bakoitza denboraldi bakar batekoa da. Kapitulu bakoitzari buruz, Id-kapituloa, izena, zenbakia eta bistaratzeak gordetzen dira. Kapituluak dagokion denboraldiarekin lotuta erregistratzen dira, denboraldi bakoitzeko kapituluak identifikatu eta antolatu ahal izateko.
 
 # ER DIAGRAMA 
+
 ![Mi foto](img/DB/ER%20diagrama.png)
 
 # EREDU ERLAZIONALA
-
 
 Erabiltzaileak: ( Id erabiltzailea, izena, posta elektronikoa, jaiotze-data, ┄┄ Id Plan ┄┄ )
 
@@ -29,7 +29,7 @@ Planak: ( Id Plan, izena, prezioa )
 
 Profilak: ( Id profila, ┄┄ Id erabiltzailea ┄┄, Mota, izena, rola )
 
-Ikusi: ( <text underline>Id profila</text>, <text underline>Id edukia</text>, Bistaratzeak )
+Ikusi: ( <text underline>Id profila</text>, <text underline>Id edukia</text>, Bistaratzeak ) text
 
 Edukiak: ( Id edukia, Mota, Adin-sailkapena )
 

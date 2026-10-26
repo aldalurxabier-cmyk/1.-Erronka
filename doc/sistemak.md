@@ -6,7 +6,7 @@ title: Sistemak
 
 Ikasgai honetan, sistema gure sistema eragilearen funtzioak eta bere osagaiak zeintzuk diren zehaztu, Windows familiako sistema instalatu eta konfiguratu, disko gogorren bolumenak kudeatu eta RAID egiturak sortu eta disko gogorretako informazioen galeren aurrean ahalik eta informazio gutxien galtzeko prestatu dugu gure sistema. Hauetaz aparte, zerbitzarian lan egingo duten erabiltzaileak eta taldeak zein diren zehaztu, hauen baimenak prestatu, pasahitzen segurtasun politikak zeintzuk izango diren zehaztu, web zerbitzaria martxan jarri eta segurtasun kopiak egitea ere ahalbidetu ditugu. Jarraian, hauek lortzeko emandako pausoak azalduko ditugu.
 
-## 1. Gida Teknikoa: Windows Server-en Instalazioa eta Oinarrizko Konfigurazioa (VirtualBox)
+## 1. Windows Server-en Instalazioa eta Oinarrizko Konfigurazioa (VirtualBox)
 
 ### 1.1. Sarrera eta Helburua
 
@@ -162,7 +162,7 @@ Disko hauek, gure makina birtualean dugun zerbitzariari gehitzeko pauso hauek ja
 * Jarraian, diskoak hautatzeko menuan, disco berriak sortu ditugu.
 * Amaitzeko disko hauek makina birtualera geitu ditugu.
 
-## 4.2 Bolumenak
+### 4.2 Bolumenak
 
 Diskoak gehitu ondoren, disko hauek erabilgarri izateko, bolumenak sortu behar dira. Disko gogor baten bolumena datuak eta artxiboak gorde ahal izateko zatitzen den biltegiratze-espazioaren atal edo zatia da  Sistema eragileak diskoa modu ordenatuan erabiltzeko eta fitxategi-sistema bat (NTFS, FAT32, etab.) ezartzeko erabiltzen du.
 
@@ -176,6 +176,65 @@ Disko bakoitza, bolumen bat edo gehiagotan zatitu ahal da. Gaitasun honi esker, 
 Diskoan soberan geratu den memoriarekin behar adina bolumen egin ditzakegu, diskoko memoria osoa bete arte. Gure kasuan, 50GB-ko bolumen bakarra utzi dugu, emango diogun erabilerarako ez dugulako bolumen ezberdinak egiteko beharrik ikusten.
 
 ## 5. RAID
+
+Enpresa baten egunerokotasunean, informazio kritikoa etengabe sortzen eta erabiltzen da. Datu horien galera ekiditeko eta zerbitzuaren jarraitutasuna bermatzeko, ezinbestekoa da disko gogorren kudeaketa egokia egitea. Gure proiektuaren dokumentazio teknikoan ikusi den bezala, hainbat disko fisiko batu eta sistema bakar gisa tratatzeko RAID (Redundant Array of Independent Disks) teknologia ezarri dugu, errendimendua eta segurtasuna uztartzeko helburuarekin.
+
+### 5.1 RAID motak eta erronkako hautaketa
+Diskoak kudeatzeko hainbat RAID mota existitzen dira (RAID 0, RAID 1, RAID 5, RAID 10...). Hala ere, erronka honetan bi mota nagusi landu ditugu: RAID 1 eta RAID 5.
+
+#### 5.1.1 RAID 1
+
+RAID 1 sistemari ispilu-diskoa (mirroring) esaten zaio. Informazio bera bi diskoetan edo gehiagotan aldi berean idazten da.
+
+**Abantailak**:
+
+* Segurtasun handia eskaintzen du. Disko batek huts egiten badu, datu guztiak beste diskoan mantentzen dira (beste diskoak ispilua balitz bezala funtzionatzen duelako) eta zerbitzuak martxan jarraitzen du.
+* Irakurketa abiadura ona.
+
+**Desabantailak**:
+
+* Biltegiratze-eraginkortasuna oso txikia da. Naiz eta bi disko izan, ez da RAID0 bezela bi diskoen memorien batuketa egiten. Disko 1 memoria bezala ibiliko da eta bestea ispilu bezala. Gainera, disko bat bestea baino txikiagoa bada, erabilgarri geldituko den memoria totala diskorik txikenak duen memoria izango da.
+
+Windows Server-en RAID 1 egiteko honako pausu hauek jarraitu behar dira: (Gutxieneko disko kopurua: 2 disko)
+
+* Ireki Administrador de discos (Disko Kudeatzailea).
+* Ziurtatu disko berriak "Ez esleitua" (Unallocated) egoeran daudela.
+* Egin klik eskuineko botoiaz diskoetako batean eta hautatu Nuevo volumen reflejado (New Mirrored Volume).
+* Gehitu bigarren diskoa ispilua egiteko.
+* Esleitu letra bat eta eman formatua (adibidez, NTFS).
+
+### 5.1.2 RAID 5
+
+RAID 5 sistemak datuak eta paritate-informazioa (akatsak zuzentzeko datuak) banatzen ditu matrizea osatzen duten disko guztien artean. Disko batek huts eginez gero, paritateari esker galdutako datuak berreraiki daitezke.
+
+**Paritatea akatsak zuzentzeko edo datuak berreskuratzeko erabiltzen den matematika-kalkulu bidezko informazio gehigarri bat da. Disko batek huts eginez gero, sistema gai da galdutako datuak eta geratzen diren diskoetako datuak nahiz paritatea konbinatuz informazio osoa berreraikitzeko.*
+
+**Abantailak**:
+
+* Errendimendu ona irakurketa eta idazketan.
+* Biltegiratze-eraginkortasun hobea ematen du (espazioaren gehiengoa datuetarako aprobetxatzen da RAID 1ekin alderatuta).
+* Tolerantzia akatsen aurrean, disko baten hutsegitea jasaten du.
+
+**Desabantailak**:
+
+* Disko bat hondatzen denean, berreraikitze prozesuak gailuaren baliabideak eta denbora asko eskatzen ditu.
+
+*RAID 5en abantaila nagusietako bat erabilgarri gelditzen den biltegiratze-kapazitatea da: hiru disko erabilita, bi diskoren memorien batura (% 66 inguru) datuetarako aprobetxatzen da, RAID 1en bezala erdia baino gehiago galdu gabe. Hala ere, errendimendu eta biltegiratze eraginkor hori lortzeko, hirugarren disko bat behar da bai ala bai, paritate-informazioa gorde eta edozein diskoren hutsegitearen aurrean datuak babestuta egotea bermatzeko.*
+
+Windows Server-en RAID 5 egiteko honako pausu hauek jarraitu behar dira: (Gutxieneko disko kopurua: 3 disko)
+
+* Ireki Administrador de discos.
+* Egin klik eskuineko botoiaz diskoetako baten gune ez-esleituaren gainean eta hautatu Nuevo volumen RAID-5 (New RAID-5 Volume).
+* Gehitu gutxienez hiru disko hautatutako diskoen zerrendara.
+* Esleitu unitate-letra bat eta aukeratu fitxategi-sistema (NTFS).
+
+### 5.2 Gure enpresak aukeratutako RAID-a eta zergatia
+
+Proiektu honetan RAID 5 aukeratzea erabaki dugu, ondorio hauek baloratuta:
+
+* Disko kopurua: Gure azpiegiturarako 3 disko genituen eskuragarri, eta RAID 5ek gutxienez eskatzen duen kopurua betetzen du.
+* Segurtasuna eta erredundantzia: Enpresaren datuak babesteko segurtasun-maila egokia ematen digu, disko batek huts eginez gero informazioa ez delako galtzen.
+* Memoriaren optimizazioa: RAID 1 hautatu izan bagenu, diskoen erabilgarritasuna askoz ere mugatuagoa izango litzateke eta memoria gutxiago izango genuke datuak gordetzeko. RAID 5ek espazioaren eta segurtasunaren arteko oreka hobea eskaintzen digu gure baliabideekin.
 
 ## 6. Sistemaren Rol-ak eta ezaugarriak gehitu (IIS, iSCSI eta Segurtasun kopiak)
 
@@ -335,7 +394,7 @@ Segurtasun-kopiak egiteko hiru estrategia nagusi daude:
 
 * RPO (24 ordu) betetzea: Gure helburua eguneroko datuak ez galtzea denez eta kopia inkrementalak azkarrak direnez, gauero atzera pausorik gabe kopiak osotasunean egingo direla ziurtatzen digu.
 
-*(Aipatu beharra dago: berreskuratze-denbora zertxobait luzeagoa izan daitekeen arren (kopia osoa + inkremental guztiak kargatu behar direlako), gure enpresaren lehentasuna eguneroko biltegiratze-lekua ez saturatzea eta kopia azkarrak egitea dela eta horregatik hautatu dugula metodo hau).*
+*berreskuratze-denbora zertxobait luzeagoa izan daitekeen arren (kopia osoa + inkremental guztiak kargatu behar direlako), gure enpresaren lehentasuna eguneroko biltegiratze-lekua ez saturatzea eta kopia azkarrak egitea da. Horregatik hautatu dugu metodo hau.*
 
 ### 9.5 3-2-1 Araua
 
@@ -358,9 +417,9 @@ Gure sisteman segurtasun-kopien plana honela geratuko da ezarrita:
 * **Zerbitzariko bolumena:** 100 GB-ko bolumen finko bat erabiliko da zerbitzarian segurtasun-kopiak gordetzeko.
 * **Sarbide-muga eta baimenak:** Bolumen honetarako sarbidea **zerbitzariko administratzaileak bakarrik** izango du, sistemako baimenen bidez (Permissions/ACL) murriztuta, baimenik gabeko erabiltzaileek edo malwareak kopiak ez manipulatzeko.
 * **Kopiatuko diren elementuak:**
-* `C:` Diskoa (Zerbitzariaren sistema eragilea eta konfigurazioak).
-* `E:` Diskoa (Enpresako fitxategi guztiak eta web orria gordetzen diren bolumena).
 
+    * `C:` Diskoa (Zerbitzariaren sistema eragilea eta konfigurazioak).
+    * `E:` Diskoa (Enpresako fitxategi guztiak eta web orria gordetzen diren bolumena).
 
 * **Maiztasuna:** Kopiak **egunero** egingo dira automatikoki. Goizeko 03:00 tan egingo dira kopiak, enpresako langileak lanean ari diren bitartean egitea baino egokiagoa da ordu hauetan egitea, zerbitzariaren errendimenduan eragina izan dezakeelako segurtasun kopia egiteak (kopia egiten ari den bitartean makalago ibili ahal da zerbitzaria).
 * **Mantentze-lana:** Informatikariak **egunero errebisatu eta egiaztatuko du** kopiak zuzen eta egitura egokiarekin egin direla.
@@ -371,12 +430,8 @@ Windows Server-en segurtasun-kopiak automatizatzeko, sistemak berak dakarren jat
 
 Segurtasun kopiak nola automatizatu?
 
-* Instalazioa: 6. Puntuan aipatu dugun bezala, Server Manager (Zerbitzuen Kudeatzailea) atalean sartu eta Add roles and features aukeratik Windows Server Backup instalatu.
-
-* Konfigurazioa: Ireki Windows Server Backup kontsola eta hautatu Backup Schedule (Kopien Programazioa) abiarazteko.
-
-* Pertsonalizazioa: Aukeratu Custom (Pertsonalizatua) modua, eta bertan markatu guk zehaztutako diskoak kopiatzeko: C: diskoa (sistema) eta E: diskoa (fitxategiak eta web orria).
-
-* Maiztasuna eta Euskarria: Zehaztu kopiak egunero ordu jakin batean egiteko (adibidez, gauean bulegoa itxitakoan) eta esleitu helmuga gisa gure 100 GB-ko bolumen finkoa eta kanpoko disko gogorrak (HDD extraible).
-
-* Exekuzioa: Behin konfiguratuta, sistema eragileak berak automatikoki egingo ditu kopiak egunero, eta informatikariak soilik eguneroko log-ak edo emaitzak egiaztatu beharko ditu.
+* **Instalazioa**: 6. Puntuan aipatu dugun bezala, Server Manager (Zerbitzuen Kudeatzailea) atalean sartu eta Add roles and features aukeratik Windows Server Backup instalatu.
+* **Konfigurazioa**: Ireki Windows Server Backup kontsola eta hautatu Backup Schedule (Kopien Programazioa) abiarazteko.
+* **Pertsonalizazioa**: Aukeratu Custom (Pertsonalizatua) modua, eta bertan markatu guk zehaztutako diskoak kopiatzeko: C: diskoa (sistema) eta E: diskoa (fitxategiak eta web orria).
+* **Maiztasuna eta Euskarria**: Zehaztu kopiak egunero ordu jakin batean egiteko (Gure kasuan gauean, bulegoa itxitakoan) eta esleitu helmuga gisa gure 100 GB-ko bolumen finkoa eta kanpoko disko gogorrak (HDD extraible).
+* **Exekuzioa**: Behin konfiguratuta, sistema eragileak berak automatikoki egingo ditu kopiak egunero, eta informatikariak soilik eguneroko log-ak edo emaitzak egiaztatu beharko ditu, segurtasun kopiak ondo egin direla egiaztatzeko.

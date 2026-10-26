@@ -62,11 +62,23 @@ Tresna nagusiak: dokumentu digitalak, prozesu automatizatuak, komunikazio elektr
 
 ### 2.2 IT eta OT teknologiak
 
-* **Informazioaren Teknologiak (IT):** Enpresaren "garuna" dira. Datuak prozesatzera eta informazioa kudeatzera bideratutako tresnak dira (softwarea, sareak, datu-baseak). Segurtasunaren ikuspegitik, datuak eta sistemak mehatxu zibernetikoetatik babestean datza.
+Enpresa-ingurune digitalean bi teknologia-talde handi bereizten dira (IT eta OT). Hauek helburu eta ikuspegi desberdinak dituzte baina erakundearen eraginkortasuna hobetzeko osatzen dira:
 
-* **Operazio Teknologiak (OT):** Enpresaren "besoak eta hankak" dira. Etxeko, industriako eta merkataritzako prozesu fisikoak kontrolatu eta automatizatzera bideratuta daude (makinak, sentsoreak, beso robotikoak...). Segurtasunaren ikuspegitik, sistema industrialak eraso informatikoetatik babestean datza.
+- **Informazioaren Teknologiak (IT)**: Datuak prozesatzera eta informazioa kudeatzera bideratutako tresna digitalak dira. Enpresaren garuna bezalakoak dira; gauzak antolatzen, beste pertsona batzuekin komunikatzen eta erabaki adimendunak hartzen laguntzen dute.
 
-**Integrazioa eta erlazioa:** Bi inguruneen konbergentziak efizientzia hobetzen du, mantentze prediktiboa ahalbidetzen du, segurtasun integrala dakar eta denbora errealean erabaki informatuak hartzea errazten du.
+    * Teknologia motak: Softwarea, sareak, datu-baseak eta aplikazio informatikoak. 
+    * Segurtasuna: Datuak eta sistemak mehatxu zibernetikoen aurka babestean datza. 
+    * Bizi-zikloa: Bizi-ziklo laburragoak dituzte, eguneratze teknologiko etengabeak direla eta. 
+    * Adibideak: Microsoft Azure (hodeiko plataforma) edo VMware (zerbitzari fisikoetan makina birtualak sortzekoa). 
+
+- **Operazio Teknologiak (OT)**: Etxeko, industriako eta merkataritzako prozesu fisikoak kontrolatzera eta automatizatzera bideratutako tresna digitalak dira. Konpainiaren besoak eta hankak bezalakoak dira; fabrikazio industrialerako, garraiorako edo energia ekoizpenerako teknologia espezifikoak biltzen dituzte. 
+
+    * Teknologia motak: Sentsoreak, kontrolagailu industrialak eta automatizazio-sistemak. 
+    * Segurtasuna: Sistema industrialak eraso informatikoetatik babestean datza. 
+    * Bizi-zikloa: Bizi-ziklo luzeagoetara jotzen dute, ekoizpena egonkortzeko eta ekipoen kostu handiagatik. 
+    * Adibideak: SCADA (ekipoak denbora errealean monitorizatzeko kontrol-sistema) eta PLC (berariazko zereginak egiteko gailu programagarriak). 
+
+Bi inguruneen konbergentziak edo interkonexioak enpresaren kudeaketa eraginkorragoa ahalbidetzen du. Ekoizpenaren denbora errealeko monitorizazioak (OT) arazoak goiz detektatzea eta kalitate-estandarrak (IT) hobetzea ahalbidetzen du, mantentze prediktiboa planifikatuz eta segurtasun integrala bermatuz.
 
 ### 2.3 Cloudean oinarritutako sistemak (Cloud Computing)
 

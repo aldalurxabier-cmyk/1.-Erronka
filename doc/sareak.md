@@ -110,5 +110,19 @@ argazkia
 # MANCHESTER DIFERENTZIAL ARIKETA
 ![Mi foto](img/Sareak/Diferentziala.PNG)
 
+# PATCH PANELA ETA KABLEA
+![Mi foto](img/Sareak/rj45%20especial%20eta%20pacj%20panel.png)
 
+## KABLEA
+* Prozedura: Hasteko, kable bat zuritu dugu bi aldeetatik.
+![Mi foto](img/Sareak/20261022_084909.jpg)
+
+Jarraian alde bat jarri behar izan dugu RJ45 B-n, bertan jarri dugu or ipintzen duen kolore-ordenan. Erremientarekin koloreen arabera ordenatu ondoren, kablea katigatuko dugu, eta gainerakoa moztu egingo dugu, kanpotik geratzen ez dena gera ez dadin.
+## RJ45 B KONEKTOREA EGINDA
+![Mi foto](img/Sareak/rj45%20especial.png)
+
+## PATCH PANELA
+* Prozedura: Patch panela egiteko, kable zurituaren beste zatia hartu dugu. Patch panelean jartzen duzun lekuaren arabera, koloreen ordena aldatu egiten da. Gure lekuan eskura jartzen duen ordenan jarri dugu eta gero erremintarekin RJ45 B-arekin egiten den gauza bera egin dugu. Kablea ondo lotu, eta gainerazkoa moztu. Ondo doala egiarazteko, sareko kable bat hartu dugu, eta alde batean rj45 b-n entxufatuko dugu, eta bestea testerrean. Argi guztiak pizten badira, prozezua ondo eginda dagoela da.
+## PATCH PANELA EGINDA
+![Mi foto](img/Sareak/PACH%20PANEL.png)
 

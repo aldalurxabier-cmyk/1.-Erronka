@@ -56,7 +56,7 @@ Pasahitza ondo dagoen egiaztatzeko konprobaketa egin dugu. Hasierako bit-kateari
 PSK(2),ASK(2) eta FSK(2) egin baino lehen guk aukeratutako pasahitza bitarrera aldatu dugu, behin bitarrean izan dugunean zatiketa egin dugu CRC6 formularekin:
 
 \[
-X^6 + X^5 + X^3 + X^2 + X + 1
+$X^6 + X^5 + X^3 + X^2 + X + 1$
 \]
 
 Zatiketaren hondarra lortu eta gero (PSK2,ASK2,FSK2) grafikoak egin ditugu.

@@ -2,62 +2,74 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    color: #222;
     text-align: center;
+    background-color: #f4f6f8;
+    color: #222;
 }
 
 header {
-    background: #1769aa;
+    background-color: blue;
     color: white;
-    padding: 40px;
+    padding: 30px;
 }
 
 header h1 {
-    font-size: 60px;
-    margin: 0;
+    font-size: 50px;
+    margin: 5px;
+}
+
+header p {
+    font-size: 16px;
 }
 
 nav {
+    background-color: white;
     padding: 20px;
-    background: #eeeeee;
 }
 
 nav a {
-    color: #1769aa;
     text-decoration: none;
-    margin: 10px;
-    font-weight: bold;
+    background-color: #2878b5;
+    color: white;
+    padding: 12px 18px;
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-block;
 }
 
 nav a:hover {
-    color: #e67e22;
+    background-color: #2878b5
 }
 
 main {
-    padding: 50px 20px;
+    background-color: white;
+    margin: 10px auto;
+    padding: 30px;
+    width: 80%;
+    border-radius: 10px;
 }
 
-.botones {
-    margin-top: 35px;
+h1 {
+    color:#2878b5;
 }
 
-.boton {
-    display: inline-block;
-    background: #1769aa;
+header h1 {
     color: white;
-    text-decoration: none;
-    padding: 15px 25px;
-    margin: 10px;
-    border-radius: 8px;
 }
 
-.boton:hover {
-    background: #e67e22;
+h2 {
+    color: #2878b5;
+}
+
+p {
+    font-size: 17px;
 }
 
 footer {
-    margin-top: 40px;
+    background-color: blue;
+    color: white;
     padding: 15px;
-    background: #eeeeee;
+    margin-top: 50px;
 }
+
 

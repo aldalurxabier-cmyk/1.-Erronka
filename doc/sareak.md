@@ -26,7 +26,9 @@ Ondoren, zenbaki bakoitza bitarrera pasatu dugu, CRC-a egiteko. Horretarako zenb
 
 # CRC
 CRC-a egiteko ASCII bidez lortutako 6 karaktereak bitar sistemara pasatu ditugu eta 8 biteko zenbaki bakoitza elkartuz 48 biteko bit-kate bat osatu dugu. Ondoren, 6 zero gehitu dizkiogu CRC-6 delako.
-Erabili dugun polinomioa hau da: $$(X^6+X^5+X^3+X^2+X+1)$$
+Erabili dugun polinomioa hau da: \[
+X^6 + X^5 + X^3 + X^2 + X + 1
+\]
 
 Polinomio hori bitar sistemara pasatuta, 110111 lortzen da. Ondoren, gure kasuan lehenengo bi bitak 0 direnez hurrengo posiziora pasatuko gara bit-kate horren hurrengo 7 bitak hartuz eta XOR eragiketa egingo dugu. Horretarako kontuan izan behar da : 
 
@@ -44,14 +46,18 @@ Pasahitza ondo dagoen egiaztatzeko konprobaketa egin dugu. Hasierako bit-kateari
 
 ## CRC ARIKETA
 
-![Mi foto](img/Sareak/IMG_9329.jpg)
+![Mi foto](img/Sareak/20261026_132135.jpg)
 
 
-![Mi foto](img/Sareak/CRC.png)
+![Mi foto](img/Sareak/IMG_9361.jpg)
 
 
 # PSK(2),ASK(2),FSK(2)
-PSK(2),ASK(2) eta FSK(2) egin baino lehen guk aukeratutako pasahitza bitarrera aldatu dugu, behin bitarrean izan dugunean zatiketa egin dugu CRC6 formularekin $$(X^6+X^5+X^3+X^2+X+1)$$
+PSK(2),ASK(2) eta FSK(2) egin baino lehen guk aukeratutako pasahitza bitarrera aldatu dugu, behin bitarrean izan dugunean zatiketa egin dugu CRC6 formularekin:
+
+\[
+$X^6 + X^5 + X^3 + X^2 + X + 1$
+\]
 
 Zatiketaren hondarra lortu eta gero (PSK2,ASK2,FSK2) grafikoak egin ditugu.
 Grafikoak egiteko lortu ditugun 54 bit-ak sei-naka banatu ditugu.
@@ -110,5 +116,19 @@ argazkia
 # MANCHESTER DIFERENTZIAL ARIKETA
 ![Mi foto](img/Sareak/Diferentziala.PNG)
 
+# PATCH PANELA ETA KABLEA
+![Mi foto](img/Sareak/rj45%20especial%20eta%20pacj%20panel.png)
 
+## KABLEA
+* Prozedura: Hasteko, kable bat zuritu dugu bi aldeetatik.
+![Mi foto](img/Sareak/20261022_084909.jpg)
+
+Jarraian alde bat jarri behar izan dugu RJ45 B-n, bertan jarri dugu or ipintzen duen kolore-ordenan. Erremientarekin koloreen arabera ordenatu ondoren, kablea katigatuko dugu, eta gainerakoa moztu egingo dugu, kanpotik geratzen ez dena gera ez dadin.
+## RJ45 B KONEKTOREA EGINDA
+![Mi foto](img/Sareak/rj45%20especial.png)
+
+## PATCH PANELA
+* Prozedura: Patch panela egiteko, kable zurituaren beste zatia hartu dugu. Patch panelean jartzen duzun lekuaren arabera, koloreen ordena aldatu egiten da. Gure lekuan eskura jartzen duen ordenan jarri dugu eta gero erremintarekin RJ45 B-arekin egiten den gauza bera egin dugu. Kablea ondo lotu, eta gainerazkoa moztu. Ondo doala egiarazteko, sareko kable bat hartu dugu, eta alde batean rj45 b-n entxufatuko dugu, eta bestea testerrean. Argi guztiak pizten badira, prozezua ondo eginda dagoela da.
+## PATCH PANELA EGINDA
+![Mi foto](img/Sareak/PACH%20PANEL.png)
 

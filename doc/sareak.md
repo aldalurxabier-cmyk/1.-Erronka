@@ -44,7 +44,7 @@ Pasahitza ondo dagoen egiaztatzeko konprobaketa egin dugu. Hasierako bit-kateari
 
 ## CRC ARIKETA
 
-![Mi foto](img/Sareak/crc.png)
+![Mi foto](img/Sareak/20261026_132135.jpg)
 
 
 ![Mi foto](img/Sareak/IMG_9361.jpg)

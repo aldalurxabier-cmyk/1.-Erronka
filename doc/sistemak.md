@@ -33,6 +33,12 @@ Instalazioari ekin aurretik, honako baliabide hauek behar ditugu:
     5. **Bertsioa (Version)**: Windows Server 2022 x64 es-ES
     6. **Proceed with Unattended installation, MARKATU GABE** utziko dugu, virtualbox-ek administratzailearen izenak eta pasahitzak automatikoki sortu partez, geuk manualki aldatu ahal izateko instalazio garaian.
 
+    ![Mi foto](img/Sistemak/01/08.png)
+
+    ![Mi foto](img/Sistemak/01/09.png)
+
+    ![Mi foto](img/Sistemak/01/10.png)
+
 * Hardware Baliabideak Esleitu:
 
     * **Memoria RAM**: 4096 MB (4 GB).
@@ -143,11 +149,18 @@ Jarri dugun IP-a hau da:
 * IP zerbitzaria: 192.168.70.1
 * Maskara: 255.255.255.0
 * Aterabidea (Puerta de enlace): 192.168.70.254
+
+![Mi foto](img/Sistemak/02/02.png)
+
 * Servidor DNS preferido: 8.8.8.8 (Google-rena da hau)
 
 ![Mi foto](img/Sistemak/02/01.png)
 
-Hauek idatzi ondoren, ez dugu arazorik izango gure zerbitzaria sarean aurkitzeko.
+Sare bereko beste ordenagailu batekin Ping egitea ere lortu dugu konfigurazio hau amaitu dugunean, inolako arazorik gabe.
+
+![Mi foto](img/Sistemak/02/03.png)
+
+Hauek idatzi ondoren, ez dugu gehiago arazorik izango gure zerbitzaria sarean aurkitzeko.
 
 ## 3. Segurtasun politikak (Pasahitzak)
 
@@ -182,8 +195,18 @@ Gure kasuan, 3 disko gogor gehitu ditugu, bakoitza 50GB koa. (Urrengo ataleak az
 Disko hauek, gure makina birtualean dugun zerbitzariari gehitzeko pauso hauek jarraitu ditugu.
 
 * VirtualBox-eko makina birtualaren konfigurazioan, ""Almacenamiento"" atalean, disko gogorrak gehitzeko aukerari eman.
+
+![Mi foto](img/Sistemak/04-01/01.png)
+
 * Jarraian, diskoak hautatzeko menuan, disco berriak sortu ditugu.
+
+![Mi foto](img/Sistemak/04-01/02.png)
+
 * Amaitzeko disko hauek makina birtualera geitu ditugu.
+
+![Mi foto](img/Sistemak/04-01/03.png)
+
+![Mi foto](img/Sistemak/04-01/04.png)
 
 ### 4.2 Bolumenak
 
@@ -192,11 +215,25 @@ Diskoak gehitu ondoren, disko hauek erabilgarri izateko, bolumenak sortu behar d
 Disko bakoitza, bolumen bat edo gehiagotan zatitu ahal da. Gaitasun honi esker, disko gogorra lan eremu ezberdinetan banatzeko aukera ematen digu, nahiz eta izatez disko gogor bakarra izan. Bolumen ezberdinak sortzeko pausoak hauek dira:
 
 * ""Administrador de discos"" sartu.
+
+![Mi foto](img/Sistemak/04-01/04.png)
+
 * Bolumenak sortu nahi diren diskoa hautatu.
 * Bolumenari eman nahi zaion memoria kantitatea haukeratu.
-* Formatua (FAT32, NTFS...) eta eman nahi zaion letra (C: / D:/ E:/) aukeratu.
+
+![Mi foto](img/Sistemak/04-02/01.png)
+
+* Formatua (FAT32, NTFS...) eta eman nahi zaion letra (C: / D:/ E:/...) aukeratu.
 
 Diskoan soberan geratu den memoriarekin behar adina bolumen egin ditzakegu, diskoko memoria osoa bete arte. Gure kasuan, 50GB-ko bolumen bakarra utzi dugu, emango diogun erabilerarako ez dugulako bolumen ezberdinak egiteko beharrik ikusten.
+
+![Mi foto](img/Sistemak/04-02/02.png)
+
+![Mi foto](img/Sistemak/04-02/03.png)
+
+![Mi foto](img/Sistemak/04-02/04.png)
+
+![Mi foto](img/Sistemak/04-02/05.png)
 
 ## 5. RAID
 
@@ -221,16 +258,33 @@ RAID 1 sistemari ispilu-diskoa (mirroring) esaten zaio. Informazio bera bi disko
 Windows Server-en RAID 1 egiteko honako pausu hauek jarraitu behar dira: (Gutxieneko disko kopurua: 2 disko)
 
 * Ireki Administrador de discos (Disko Kudeatzailea).
+
+![Mi foto](img/Sistemak/04-01/04.png)
+
 * Ziurtatu disko berriak "Ez esleitua" (Unallocated) egoeran daudela.
-* Egin klik eskuineko botoiaz diskoetako batean eta hautatu Nuevo volumen reflejado (New Mirrored Volume).
+* Sortu beharrezko bolumena disko batean.
+
+![Mi foto](img/Sistemak/05-01/01.png)
+
+* Egin klik eskuineko botoiaz beste diskoetako batean eta hautatu Nuevo volumen reflejado (New Mirrored Volume).
+
+![Mi foto](img/Sistemak/05-02/01.png)
+
 * Gehitu bigarren diskoa ispilua egiteko.
+
+![Mi foto](img/Sistemak/05-01/04.png)
+
 * Esleitu letra bat eta eman formatua (adibidez, NTFS).
+
+![Mi foto](img/Sistemak/05-01/05.png)
+
+![Mi foto](img/Sistemak/05-01/06.png)
 
 ### 5.1.2 RAID 5
 
 RAID 5 sistemak datuak eta paritate-informazioa (akatsak zuzentzeko datuak) banatzen ditu matrizea osatzen duten disko guztien artean. Disko batek huts eginez gero, paritateari esker galdutako datuak berreraiki daitezke.
 
-**Paritatea akatsak zuzentzeko edo datuak berreskuratzeko erabiltzen den matematika-kalkulu bidezko informazio gehigarri bat da. Disko batek huts eginez gero, sistema gai da galdutako datuak eta geratzen diren diskoetako datuak nahiz paritatea konbinatuz informazio osoa berreraikitzeko.*
+*Paritatea akatsak zuzentzeko edo datuak berreskuratzeko erabiltzen den matematika-kalkulu bidezko informazio gehigarri bat da. Disko batek huts eginez gero, sistema gai da galdutako datuak eta geratzen diren diskoetako datuak nahiz paritatea konbinatuz informazio osoa berreraikitzeko.*
 
 **Abantailak**:
 
@@ -247,9 +301,20 @@ RAID 5 sistemak datuak eta paritate-informazioa (akatsak zuzentzeko datuak) bana
 Windows Server-en RAID 5 egiteko honako pausu hauek jarraitu behar dira: (Gutxieneko disko kopurua: 3 disko)
 
 * Ireki Administrador de discos.
+
+![Mi foto](img/Sistemak/04-01/04.png)
+
 * Egin klik eskuineko botoiaz diskoetako baten gune ez-esleituaren gainean eta hautatu Nuevo volumen RAID-5 (New RAID-5 Volume).
+
+![Mi foto](img/Sistemak/05-02/01.png)
+
 * Gehitu gutxienez hiru disko hautatutako diskoen zerrendara.
+
+![Mi foto](img/Sistemak/05-02/02.png)
+
 * Esleitu unitate-letra bat eta aukeratu fitxategi-sistema (NTFS).
+
+![Mi foto](img/Sistemak/05-02/03.png)
 
 ### 5.2 Gure enpresak aukeratutako RAID-a eta zergatia
 
@@ -258,6 +323,12 @@ Proiektu honetan RAID 5 aukeratzea erabaki dugu, ondorio hauek baloratuta:
 * Disko kopurua: Gure azpiegiturarako 3 disko genituen eskuragarri, eta RAID 5ek gutxienez eskatzen duen kopurua betetzen du.
 * Segurtasuna eta erredundantzia: Enpresaren datuak babesteko segurtasun-maila egokia ematen digu, disko batek huts eginez gero informazioa ez delako galtzen.
 * Memoriaren optimizazioa: RAID 1 hautatu izan bagenu, diskoen erabilgarritasuna askoz ere mugatuagoa izango litzateke eta memoria gutxiago izango genuke datuak gordetzeko. RAID 5ek espazioaren eta segurtasunaren arteko oreka hobea eskaintzen digu gure baliabideekin.
+
+![Mi foto](img/Sistemak/05-02/05.png)
+
+*RAID1 eta RAID5 egiteko, diskoak modu dinamikoan jarri behar dira derrigorrez, bestela ez du uten aurrera jarraitzen.*
+
+![Mi foto](img/Sistemak/05-02/04.png)
 
 ## 6. Sistemaren Rol-ak eta ezaugarriak gehitu (IIS, iSCSI eta Segurtasun kopiak)
 
@@ -286,13 +357,17 @@ Beharrezko diren rolak eta ezaugarriak instalatu ostean, gure enpresako fitxateg
 
 Gure enpresa ikus-entzunezkoen streaming edukiak eta multimedia zerbitzu digitalak online eskaintzean datza. Gure bezeroek mota askotako edukiak (filmak, serieak eta dokumentalak) modu arin, seguru eta etengabean kontsumitzea bermatzen dugu. Negozio-eredu honek zerbitzarien erabilera intentsiboa eta departamentu ezberdinen arteko lankidetza estua eskatzen du. Horregatik, langileen profil eta eginkizun zehatzen arabera, karpeten eta baimenen egitura hau definitu dugu gure sisteman:
 
-* Zuzendaritza (eta barruko zuzendarien karpetak): Plataformaren estrategia orokorra, nazioarteko lizentzia-kontratuak eta enpresaren norabidea kudeatzeko gunea. Barruan zuzendari bakoitzak (edukiak, finantzak, teknologia, bezeroak eta marketina) bere direktorio pribatua du.
+* Zuzendaritza (eta barruko zuzendarien karpetak): Plataformaren estrategia orokorra, nazioarteko lizentzia-kontratuak eta enpresaren norabidea kudeatzeko gunea (edukiak, finantzak, teknologia, bezeroak eta marketina). Karpeta hauetaz apare zuzendari bakoitzak bere direktorio pribatua du.
 
 * Kontabilitatea: Enpresaren diru-sarrerak, harpidedunen kuoten ordainketak, hornitzaileen fakturak eta aurrekontuak kudeatzeko karpeta. Ekonomia eta finantza departamentuko langileek baino ez dute bertan idazteko eta irakurtzeko baimena.
 
 * Giza Baliabideak: Langileen kontratuak, nomina-aurreikuspenak, barne-prestakuntzak eta hautaketa-prozesuak kudeatzen diren lekua. Datu pertsonal eta sentikorrak direnez, GB saileko arduradunek soilik daukate sarbidea.
 
 * Orokorra: Enpresa osoko langile guztiek kontsultatzeko karpeta komuna. Bertan dokumentu orokorrak, enpresaren oharrak, egutegiak eta baliabide orokorrak gordetzen dira, eta langile guztiek dute irakurtzeko baimena.
+
+![Mi foto](img/Sistemak/07-01/01.png)
+
+![Mi foto](img/Sistemak/07-01/02.png)
 
 Egitura honi esker, zerbitzarian bakoitzak bere lanerako behar dituen fitxategietara soilik dauka sarbidea, datuen konfidentzialtasuna eta segurtasuna bermatuz.
 
@@ -305,11 +380,20 @@ Hauek sortu ondoren, lan taldeak sortu ditugu. 3 talde egin ditugu: Kontabilitat
 Erabiltzaileak eta taldeak sortzeko pausoak onako hauek dira:
 
 * **Administrador de Equipos** sartu.
+
+![Mi foto](img/Sistemak/07-02/01.png)
+
 * **Usuarios y grupos locales** hautatu.
 * Bertan, sortu nahi dena aukeratu: **Usuario** (Erabiltzailea) edo **Grupo** (Taldea)
+
+![Mi foto](img/Sistemak/07-02/02.png)
+![Mi foto](img/Sistemak/07-02/03.png)
+
 * Amaitzeko, erabiltzaileak beren taldeetan sartu.
 
-Hauek dira talde bakoitzean sartu diren erabiltzaileak:
+![Mi foto](img/Sistemak/07-02/05.png)
+
+Hauek dira, gure enpresan, talde bakoitzean sartu diren erabiltzaileak:
 * Kontabilitatea: DeLaFlor.Iñaki
 * Giza Baliabideak: Aldalur.Xabier
 * Zuzendaritza: Ortuzar.Oier eta Ortega.Iker
@@ -335,6 +419,30 @@ Honako hau da gure enpresan ezarri dugun karpeten estruktura eta baimenen azalpe
 
 Zuzendaritza karpetaren kasuan badugu berezitasun bat. Bi zuzendari ditugunez, zuzendari bakoitzari karpeta bana esleitu diogu zuzendaritza karpetaren barruan. Ez dugu nahi ordea, zuzendari den batek, berea ez den karpetara sartzeko baimenik izatea. Horregatik, Ikerren karpetara Oierrek sarbide baimen guztiak ukatuta izango ditu (deny) eta Oierren karpetara ere Ikerrek baimenak ukatuta izango ditu (deny).
 
+**Argazkia**
+
+![Mi foto](img/Sistemak/07-03/01.png)
+
+![Mi foto](img/Sistemak/07-03/02.png)
+
+![Mi foto](img/Sistemak/07-03/03.png)
+
+![Mi foto](img/Sistemak/07-03/04.png)
+
+![Mi foto](img/Sistemak/07-03/05.png)
+
+![Mi foto](img/Sistemak/07-03/06.png)
+
+![Mi foto](img/Sistemak/07-03/07.png)
+
+![Mi foto](img/Sistemak/07-03/08.png)
+
+![Mi foto](img/Sistemak/07-03/09.png)
+
+![Mi foto](img/Sistemak/07-03/10.png)
+
+![Mi foto](img/Sistemak/07-03/11.png)
+
 ### 7.4 Kuotak
 
 Baimenak ezarri ondoren erabili daitezkeen memoria mugak ezarriko dizkiegu erabiltzaileei. Muga hauek **Kuotak** deitzen dira. Bi kuota mota daude:
@@ -357,6 +465,20 @@ Gure kasuan bolumen bakarra dugu. Bolumen honek, 85GB okupatzen duenean abisua e
 
 Gure kasuan, Giza baliabideen, Kontabilitatearen eta Orokorraren kuotak 5GB koak dira. Zuzendaritza karpetari 15Gb ezarri dizkiogu (Fitxategi gehiago erabiliko direlako bertan). Zuzendaritza karpetaren barruan aurkitzen diren zuzendarien karpeta bakoitzari 5GB ko limitea ezarri diogu.
 
+**Argazkiak**
+
+![Mi foto](img/Sistemak/07-04/01.png)
+
+![Mi foto](img/Sistemak/07-04/02.png)
+
+![Mi foto](img/Sistemak/07-04/03.png)
+
+![Mi foto](img/Sistemak/07-04/04.png)
+
+![Mi foto](img/Sistemak/07-04/05.png)
+
+![Mi foto](img/Sistemak/07-04/06.png)
+
 ## 8. Web Zerbitzaria (IIS)
 
 Erronka honetako helburuetako bat, Web zerbitzari erabilgarri bat martxan jartzea izan da. Horretarako 6. atalean martxan jarritako IIS ezaugarria erabili dugu.
@@ -365,7 +487,13 @@ Erronka honetako helburuetako bat, Web zerbitzari erabilgarri bat martxan jartze
 
 Lehenbizi, gure web orriko html eta css fitxategi guztiak prestatu eta disko gogorrera kopiatu ditugu, Web orria gordetzeko sortu dugun **1.Erronka Web** karpetara hain zuzen. Jarraian, karpeta honen baimenak aldatu behar izan ditugu. Baimen hauek aldatuko ez bagenitu, edozein erabiltzailek, karpetara sarbidea izango luke edo nahi gabe zerbait ezabatu eta gure web orria ez erabiltzeko moduan utzi dezake. Hau ekiditeko, aurreko atalean sortutako taldeei, karpeta honetara dituzten baimen guztiei **deny** jarri diegu. Horrela, ezingo du inork karpeta honetara sartu (administratzaileak sartu ahalko du, honi ez dizkiogu eta baimenak kendu).
 
+![Mi foto](img/Sistemak/08-01/03.png)
+
 Baimenekin amaitzeko sarean dauden kanpoko erabiltzaileei web orria ikusteko aukera emateko, IUSR erabiltzaileei karpeta ikusteko eta irakurtzeko baimena eman behar izan diogu. Bestela, administratzaileak bakarrik ikusi ahal zezakeen eta web orria.
+
+![Mi foto](img/Sistemak/08-01/02.png)
+
+![Mi foto](img/Sistemak/08-01/01.png)
 
 ### 8.2 Web zerbitzaria martxan jarri
 
@@ -377,9 +505,17 @@ Web zerbitzaria martxan jartzeko pauso hauek jarraitu ditugu.
 * Ruta sartu (Web orriko fitxategiak kopiatu ditugun karpeta)
 * IP-a eta portua ezarri (Gure kasuan, 192.168.70.1:8080)
 
+![Mi foto](img/Sistemak/08-02/01.png)
+
+![Mi foto](img/Sistemak/08-02/02.png)
+
 ### 8.3 Firewall arazoak
 
-Gure taldeak, guzti hau konfiguratu ondoren, arazoak izan ditu web orri hau gailu inalambriko batetik wifi bidez ikusteko. Web orria alojatu dugun gailuan ondo ikusten zen gure web-a baina beste gailuetatik ezin genuen ikusi nahiz eta sare berdinean egon. Azkenean, firewall-ak kanpoko beste gailuei sarbidea mozten ziela konturatu gara. Firewall-ean 8080 portuari salbuespen bat jarri diogunean konpondu da gure arazoa.
+Gure taldeak, guzti hau konfiguratu ondoren, arazoak izan ditu web orri hau gailu inalambriko batetik wifi bidez ikusteko. Web orria alojatu dugun gailuan ondo ikusten zen gure web-a baina beste gailuetatik ezin genuen ikusi nahiz eta sare berdinean egon. Azkenean, firewall-ak kanpoko beste gailuei sarbidea mozten ziela konturatu gara (Firewall kenduta, web orria martxan jarri da). Firewall-ean 8080 portuari salbuespen bat jarri diogunean konpondu da gure arazoa.
+
+![Mi foto](img/Sistemak/08-03/01.png)
+
+![Mi foto](img/Sistemak/08-03/02.png)
 
 ## 9 Segurtasun Kopiak
 
@@ -395,7 +531,7 @@ RAID-ak fitxategi-sistema edo disko fisiko baten akatsen aurrean babesten gaitu 
 
 **RPO (Recovery Point Objective)** edo Berreskuratze puntua dugu. Honekin enpresak bere jardueran onartu dezakeen gehienezko datu-galera denbora neurtzen dugu. Adibidez, azken kopia egin zenetik sistema erori den unera arte igarotako denbora adierazten du.
 
-* **Gure enpresaren kasuan:** Gure enpresak **RPO = 24 ordu** ezarri du, hau da, **egunero** egingo ditugu segurtasun-kopiak. Modu honetan, intzidentzia bat gertatuz gero, gehienez ere egun bakarreko lana galduko litzateke.
+**Gure enpresaren kasuan:** Gure enpresak **RPO = 24 ordu** ezarri du, hau da, **egunero** egingo ditugu segurtasun-kopiak. Modu honetan, intzidentzia bat gertatuz gero, gehienez ere egun bakarreko lana galduko litzateke.
 
 ### 9.3 Segurtasun-kopia motak eta ezberdintasunak
 
@@ -444,7 +580,13 @@ Datuen segurtasun osoa bermatze aldera, industrian estandarra den **3-2-1 segurt
 Gure sisteman segurtasun-kopien plana honela geratuko da ezarrita:
 
 * **Zerbitzariko bolumena:** 100 GB-ko bolumen finko bat erabiliko da zerbitzarian segurtasun-kopiak gordetzeko.
+
+![Mi foto](img/Sistemak/09/02.png)
+
 * **Sarbide-muga eta baimenak:** Bolumen honetarako sarbidea **zerbitzariko administratzaileak bakarrik** izango du, sistemako baimenen bidez (Permissions/ACL) murriztuta, baimenik gabeko erabiltzaileek edo malwareak kopiak ez manipulatzeko.
+
+![Mi foto](img/Sistemak/09/03.png)
+
 * **Kopiatuko diren elementuak:**
 
     * `C:` Diskoa (Zerbitzariaren sistema eragilea eta konfigurazioak).
@@ -460,7 +602,24 @@ Windows Server-en segurtasun-kopiak automatizatzeko, sistemak berak dakarren jat
 Segurtasun kopiak nola automatizatu?
 
 * **Instalazioa**: 6. Puntuan aipatu dugun bezala, Server Manager (Zerbitzuen Kudeatzailea) atalean sartu eta Add roles and features aukeratik Windows Server Backup instalatu.
+
+![Mi foto](img/Sistemak/09/01.png)
+
 * **Konfigurazioa**: Ireki Windows Server Backup kontsola eta hautatu Backup Schedule (Kopien Programazioa) abiarazteko.
+
+![Mi foto](img/Sistemak/09/04.png)
+
 * **Pertsonalizazioa**: Aukeratu Custom (Pertsonalizatua) modua, eta bertan markatu guk zehaztutako diskoak kopiatzeko: C: diskoa (sistema) eta E: diskoa (fitxategiak eta web orria).
+
+![Mi foto](img/Sistemak/09/05.png)
+![Mi foto](img/Sistemak/09/06.png)
+
 * **Maiztasuna eta Euskarria**: Zehaztu kopiak egunero ordu jakin batean egiteko (Gure kasuan gauean, bulegoa itxitakoan) eta esleitu helmuga gisa gure 100 GB-ko bolumen finkoa eta kanpoko disko gogorrak (HDD extraible).
+
+![Mi foto](img/Sistemak/09/07.png)
+![Mi foto](img/Sistemak/09/08.png)
+![Mi foto](img/Sistemak/09/09.png)
+
 * **Exekuzioa**: Behin konfiguratuta, sistema eragileak berak automatikoki egingo ditu kopiak egunero, eta informatikariak soilik eguneroko log-ak edo emaitzak egiaztatu beharko ditu, segurtasun kopiak ondo egin direla egiaztatzeko.
+
+![Mi foto](img/Sistemak/09/10.png)

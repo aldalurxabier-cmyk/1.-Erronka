@@ -149,11 +149,18 @@ Jarri dugun IP-a hau da:
 * IP zerbitzaria: 192.168.70.1
 * Maskara: 255.255.255.0
 * Aterabidea (Puerta de enlace): 192.168.70.254
+
+![Mi foto](img/Sistemak/02/02.png)
+
 * Servidor DNS preferido: 8.8.8.8 (Google-rena da hau)
 
 ![Mi foto](img/Sistemak/02/01.png)
 
-Hauek idatzi ondoren, ez dugu arazorik izango gure zerbitzaria sarean aurkitzeko.
+Sare bereko beste ordenagailu batekin Ping egitea ere lortu dugu konfigurazio hau amaitu dugunean, inolako arazorik gabe.
+
+![Mi foto](img/Sistemak/02/03.png)
+
+Hauek idatzi ondoren, ez dugu gehiago arazorik izango gure zerbitzaria sarean aurkitzeko.
 
 ## 3. Segurtasun politikak (Pasahitzak)
 

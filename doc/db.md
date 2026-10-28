@@ -3,11 +3,11 @@ layout: page
 title: Datu Baseak
 ---
 
-# SARRERA
+# Sarrera
 
-Lehenik eta behin, enuntziatu bat eman digute eta bertan agertzen den informazioa interpretatu behar izan dugu. Lehenik, deskribapena egin dugu eta horrekin E/R diagrama osatu dugu. Gero, eredu erlazionala sortu dugu eta datu-basea normalizatu dugu. Azkenik, egindako lana Accessen inplementatu dugu.
+Lehenik eta behin, enuntziatu bat eman digute eta bertan agertzen den informazioa interpretatu behar izan dugu. Gero, deskribapena egin dugu eta horrekin E/R diagrama osatu dugu. Ondoren, eredu erlazionala sortu dugu eta datu-basea normalizatu dugu. Azkenik, egindako lana Access-en inplementatu dugu.
 
-# DESKRIBAPENA 
+# 1. Deskribapena
 
 Streaming plataforma batek bere datu-basean erabiltzaileak, perfilak, planak, edukiak eta bistaratzeak kudeatu nahi ditu.
 
@@ -21,15 +21,23 @@ Telesail bakoitzak denboraldi bat edo gehiago izan ditzake, eta denboraldi bakoi
 
 Bukatzeko denboraldi bakoitzak kapitulu bat edo gehiago ditu, eta kapitulu bakoitza denboraldi bakar batekoa da. Kapitulu bakoitzari buruz, Id-kapituloa, izena, zenbakia eta bistaratzeak gordetzen dira. Kapituluak dagokion denboraldiarekin lotuta erregistratzen dira, denboraldi bakoitzeko kapituluak identifikatu eta antolatu ahal izateko.
 
-# ER DIAGRAMA 
+# 2. ER Diagrama
 
 ![Mi foto](img/DB/ER%20diagrama.png)
 
-# EREDU ERLAZIONALA
+# 3. Eredu erlazionala
+ER diagrama amaitu eta gero, datu-basearen eredu erlazionala egin dugu. 
+
 ![Mi foto](img/DB/EreduErlazionala.png)
 
-# NORMALIZAZIOA
+# 4. Normalizazioa
+Ondoren, datu basearen normalizazioa egin dugu. Hiru forma normalak ( 1FN, 2FN eta 3FN ) aplikatuz.
+
+
+Normalizazioa eginda ↓
 
 [Sakatu hemen](normalizazioa/Normalizazioa.pdf)
 
-# DATU BASEA ACCESS-EN IMPLEMENTATU 
+# 5. Datu basea Access-en implementatu 
+Azkenik, datu-basea Access-en inplementatu dugu. Taulak eta haien arteko erlazioak sortuz. Horrela, informazioa modu egituratuan gorde, kontsultatu eta eguneratzeko aukera izango dugu
+

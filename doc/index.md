@@ -2,11 +2,11 @@
 layout: home
 title: Hasiera
 ---
-## Aurkezpena
+# Aurkezpena
 
 Gu SISA1-eko 4 ikasle gaituzue, **Oier Ortuzar, Iker Ortega, Iñaki De la Flor** eta **Xabier Aldalur** hain zuzen, eta lehen erronka hau egiteko taldea osatzen dugu. Ikastetxearen partetik erronka hau burutzeko hainbat baliabide jaso ondoren, erronka honen dokumentazioa aurkezteari ekingo diogu.
 
-## Sarrera
+# Sarrera
 
 Lehen erronka honetan enpresa baten azpiegitura informatikoa osatzeko eta digitalizazio-prozesua bultzatzeko helburuarekin, **Informazioaren digitalizazio webgunea** izeneko erronkari ekin diogu. Proiektu honetan hainbat arlo tekniko uztartuko ditugu (Sistemak, Sareak, Datu-baseak, Markatze-lengoaiak eta Digitalizazioa):
 

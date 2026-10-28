@@ -26,10 +26,18 @@ Bukatzeko denboraldi bakoitzak kapitulu bat edo gehiago ditu, eta kapitulu bakoi
 ![Mi foto](img/DB/ER%20diagrama.png)
 
 # Eredu Erlazionala
+ER diagrama amaitu eta gero, datu-basearen eredu erlazionala egin dugu. 
+
 ![Mi foto](img/DB/EreduErlazionala.png)
 
 # Normalizazioa
+Ondoren, datu basearen normalizazioa egin dugu, hiru forma normalak ( 1FN, 2FN eta 3FN ) aplikatuz.
+
+
+Normalizazioa eginda ↓
 
 [Sakatu hemen](normalizazioa/Normalizazioa.pdf)
 
 # Datu Basea Access-en implementatu 
+Azkenik, datu-basea Access-en inplementatu dugu. Taulak eta haien arteko erlazioak sortuz. Horrela, informazioa modu egituratuan gorde, kontsultatu eta eguneratzeko aukera izango dugu
+

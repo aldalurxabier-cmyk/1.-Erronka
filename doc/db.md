@@ -25,3 +25,4 @@ Bukatzeko denboraldi bakoitzak kapitulu bat edo gehiago ditu, eta kapitulu bakoi
 ![Mi foto](img/DB/ER%20diagrama.png)
 
 # EREDU ERLAZIONALA
+![Mi foto](img/DB/EreduErlazionala.png)

@@ -130,11 +130,9 @@ Azken pauso honekin, gure Windows server-a prest utzi dugu berarekin lanean hasi
 
 Gure zerbitzariarekin lan egin ahal izateko eta sistemaren kanpo aldetik konektatzeko, IP estatiko bat eman diogu. Izatez, DHCP-ak berak automatikoki esleitu ahal dio, baina gerta daiteke, zerbitzaria abiarazi bakoitzean IP ezberdina aurkitzea eta honek zerbitzaria gure sarean aurkitzerakoan arazoak ematea. Horrenbestez, IP finko bat ezarri diogu. 
 
-Gure kasuan, beste ikaskideek ere beraien IP-ak beharko dituztelako, ezin izan dugu edozein jarri, zeren beste norbaitek gure IP berdina erabiliko badu, makinekin konektatzeko garaian, arazoak izango ditugu. Horrenbestez, gelako kideen artean IP-ak banatu ditugu, gelako zerrendako ordenaren arabera. Guk erabiliko dugun IP-a 192.168.70.1 izango da (Maskara 255.255.255.0). 70 zenbakia, SISA1 gelari dagokion sarea da eta 1 zenbakia, Xabier gelako zerrendako lehena dugunez, berak libre duen IP-etako bat hori da.
+Gure kasuan, router bat erabili dugu gure zerbitzaria eta gailu inalambrikoak sare batean batu eta elkarrekin lotu ahal izateko. Zerbitzaria, RJ45 Kable bidez lotu dugo Routerrera eta gailu inalambrikoa berriz, WiFi bidez.
 
-IP-en banaketa gelako zerrendako zenbakien arabera egin dugu. Pertsona bakoitzak, bere zerrendako zenbakia izango du bere IP bezala eta, gehiago behar baditu +50 egin beharko da.
-
-Gure gailuari IP finkoa ezartzeko urratsak ondorengo hauek dira:
+Gure gailuari (Zerbitzariari) IP finkoa ezartzeko urratsak ondorengo hauek dira:
 
 * Administrador de servidor sartu.
 * Servidor Local aukeratu.
@@ -146,9 +144,11 @@ IP manualki jarri dugunez, gure interneteko sarreraren IP-a ere jarri behar dugu
 
 Jarri dugun IP-a hau da:
 
-* IP zerbitzaria: 192.168.70.1
+* IP zerbitzaria: 192.168.0.10
 * Maskara: 255.255.255.0
-* Aterabidea (Puerta de enlace): 192.168.70.254
+* Aterabidea (Puerta de enlace): 192.168.0.1
+
+Konektatuko dugun gailu inalambrioak IP-a DHCP-ek asignatuko dio. Kanpotik konektatzen dugun gailuaren IP-a ez daukagu zertan finkoa jarri beharrik, IIS, ren IP-a ezagutzea eta sare berdinean egotea nahikoa ditu gailu inalambrikoak konexioa ondo egiteko.
 
 ![Mi foto](img/Sistemak/02/02.png)
 

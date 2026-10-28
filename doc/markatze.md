@@ -5,7 +5,8 @@ title: Markatze Lengoaiak
 
 ## Sarrera
 
-Proiektuaren helburua informatikako erronkan landutako edukiak webgune batean biltzea da. HTML erabili dugu egitura sortzeko eta CSS diseinua egiteko. Webguneak sei atal ditu: Hasiera, Sareak, Sistemak, Markatzea, Datu-baseak eta Digitalizazioa.
+Proiektu honetan HTML eta CSS erabiliz webgune bat sortu dugu. Horretarako izenburuak, zerrendak, estekak eta irudiak gehitu ditugu baita menu bat eta footer bat ere. Gainera CSS estiloak aplikatu ditugu webgunearen diseinua hobetzeko eta dokumentazioa GitHub-en egin dugu MD erabiliz.
+
 
 ##  1. Erabilitako programak 
 

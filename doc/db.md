@@ -29,3 +29,5 @@ Bukatzeko denboraldi bakoitzak kapitulu bat edo gehiago ditu, eta kapitulu bakoi
 ![Mi foto](img/DB/EreduErlazionala.png)
 
 # NORMALIZAZIOA
+
+[Sakatu hemen](normalizazioa/Normalizazioa.pdf)

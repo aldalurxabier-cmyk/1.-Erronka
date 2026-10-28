@@ -5,7 +5,7 @@ title: Datu Baseak
 
 # Sarrera
 
-Lehenik eta behin, enuntziatu bat eman digute eta bertan agertzen den informazioa interpretatu behar izan dugu. Lehenik, deskribapena egin dugu eta horrekin E/R diagrama osatu dugu. Gero, eredu erlazionala sortu dugu eta datu-basea normalizatu dugu. Azkenik, egindako lana Accessen inplementatu dugu.
+Lehenik eta behin, enuntziatu bat eman digute eta bertan agertzen den informazioa interpretatu behar izan dugu. Gero, deskribapena egin dugu eta horrekin E/R diagrama osatu dugu. Ondoren, eredu erlazionala sortu dugu eta datu-basea normalizatu dugu. Azkenik, egindako lana Access-en inplementatu dugu.
 
 # 1. Deskribapena
 

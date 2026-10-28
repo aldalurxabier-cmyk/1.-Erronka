@@ -3,11 +3,11 @@ layout: page
 title: Datu Baseak
 ---
 
-# SARRERA
+# Sarrera
 
 Lehenik eta behin, enuntziatu bat eman digute eta bertan agertzen den informazioa interpretatu behar izan dugu. Lehenik, deskribapena egin dugu eta horrekin E/R diagrama osatu dugu. Gero, eredu erlazionala sortu dugu eta datu-basea normalizatu dugu. Azkenik, egindako lana Accessen inplementatu dugu.
 
-# DESKRIBAPENA 
+# Deskribapena
 
 Streaming plataforma batek bere datu-basean erabiltzaileak, perfilak, planak, edukiak eta bistaratzeak kudeatu nahi ditu.
 
@@ -21,15 +21,15 @@ Telesail bakoitzak denboraldi bat edo gehiago izan ditzake, eta denboraldi bakoi
 
 Bukatzeko denboraldi bakoitzak kapitulu bat edo gehiago ditu, eta kapitulu bakoitza denboraldi bakar batekoa da. Kapitulu bakoitzari buruz, Id-kapituloa, izena, zenbakia eta bistaratzeak gordetzen dira. Kapituluak dagokion denboraldiarekin lotuta erregistratzen dira, denboraldi bakoitzeko kapituluak identifikatu eta antolatu ahal izateko.
 
-# ER DIAGRAMA 
+# ER Diagrama
 
 ![Mi foto](img/DB/ER%20diagrama.png)
 
-# EREDU ERLAZIONALA
+# Eredu Erlazionala
 ![Mi foto](img/DB/EreduErlazionala.png)
 
-# NORMALIZAZIOA
+# Normalizazioa
 
 [Sakatu hemen](normalizazioa/Normalizazioa.pdf)
 
-# DATU BASEA ACCESS-EN IMPLEMENTATU 
+# Datu Basea Access-en implementatu 

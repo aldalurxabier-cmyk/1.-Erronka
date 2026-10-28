@@ -83,7 +83,7 @@ Pasahitza ondo dagoen egiaztatzeko konprobaketa egin dugu. Hasierako bit-kateari
 
 ![Mi foto](img/Sareak/IMG_9361.jpg)
 
-# PSK(2),ASK(2),FSK(2)
+## PSK(2),ASK(2),FSK(2)
 
 PSK(2),ASK(2) eta FSK(2) egin baino lehen guk aukeratutako pasahitza bitarrera aldatu dugu, behin bitarrean izan dugunean zatiketa egin dugu CRC6 formularekin:
 

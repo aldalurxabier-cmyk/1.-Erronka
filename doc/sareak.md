@@ -168,7 +168,8 @@ Hasteko, beharrezko materiala bildu dugu. Kasu honetan honako gailu hauek behar 
 
 Ondoren, nola montatuko dugun erabaki dugu. Garbiago ikusteko, sortuko dugun sarearen eskema bat egin dugu. Bertan ikusten da Router Wifi bat izango dugula (TP-Link Archer C3200) eta gailu guztiak bertara konektatuko direla. Alde batetik, Zerbitzaria, Web zerbitzaria eta gure ordenagailu lokala ditugu, kable bidez konektatua. Bestaldetik, kanpoko gailu inalanbrikoak ditugu, Routerrak sortuko duen Wifi bidez lotuko direnak.
 
-HEMEN ARGAZKIA SARTU ESKEMANA
+
+![Mi foto](img/Sareak/SareEskema.png)
 
 Jarraian, gure Routerra konfiguratuko dugu. Horretarako bere "Puerta de enlace" IP-a zein den jakin behar dugu, hortik sartu ahal garelako Routerraren konfigurazioa ezartzera Web nabigatzaile batetik. Gure kasuan bi haukera izan ditugu IP hau zein den jakiteko. Lehen aukera, Routerra piztu eta gailu bat kable bidez konektatzea dugu. Jarraian, CMD, komandoen lehioa ireki eta IPconfig erabilita, aurkitu dezakegu zein den Routerraren sarbidea. Beste haukera, Routerrak berak sortzen duen Wifira konektatuta (defektuzko pasahitza Routerraren atzeko aldean dago), berdina egitea da. Oraingo honetan, mugikor bat erabili dugu, Routerreko WiFi-ra konektatu gara eta mugikorrak ematen dizkigun aukeretatik aurkitu dugu zein den Routerraren sarbidea.
 

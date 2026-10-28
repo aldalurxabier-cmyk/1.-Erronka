@@ -5,7 +5,7 @@ title: Sareak
 
 # Sarrera
 
-Ikasgai honetan, OSI ereduaren lehenengo bi mailak landuko ditugu. Horretarako, sare-kableak egingo ditugu, patch panelera konektatzeko. Gainera, pasahitza ASCII kodearen bidez bitar bihurtuko dugu, eta CRC-6 algoritmoa aplikatuko diogu datuen transmisioan gerta daitezkeen akatsak detektatzeko. Era berean, datuak modulazioaren eta Manchester kodifikazioaren bidez irudikatuko ditugu. Azkenik, Wi-Fi sare bat sortuko dugu, webgunea mugikorretik eta ordenagailu eramangarritik ikusi ahal izateko.
+Ikasgai honetan, OSI ereduaren lehenengo bi mailak landu ditugu. Horretarako, sare-kableak egin ditugu, patch panelera konektatzeko. Gainera, pasahitza ASCII kodearen bidez bitar bihurtu dugu, eta CRC-6 algoritmoa aplikatu diogu datuen transmisioan gerta daitezkeen akatsak detektatzeko. Era berean, datuak modulazioaren eta Manchester kodifikazioaren bidez irudikatu ditugu. Azkenik, Wi-Fi sare bat sortu dugu, webgunea mugikorretik eta ordenagailu eramangarritik ikusi ahal izateko.
 
 # PATCH PANELA ETA KABLEA
 

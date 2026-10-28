@@ -5,6 +5,7 @@ title: Datu Baseak
 
 # Sarrera
 
+Lehenik eta behin, enuntziatu bat eman digute eta bertan agertzen den informazioa interpretatu behar izan dugu. Lehenik, deskribapena egin dugu eta horrekin E/R diagrama osatu dugu. Gero, eredu erlazionala sortu dugu eta datu-basea normalizatu dugu. Azkenik, egindako lana Accessen inplementatu dugu.
 
 # DESKRIBAPENA 
 
@@ -26,3 +27,7 @@ Bukatzeko denboraldi bakoitzak kapitulu bat edo gehiago ditu, eta kapitulu bakoi
 
 # EREDU ERLAZIONALA
 ![Mi foto](img/DB/EreduErlazionala.png)
+
+# NORMALIZAZIOA
+
+[Sakatu hemen](normalizazioa/Normalizazioa.pdf)

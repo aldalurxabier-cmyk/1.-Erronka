@@ -30,4 +30,4 @@ Bukatzeko denboraldi bakoitzak kapitulu bat edo gehiago ditu, eta kapitulu bakoi
 
 # NORMALIZAZIOA
 
-[Sakatu hemen](normalizazioa/Normalizazioa.pdf)
+[Sakatu hemen](normalizazioa/DBNormalizazioa.pdf)

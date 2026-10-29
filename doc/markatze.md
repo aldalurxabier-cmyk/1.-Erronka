@@ -74,7 +74,7 @@ Webgunea egiaztatzeko, orriak ireki ditugu, menuaren estekak probatu ditugu eta 
 ![Mi foto](img/markatze/pagina.png)
 
 ## WEB ORRIALDERAKO SARBIDEA
-[Web 3 TALDEA](http://127.0.0.1:5500/index.html)
+[🌐 Abrir página web]
 
 
 

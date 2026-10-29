@@ -187,7 +187,9 @@ Webgunea egiaztatzeko, orriak ireki ditugu, menuaren estekak probatu ditugu eta 
 
 ## 7. Web orrialderako sarbidea 
 [Web 3 TALDEA](http://192.168.0.10:8080)
-SSID:1erronka3T
+
+SSID: 1erronka3T
+
 PASAHITZA: 3T_12345
 
 

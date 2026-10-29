@@ -74,13 +74,9 @@ Webgunea egiaztatzeko, orriak ireki ditugu, menuaren estekak probatu ditugu eta 
 ![Mi foto](img/markatze/PRINCIPAL.png)
 ![Mi foto](img/markatze/pagina.png)
 
-<<<<<<< HEAD
-## WEB ORRIALDERAKO SARBIDEA
-[🌐 Abrir página web]
-=======
 ## 7. Web orrialderako sarbidea 
 [Web 3 TALDEA](http://127.0.0.1:5500/index.html)
->>>>>>> 4f992e05a5893e6ab28bc5ac39f47e38039d4aa2
+
 
 
 

@@ -41,7 +41,7 @@ Normalizazioa eginda ↓
 # 5. Datu basea Access-en implementatu 
 Atal honetan, gure orain arte egin ditugun Entitate erlazio diagrama, eredu erlazionala eta amaitzeko egindako normalizazioaren ondoren, gure datu base propioa sortzeko beharrezko datuak baditugu. Jarraian, access-ean sortu ditugun taluak eta barruko atribu bakoitza zer den, zertarako den eta zein murrizketa aplikatu ditugun aipatuko dugu:
 
-1. Edukiak: 
+1.Edukiak: 
 
 Proiektuan dauden ikus-entzunezko eduki nagusiak kudeatzeko taula da. Hauek dira bere atributuak:
 
@@ -63,7 +63,7 @@ Eduki bakoitza zein adinetik gora ikusi ahalko den zehaztuko du.
 
 Zerrenda desplegablea (Balio-zerrenda) jarri dugu formatu gisa: +3; +7; +12; +16; +18 aukerekin. Eduki bakoitzean balio estandarizatuak bakarrik sartzeko eta akatsak saihesteko. 
 
-2. Pelikulak: 
+2.Pelikulak: 
 
 Pelikulen informazio espezifikoa biltzen duen taula da. Hauek dira bere atributuak:
 
@@ -85,7 +85,7 @@ Pelikula konkretu bakoitza zenbat aldiz bistaratu den zenbatzen du.
 
 Zenbaki oso gisa jarri dugu formatua.
 
-3. Kapituluak:
+3.Kapituluak:
 
  Telesailen kapituluak kudeatzeko taula da. Hauek dira bere atributuak:
 
@@ -109,7 +109,7 @@ Zenbaki oso gisa jarri dugu formatua (Ezin da behin ere 1,5 aldiz bistaratu eduk
 
 Murrizketa: Bistaratzeak ezin dira inoiz negatiboak izan, beraz, datua beti 0 tik gora izateko murrizketa ezarri diogu.
 
-4. Denboraldiak:
+4.Denboraldiak:
 
  Telesailen denboraldien informazioa gordetzen duen taula da. Hauek dira bere atributuak:
 
@@ -137,7 +137,7 @@ Denboraldi hori zein telesailetakoa den erlazionatzen du.
 
 Zenbaki oso gisa jarri dugu formatua (Gako printzipala ere hala dago).
 
-5. Telesailak: 
+5.Telesailak: 
 
 Telesailen datuak biltzen dituen taula da. Hauek dira bere atributuak:
 
@@ -159,7 +159,7 @@ Pelikula konkretu bakoitza zenbat aldiz bistaratu den zenbatzen du.
 
 Zenbaki oso gisa jarri dugu formatua.
 
-6. Dokumentalak:
+6.Dokumentalak:
 
  Dokumentalen erregistroa kudeatzeko taula da. Hauek dira bere atributuak:
 
@@ -177,7 +177,7 @@ Zenbaki oso gisa jarri dugu formatua.
     o	Zenbaki oso gisa jarri dugu formatua (Ezin da behin ere 1,5 aldiz bistaratu eduki bat adibidez).
     o	Murrizketa: Bistaratzeak ezin dira inoiz negatiboak izan, beraz, datua beti 0 tik gora izateko murrizketa ezarri diogu.
 
-7. Erabiltzaileak:
+7.Erabiltzaileak:
 
  Sistemako erabiltzaileen datuak gordetzen dituen taula da. Hauek dira bere atributuak:
 
@@ -207,7 +207,7 @@ Zenbaki oso gisa jarri dugu formatua.
     o	Data/Ordua gisa jarri dugu formatua, sistemak data gisa interpretatu eta adin-filtroak egin ahal izateko.
     o	18 urtetik beherakoek ezin izango dutenez gure Streaming plataforman erregistratu, daten murrizketa bat jarri diogu atal honi.
 
-8. Planak: 
+8.Planak: 
 
  Kontratazio edo harpidetza planak kudeatzeko taula da. Hauek dira bere atributuak:
 
@@ -224,7 +224,7 @@ Zenbaki oso gisa jarri dugu formatua.
     o	Planaren kostua zehazten du.
     o	Moneta gisa jarri dugu formatua, balio ekonomikoak eta dezimalak zuzenean kudeatzeko.
 
-9. Perfilak:
+9.Perfilak:
 
  Erabiltzaile bakoitzaren profilak kudeatzeko taula da. Hauek dira bere atributuak:
 
@@ -246,7 +246,7 @@ Profil hori zein erabiltzailearena den adierazten du.
 
 Testu labur gisa jarri dugu formatua, erabiltzailearen taularekin erlazionatzeko.
 
-10. ErabiltzailePlana: 
+10.ErabiltzailePlana: 
 
 Erabiltzaileek hautatutako planen erlazio-taula da. Hauek dira bere atributuak:
 
@@ -274,7 +274,7 @@ Kontratatutako planaren amaiera data gordetzen da.
 
 Data formatuan gordeko dugu datu hau.
 
-11. Ikusi:
+11.Ikusi:
 
  Perfil konkretu batek eduki konkretu bat zenbat aldiz bistaratu duen adierazten du:
 

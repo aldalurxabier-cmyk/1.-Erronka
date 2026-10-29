@@ -39,13 +39,17 @@ Normalizazioa eginda ↓
 [Sakatu hemen](normalizazioa/Normalizazioa.pdf)
 
 # 5. Datu basea Access-en implementatu 
-Atal honetan, gure orain arte egin ditugun Entitate erlazio diagrama, eredu erlazionala eta amaitzeko egindako normalizazioaren ondoren, gure datu base propioa sortzeko beharrezko datuak baditugu. Jarraian, access-ean sortu ditugun taluak eta barruko atribu bakoitza zer den, zertarako den eta zein murrizketa aplikatu ditugun aipatuko dugu:
+Atal honetan, gure orain arte egin ditugun Entitate erlazio diagrama, eredu erlazionala eta amaitzeko egindako normalizazioaren ondoren, gure datu base propioa sortzeko beharrezko datuak baditugu. Jarraian, access-ean sortu ditugun taluak eta barruko atribu bakoitza zer den, zertarako den eta zein murrizketa aplikatu ditugun aipatuko dugu.
+
+Access-a eginda →
+[Sakatu hemen](access/1Erronka3T.accdb)
+
 
 EDUKIAK : 
 
 Proiektuan dauden ikus-entzunezko eduki nagusiak kudeatzeko taula da. Hauek dira bere atributuak:
 
-•	Id_Edukiak - (Gako nagusia)
+•	Id_Edukiak - ( Gako nagusia )
 
 Eduki bakoitza modu bakarrean eta errepikaezinean identifikatzeko balio du.
 

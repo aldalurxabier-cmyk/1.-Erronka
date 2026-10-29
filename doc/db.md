@@ -39,5 +39,5 @@ Normalizazioa eginda ↓
 [Sakatu hemen](normalizazioa/Normalizazioa.pdf)
 
 # 5. Datu basea Access-en implementatu 
-Azkenik, datu-basea Access-en inplementatu dugu. Taulak eta haien arteko erlazioak sortuz. Horrela, informazioa modu egituratuan gorde, kontsultatu eta eguneratzeko aukera izango dugu
+Azkenik, datu-basea Access-en inplementatu dugu. Taulak eta haien arteko erlazioak sortuz. Horrela, informazioa modu egituratuan gorde, kontsultatu eta eguneratzeko aukera izango dugu.
 

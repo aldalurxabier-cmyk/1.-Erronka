@@ -164,6 +164,9 @@ Erronka honetan, helburu zehatz bat betetzea egokitu zaigu. Sortu dugun Web zerb
 
 Hasteko, beharrezko materiala bildu dugu. Kasu honetan honako gailu hauek behar izan ditugu lan hau burutzeko:
 * Router bat
+
+![Mi foto](img/Sareak/01/01.jpg)
+
 * Web zerbitzari bat (Virtual-box-en muntatu dugu, honen azalpenak sistema eragileen atalean)
 * Zerbitzaria eta Routerra konektatzeko RJ45 kablea.
 
@@ -179,8 +182,17 @@ Jarraian, gure Routerra konfiguratuko dugu. Horretarako bere "Puerta de enlace" 
 Sarbidea aurkitu ondoren, Routerra konfiguratzearin ekin diogu. Hauek dira jarri ditugun gauzak:
 
 * Routerraren konfiguraziora sartzeko baimena izateko, erabiltzaile eta pasahitz berria sortu dizkiogu.
+
+![Mi foto](img/Sareak/01/03.jpg)
+
 * Zona Horaria.
+
+![Mi foto](img/Sareak/01/04.jpg)
+
 * Sare inalambrikoak: Gure kasuan, Routerrak 3 sare inalambriko sortzeko haukera ematen du, 2.4GHz-ko bat eta 5GHz-ko bi. Lan honetarako 2.4GHz ko sare bakarrik martxan uztea erabaki dugu, alkantze handiagoa duelako eta gure Web orria exekutatzeko abidura handiaren beharrik ez dugulako (Gure Web orria oso ariña da). Segurtasunagatik, defektuzko SSID eta pasahitz berriak jarri dizkiogu Wifi sare honi.
+
+![Mi foto](img/Sareak/01/05.jpg)
+
 * Interneterako konexioa: Dinamikoa, DHCP-ek emango dio IP-a.
 
 Hauek dira Routerraren konfigurazioa sartzeko ezarri ditugun erabiltzailea eta pasahitza:
@@ -193,22 +205,10 @@ Hauek dira gure Wifi sareari eman dizkiogun SSID eta pasahitza:
 * SSID: 1ERRONKA3T
 * Pasahitza:  3T_12345
 
+![Mi foto](img/Sareak/01/06.jpg)
+
 Ondoren, gure zerbitzaria routerrera konektatu dugu RJ45 kable bidez eta 192.168.0.10 IP finko bat eman diogu (Atal hau sistema eragileetako zatian azalduta)
 
 Amaitzeko, gure web zerbitzaria ikusgai dagoela egiaztatu dugu gailu inalambriko bat erabiliz (kasu honetan, mugikor bat). Web orria bikain zabaldu du, guztiak egoki funtzionatzen duela ikusi dugu.
-
-**Argazkiak :**
-
-![Mi foto](img/Sareak/01/01.jpg)
-
-![Mi foto](img/Sareak/01/02.jpg)
-
-![Mi foto](img/Sareak/01/03.jpg)
-
-![Mi foto](img/Sareak/01/04.jpg)
-
-![Mi foto](img/Sareak/01/05.jpg)
-
-![Mi foto](img/Sareak/01/06.jpg)
 
 ![Mi foto](img/Sareak/01/07.jpg)

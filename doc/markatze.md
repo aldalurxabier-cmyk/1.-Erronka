@@ -1,14 +1,14 @@
 ---
 layout: page
-title: Markatze lengoaiak
+title: Markatze Lengoaiak
 ---
-# 3 TALDEA – WEBGUNEAREN DOKUMENTAZIOA
 
-## SARRERA
+## Sarrera
 
-Proiektuaren helburua informatikako erronkan landutako edukiak webgune batean biltzea da. HTML erabili dugu egitura sortzeko eta CSS diseinua egiteko. Webguneak sei atal ditu: Hasiera, Sareak, Sistemak, Markatzea, Datu-baseak eta Digitalizazioa.
+Proiektu honetan HTML eta CSS erabiliz webgune bat sortu dugu. Horretarako izenburuak, zerrendak, estekak eta irudiak gehitu ditugu baita menu bat eta footer bat ere. Gainera CSS estiloak aplikatu ditugu webgunearen diseinua hobetzeko eta dokumentazioa GitHub-en egin dugu MD erabiliz.
 
-##  ERABILITAKO PROGRAMAK
+
+##  1. Erabilitako programak 
 
 - **HTML:** Testuak, izenburuak, irudiak eta estekak sortzeko.
 - **CSS:** Koloreak, tamainak, botoiak eta elementuen kokapena aldatzeko.
@@ -17,7 +17,8 @@ Proiektuaren helburua informatikako erronkan landutako edukiak webgune batean bi
 - **GitHub:** Fitxategiak gordetzeko eta lana antolatzeko.
   ![Mi foto](img/Digi/githun-removebg-preview.png)
 
-##  KARPETA ETA FITXATEGIEN EGITURA
+
+##  2. Karpeta eta fitxategien egitura 
 
 - **css/**: styleserronka.css fitxategia gordetzen du; webgunearen diseinua definitzen du.
 - **doc/img/**: Irudiak gaika antolatzen ditu.
@@ -26,7 +27,7 @@ Proiektuaren helburua informatikako erronkan landutako edukiak webgune batean bi
 - **_config.yml**: GitHub Pages edo Jekyll erabiltzen bada, konfigurazioa zehazten du.
 
 
-## HTML ETIKETAK
+## 3. HTML etiketak
 
 - **!DOCTYPE html:** HTML5 formatua adierazten du.
 - **html lang="eu":** Dokumentuaren hizkuntza euskara dela adierazten du.
@@ -43,7 +44,7 @@ Proiektuaren helburua informatikako erronkan landutako edukiak webgune batean bi
 - **img src="..." alt="...":** Irudiak txertatzen ditu; src kokapena da eta alt deskribapena.
 - **footer:** Orriaren beheko zatia sortzen du.
 
-## CSS PROPIETATEAK
+## 4. CSS propietateak
 
 - **margin:** Kanpoko tartea ezartzen du.
 - **padding:** Barruko tartea ezartzen du.
@@ -60,7 +61,7 @@ Proiektuaren helburua informatikako erronkan landutako edukiak webgune batean bi
 - **border-radius:** Ertzak biribiltzen ditu.
 - **min-height: 100vh:** Gutxieneko altuera pantailaren altuerara egokitzen du.
 
-## WEBGUNEAREN DISEINUA ETA NABIGAZIOA
+## 5. Webgunearen diseinua eta nabigazioa 
 
 Webguneko orri guztiek diseinu antzekoa dute. Goiburuak taldearen izena erakusten du, menuak beste orrietara sartzeko botoiak ditu, eta eduki nagusian testuak eta irudiak agertzen dira.
 
@@ -68,13 +69,18 @@ href atributuaren bidez, botoi bakoitza dagokion HTML fitxategiarekin lotzen dug
 
 Webgunea egiaztatzeko, orriak ireki ditugu, menuaren estekak probatu ditugu eta irudiak zein estiloak behar bezala agertzen direla egiaztatu dugu.
 
-## WEBGUNEAREN ARGAZKIAK
+## 6. Webgunearen argazkiak
 
 ![Mi foto](img/markatze/PRINCIPAL.png)
 ![Mi foto](img/markatze/pagina.png)
 
+<<<<<<< HEAD
 ## WEB ORRIALDERAKO SARBIDEA
 [🌐 Abrir página web]
+=======
+## 7. Web orrialderako sarbidea 
+[Web 3 TALDEA](http://127.0.0.1:5500/index.html)
+>>>>>>> 4f992e05a5893e6ab28bc5ac39f47e38039d4aa2
 
 
 

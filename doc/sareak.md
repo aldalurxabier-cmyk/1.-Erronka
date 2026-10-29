@@ -7,11 +7,11 @@ title: Sareak
 
 Ikasgai honetan, OSI ereduaren lehenengo bi mailak landu ditugu. Horretarako, sare-kableak egin ditugu, patch panelera konektatzeko. Gainera, pasahitza ASCII kodearen bidez bitar bihurtu dugu, eta CRC-6 algoritmoa aplikatu diogu datuen transmisioan gerta daitezkeen akatsak detektatzeko. Era berean, datuak modulazioaren eta Manchester kodifikazioaren bidez irudikatu ditugu. Azkenik, Wi-Fi sare bat sortu dugu, webgunea mugikorretik eta ordenagailu eramangarritik ikusi ahal izateko.
 
-# PATCH PANELA ETA KABLEA
+#  1. Patch panela eta kablea
 
 ![Mi foto](img/Sareak/rj45%20especial%20eta%20pacj%20panel.png)
 
-## KABLEA
+## 1.1 Kablea
 
 Prozedura: Hasteko, kable bat zuritu dugu bi aldeetatik.
 
@@ -19,19 +19,19 @@ Prozedura: Hasteko, kable bat zuritu dugu bi aldeetatik.
 
 Jarraian alde bat jarri behar izan dugu RJ45 B-n, bertan jarri dugu or ipintzen duen kolore-ordenan. Erremientarekin koloreen arabera ordenatu ondoren, kablea katigatuko dugu, eta gainerakoa moztu egingo dugu, kanpotik geratzen dena gera ez dadin.
 
-## RJ45 B KONEKTOREA EGINDA
+## RJ45 B konektorea eginda
 
 ![Mi foto](img/Sareak/rj45%20especial.png)
 
-## PATCH PANELA
+## 1.2 Patch panela
 
 Prozedura: Patch panela egiteko, kable zurituaren beste zatia hartu dugu. Patch panelean jartzen duzun lekuaren arabera, koloreen ordena aldatu egiten da. Gure lekuan eskura jartzen duen ordenan jarri dugu eta gero erremintarekin RJ45 B-arekin egiten den gauza bera egin dugu. Kablea ondo lotu, eta gainerazkoa moztu. Ondo doala egiarazteko, sareko kable bat hartu dugu, eta alde batean rj45 b-n entxufatuko dugu, eta bestea testerrean. Argi guztiak pizten badira, prozezua ondo eginda dagoela da.
 
-## PATCH PANELA EGINDA
+## Patch panela eginda
 
 ![Mi foto](img/Sareak/PACH%20PANEL.png)
 
-# PASAHITZA ASCII-RA 
+# 2. Pasahitza ASCII-ra
 
 Lehenik eta behin, zerbitzarian erabiltzeko pasahitz bat erabaki dugu: 3T_123. Pasahitz hau ASCII bidez karaktere bakoitzari dagokion zenbakia adierazten da. Horrela pasahitzaren karaktere bakoitza zenbaki batez irudika daiteke.         
 
@@ -51,11 +51,11 @@ _ = 95
 
 Ondoren, zenbaki bakoitza bitarrera pasatu dugu, CRC-a egiteko. Horretarako zenbaki bakoitza zati 2 egin dugu, hondarra lortu arte. Gero, hondarrak behetik gora irakurri ditugu, eta 8 bit-eko zenbaki bat lortu dugu. 
 
-## ASCII ARIKETA 
+## ASCII ariketa 
 
 ![Mi foto](img/Sareak/ASCII.png)
 
-# CRC
+# 3. CRC
 
 CRC-a egiteko ASCII bidez lortutako 6 karaktereak bitar sistemara pasatu ditugu eta 8 biteko zenbaki bakoitza elkartuz 48 biteko bit-kate bat osatu dugu. Ondoren, 6 zero gehitu dizkiogu CRC-6 delako.
 Erabili dugun polinomioa hau da: 
@@ -76,14 +76,14 @@ Emaitza lortu ondoren hurrengo bitak jaitsi ditugu eta prozesu bera errepikatu d
 
 Pasahitza ondo dagoen egiaztatzeko konprobaketa egin dugu. Hasierako bit-kateari 6 zero gehitu beharrean, lortutako emaitza sartu dugu. Ondoren, berriro zatiketa bitarra egin dugu polinomio berarekin. Hondarra (000000) denez, egiaztapena zuzena da eta ez da errorik detektatzen. 
 
-## CRC ARIKETA
+## CRC ariketa
 
 ![Mi foto](img/Sareak/20261026_132135.jpg)
 
 
 ![Mi foto](img/Sareak/IMG_9361.jpg)
 
-# PSK(2),ASK(2),FSK(2)
+## 4. PSK(2),ASK(2),FSK(2)
 
 PSK(2),ASK(2) eta FSK(2) egin baino lehen guk aukeratutako pasahitza bitarrera aldatu dugu, behin bitarrean izan dugunean zatiketa egin dugu CRC6 formularekin:
 
@@ -92,7 +92,7 @@ $$(X^6 + X^5 + X^3 + X^2 + X + 1)$$
 Zatiketaren hondarra lortu eta gero (PSK2,ASK2,FSK2) grafikoak egin ditugu.
 Grafikoak egiteko lortu ditugun 54 bit-ak sei-naka banatu ditugu.
 
-## PSK2 - MODULAZIO ARAUAK
+## 4.1 PSK2 - Modulazio arauak
 
 * PSK(2) norabidea adierazten digu, baita bitak binaka multzokatzen dira.
 * 4 hasiera mota desberdin daude: (00,01,10,11.)
@@ -106,7 +106,7 @@ Grafikoak egiteko lortu ditugun 54 bit-ak sei-naka banatu ditugu.
 
 ![Mi foto](img/Sareak/psk,ask,fsk.png)
 
-## ASK2 - MODULAZIO ARAUAK
+## 4.2 ASK2 - Modulazio arauak
 
 * ASK(2) altuera adierazten digu, baita bitak binaka multzokatzen dira.
 * 4 altura mota desberdin daude: (00,01,10,11)
@@ -115,7 +115,7 @@ argazkia
 
 ![Mi foto](img/Sareak/ask.png)
 
-## FSK(2) - MODULAZIO ARAUAK
+## 4.3 FSK(2) - Modulazio arauak
 
 * FSK(2) uhin kopurua adierazten digu, baita bitak binaka multzokatzen dira.
 * 4 uhin mota daude: (00,01,10,11)
@@ -126,11 +126,11 @@ argazkia
 
 ![Mi foto](img/Sareak/fsk.png)
 
-## PSK(2),ASK(2),FSK(2) ARIKETA
+## PSK(2),ASK(2),FSK(2) ariketa
 
 ![Mi foto](img/Sareak/PSK(Z),ASK(2),FSK(2).png)
 
-# MANCHESTER IEEE
+# 5. Manchester IEEE
 
 * Manchester IEEE-k bitak adierazten ditu eta hartzaileari datuak noiz irakurri behar dituen jakiten laguntzen dio.
 
@@ -140,12 +140,12 @@ argazkia
 argazkia
 * Prozedura: Zatiketa egin eta gero ateratako 54 bitak ipini ditugu lerro batean, ondoren bakoitzari tarte bat laga diogu. Tartea hutzi eta gero zenbaki bakoitzari dagokion gezia ipini diogu, geziak ipini eta gero geziak lotzen hasi gara. Geziak lotzeko dagokion araua jarraitu dugu. ( Araua: igo baino lehen jaitsi behar da, eta jaitsi baino lehen igo behar da.)
 
-## MANCHESTER IEEE ARIKETA
+## Manchester IEEE ariketa
 
 ![Mi foto](img/Sareak/IMG_2213.jpg)
 
 
-# MANCHESTER DIFERENTZIALA
+# 6. Manchester Diferentziala
 
 Manchester Diferentzialak bitak adierazten ditu, eta 0 eta 1 bereizteko bitaren hasieran aldaketarik dagoen ala ez begiratzen da.
 
@@ -153,11 +153,12 @@ Manchester Diferentzialak bitak adierazten ditu, eta 0 eta 1 bereizteko bitaren 
 - 1: Geziaren noranzkoa aldatzen da
 
 Prozedura: Zatiketa egin eta gero ateratako 54 bitak ipini ditugu lerro batean, ondoren bakoitzari tarte bat laga diogu. Tartea hutzi eta gero zenbaki bakoitzari dagokion gezia ipini diogu, geziak ipini eta gero geziak lotzen hasi gara. Geziak lotzeko dagokion araua jarraitu dugu. ( Araua: igo baino lehen jaitsi behar da, eta jaitsi baino lehen igo behar da.)
-# MANCHESTER DIFERENTZIAL ARIKETA
+
+## Manchester diferentziala ariketa
 
 ![Mi foto](img/Sareak/Diferentziala.PNG)
 
-# WEB ZERBITZARIA ETA GAILU INALAMBRIKOEN ARTEKO KONEXIOA
+# 7. Web zerbitzaria eta gailu inalambrikoen arteko konexioa 
 
 Erronka honetan, helburu zehatz bat betetzea egokitu zaigu. Sortu dugun Web zerbitzarian ikusgai jarri dugun Web orria, zerbitzaritik kanpora aurkitzen diren gailu inalambrikoekin ikusi ahal izatea. Hau lortzeko, honako pauso hauek jarraitu ditugu:
 
@@ -196,7 +197,7 @@ Ondoren, gure zerbitzaria routerrera konektatu dugu RJ45 kable bidez eta 192.168
 
 Amaitzeko, gure web zerbitzaria ikusgai dagoela egiaztatu dugu gailu inalambriko bat erabiliz (kasu honetan, mugikor bat). Web orria bikain zabaldu du, guztiak egoki funtzionatzen duela ikusi dugu.
 
-**Argazkiak**
+**Argazkiak :**
 
 ![Mi foto](img/Sareak/01/01.jpg)
 

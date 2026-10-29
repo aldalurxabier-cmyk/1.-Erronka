@@ -30,7 +30,7 @@ Instalazioari ekin aurretik, honako baliabide hauek behar ditugu:
     2. Sakatu **"Nueva"** (Berria) botoia.
     3. **Izena**: 1. Erronka
     4. **Mota (Type)**: Microsoft Windows
-    5. **Bertsioa (Version)**: Windows Server 2022 x64 es-ES
+    5. **Bertsioa (Version)**: Windows Server 2025 x64 es-ES
     6. **Proceed with Unattended installation, MARKATU GABE** utziko dugu, virtualbox-ek administratzailearen izenak eta pasahitzak automatikoki sortu partez, geuk manualki aldatu ahal izateko instalazio garaian.
 
     ![Mi foto](img/Sistemak/01/08.png)
@@ -503,7 +503,7 @@ Web zerbitzaria martxan jartzeko pauso hauek jarraitu ditugu.
 * Eskuineko klik + agregar sitio web.
 * Izena jarri
 * Ruta sartu (Web orriko fitxategiak kopiatu ditugun karpeta)
-* IP-a eta portua ezarri (Gure kasuan, 192.168.70.1:8080)
+* IP-a eta portua ezarri (Gure kasuan, 192.168.0.10:8080)
 
 ![Mi foto](img/Sistemak/08-02/01.png)
 
@@ -595,7 +595,7 @@ Gure sisteman segurtasun-kopien plana honela geratuko da ezarrita:
 * **Maiztasuna:** Kopiak **egunero** egingo dira automatikoki. Goizeko 03:00 tan egingo dira kopiak, enpresako langileak lanean ari diren bitartean egitea baino egokiagoa da ordu hauetan egitea, zerbitzariaren errendimenduan eragina izan dezakeelako segurtasun kopia egiteak (kopia egiten ari den bitartean makalago ibili ahal da zerbitzaria).
 * **Mantentze-lana:** Informatikariak **egunero errebisatu eta egiaztatuko du** kopiak zuzen eta egitura egokiarekin egin direla.
 
-### 9.7 Nola automatizatu zegurtasun kopiak
+### 9.7 Nola automatizatu segurtasun kopiak
 
 Windows Server-en segurtasun-kopiak automatizatzeko, sistemak berak dakarren jatorrizko tresna erabiliko dugu: Windows Server Backup.
 
@@ -623,3 +623,39 @@ Segurtasun kopiak nola automatizatu?
 * **Exekuzioa**: Behin konfiguratuta, sistema eragileak berak automatikoki egingo ditu kopiak egunero, eta informatikariak soilik eguneroko log-ak edo emaitzak egiaztatu beharko ditu, segurtasun kopiak ondo egin direla egiaztatzeko.
 
 ![Mi foto](img/Sistemak/09/10.png)
+
+### 9.8 Babes kopiak, hirugarrenen tresnak erabiliz
+
+Windows server backup, ez da segurtasun kopiak egiteko erabili dezakegun software bakarra. Badira beste hainbat aplikazio, instalatu eta zerbitzu berdina eman ahal digutenak. Normalean, Windows server backup, sisteman bertan integratuta dagoen herraminta bat izanda, nahikoa eta soberan izaten da babes kopiak modu egokian egiteko, baina hala ere, batzuetan, behar bereziren bat bada edo bestelako arazoren bat bada ere, berdina edo hobea izan daitekeen zerbitzuak eskaintzen dituzten softwareak ere badaudela jakitea egokia da. Gai honen arira, iPerius softwarea aztertu eta azalduko dugu atal honetan eta berak nola funtzionatzen duen azalduko dugu gainetik.
+
+Sofware honek, Windows backup-ek bezala, sisteman gordeta ditugun karpeten babes kopiak egiteko balio digu. Honek ordea, badu Windowsek berez ekartzen duen zerbitzuak eskaintzen ez duen gauza bat. iPerius softwareak, segurtasun kopia, sarean dagoen beste Googleko edo NAS batean gordetzeko aukera ematen digu. Hala ere, ezin izan dugu atal hau probatu zeren nahiz eta sofware hau "freeware" den,(inolako ordainketarik egin gabe erabili daitekeen softwarea da) funtzio hori erabili ahal izateko ordaindu egin behar da. Gure kasuan, zerbitzu honen beharrik iksuten ez dugunez momentuan, ez dugu honengatik ordainduko.
+
+iPerius en segurtasun kopiak automatizatzeko urratsak hauek dira:
+
+* Softwarea exekutatu eta *Crear nueva tarea de copia de seguridad* aukeratu.
+
+![Mi foto](img/Sistemak/09-01/01.png)
+
+* Segurtasun kopia egin nahi den karpeta aukeratu
+
+![Mi foto](img/Sistemak/09-01/02.png)
+
+* Segurtasun kopia gordekoden karpeta aukeratu (Kasu honetan, administratzailea-ren dokumentuetan, karpeta berri bat sortu dugu, kopia hau gordetzeko)
+
+![Mi foto](img/Sistemak/09-01/03.png)
+
+* Kopia zenbatean behin eta ze ordutan egin aukeratu (Gure kasuan egunero, ordua goizeko 05:00 jarri dugu, Windows server backup-ek kopia ordu berean egitea egokia ez delako)
+
+![Mi foto](img/Sistemak/09-01/04.png)
+
+* Izena eta Deskripzio bat gehitu.
+
+![Mi foto](img/Sistemak/09-01/05.png)
+
+* Hasierako panelean, konfigurazioa ondo gorde dela egiaztatau.
+
+![Mi foto](img/Sistemak/09-01/06.png)
+
+## Amaiera
+
+Atal guzti hauek landu ondoren, gure enpresako zerbitzaria martxan gelditu da eta modu egokian konfiguratuta, enpresak zituen beharizan guztiak zuzen erantzunda daude.

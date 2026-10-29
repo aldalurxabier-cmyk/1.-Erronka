@@ -84,6 +84,7 @@ Proiektu honetan HTML eta CSS erabiliz webgune bat sortu dugu. Horretarako izenb
 - **p:** Paragrafoak sortzen ditu.
 - **img src="..." alt="...":** Irudiak txertatzen ditu; src kokapena da eta alt deskribapena.
 - **footer:** Orriaren beheko zatia sortzen du.
+- **table:** Taula sortzen du.
 
 ## 4. CSS propietateak
 
@@ -123,7 +124,36 @@ input {
     border: none;
     border-radius: 4px;
 }
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+  background-color: #2c3e50;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+td:first-child {
+  font-family: monospace;
+  font-weight: bold;
+  color: #0066cc;
+}
 ```
 
 

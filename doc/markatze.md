@@ -156,7 +156,9 @@ Webgunea egiaztatzeko, orriak ireki ditugu, menuaren estekak probatu ditugu eta 
 ![Mi foto](img/markatze/pagina.png)
 
 ## 7. Web orrialderako sarbidea 
-[Web 3 TALDEA](http://127.0.0.1:5500/index.html)
+[Web 3 TALDEA](http://192.168.0.10:8080)
+SSID:1erronka3T
+PASAHITZA: 3T_12345
 
 
 

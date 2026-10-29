@@ -29,6 +29,47 @@ Proiektu honetan HTML eta CSS erabiliz webgune bat sortu dugu. Horretarako izenb
 
 ## 3. HTML etiketak
 
+```html
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 TALDEA | Informatika</title>
+    <link rel="stylesheet" href="css/styleserronka.css">
+</head>
+    <header>
+        <h1>3 TALDEA</h1>
+        <p>INFORMAZIOAREN DIGITALIZAZIO WEBGUNEA</p>
+    </header>
+
+        <nav>
+            <a href="index.html">Hasiera</a>
+            <a href="sareak.html">Sareak</a>
+            <a href="sistemak.html">Sistemak</a>
+            <a href="markatze.html">Markatzea</a>
+            <a href="db.html">Datu-baseak</a>
+            <a href="digi.html">Digitalizazioa</a>
+            
+        </nav>
+
+<main>
+<h2>SARRERA</h2>
+
+<p>Erronka honetan, enpresa baten azpiegitura informatikoa landuko dugu. Windows Server eta segurtasuna konfiguratuko ditugu, sareak, ASCII, CRC-6 eta modulazioa aztertuko ditugu, eta ER diagramak eta datu-baseak sortuko ditugu. Horrez gain, HTML eta CSS erabiliz webgune bat egingo dugu. Azkenik, proiektuaren planifikazioa, jarraipena eta dokumentazioa GitHub bidez kudeatuko ditugu.</p>
+
+<img src="doc/img/DB/uni-removebg-preview.png" alt="">
+</main>
+
+    <footer>
+        <p>3 TALDEA Iker,Iñaki,Xabi,Oier</p>
+    </footer>
+
+</body>
+</html>
+
+```
+
 - **!DOCTYPE html:** HTML5 formatua adierazten du.
 - **html lang="eu":** Dokumentuaren hizkuntza euskara dela adierazten du.
 - **head:** Orriaren konfigurazioa gordetzen du.
@@ -45,6 +86,46 @@ Proiektu honetan HTML eta CSS erabiliz webgune bat sortu dugu. Horretarako izenb
 - **footer:** Orriaren beheko zatia sortzen du.
 
 ## 4. CSS propietateak
+
+``` css
+
+body {
+    background-color: #141414;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.login {
+    background-color: #000;
+    width: 300px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+    font-size: 38px;
+}
+
+h2 {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+```
+
 
 - **margin:** Kanpoko tartea ezartzen du.
 - **padding:** Barruko tartea ezartzen du.

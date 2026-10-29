@@ -39,5 +39,148 @@ Normalizazioa eginda ↓
 [Sakatu hemen](normalizazioa/Normalizazioa.pdf)
 
 # 5. Datu basea Access-en implementatu 
-Azkenik, datu-basea Access-en inplementatu dugu. Taulak eta haien arteko erlazioak sortuz. Horrela, informazioa modu egituratuan gorde, kontsultatu eta eguneratzeko aukera izango dugu
+Atal honetan, gure orain arte egin ditugun Entitate erlazio diagrama, eredu erlazionala eta amaitzeko egindako normalizazioaren ondoren, gure datu base propioa sortzeko beharrezko datuak baditugu. Jarraian, access-ean sortu ditugun taluak eta barruko atribu bakoitza zer den, zertarako den eta zein murrizketa aplikatu ditugun aipatuko dugu:
 
+1. Edukiak
+Proiektuan dauden ikus-entzunezko eduki nagusiak kudeatzeko taula da. Hauek dira bere atributuak:
+•	Id_Edukiak- (Gako nagusia):
+    o	Eduki bakoitza modu bakarrean eta errepikaezinean identifikatzeko balio du.
+    o	Zenbaki osoa (Auto-zenbaketa) gisa jarri dugu formatua, erregistro bakoitzari zenbaki bat automatikoki emateko.
+•	Mota:
+    o	Edukiaren Izena edo mota adierazten du.
+    o	Testu labur bezala gordeko dugu (30 karaktere).
+•	Adin-Sailkapena:
+    o	Eduki bakoitza zein adinetik gora ikusi ahalko den zehaztuko du.
+    o	Zerrenda desplegablea (Balio-zerrenda) jarri dugu formatu gisa: +3; +7; +12; +16; +18 aukerekin. Eduki bakoitzean balio estandarizatuak bakarrik sartzeko eta akatsak saihesteko. 
+2. Pelikulak
+Pelikulen informazio espezifikoa biltzen duen taula da. Hauek dira bere atributuak:
+•	Id_Edukiak (Gako atzerritarra):
+    o	Edukien taularekin erlazioa egiteko eremua da.
+    o	Zenbaki oso gisa jarri dugu formatua.
+•	Izena:
+    o	Pelikularen izena zein den zehazten du.
+    o	Testu laburra bezala gordeko dugu datua.
+•	Bistaratzea:
+    o	Pelikula konkretu bakoitza zenbat aldiz bistaratu den zenbatzen du.
+    o	Zenbaki oso gisa jarri dugu formatua.
+3. Kapituluak
+Telesailen kapituluak kudeatzeko taula da. Hauek dira bere atributuak:
+•	Id_Edukiak (Gako nagusia):
+    o	Eduki konkretu bat dokumentala dela esango du.
+    o	Zenbaki oso gisa jarri dugu formatua (Gako printzipala ere hala dago).
+•	Izena
+    o	Dokumentalaren izena gordetzen du.
+    o	Testu labur gisa jarri dugu formatua.
+•	Bistaratzeak
+    o	Dokumentala zenbat aldiz bistaratu den kontatzen du.
+    o	Zenbaki oso gisa jarri dugu formatua (Ezin da behin ere 1,5 aldiz bistaratu eduki bat adibidez).
+    o	Murrizketa: Bistaratzeak ezin dira inoiz negatiboak izan, beraz, datua beti 0 tik gora izateko murrizketa ezarri diogu.
+4. Denboraldiak
+Telesailen denboraldien informazioa gordetzen duen taula da. Hauek dira bere atributuak:
+•	Id_denboraldia (Gako nagusia):
+    o	Denboraldi bakoitza bakartzeko eremua da.
+    o	Zenbaki osoa (Auto-zenbaketa) gisa jarri dugu formatua.
+•	Izena / Zenbakia
+    o	Denboraldiaren izena edo zenbatgarrena den idazten du. 
+    o	Testu laburra, 30 karaktere.
+•	Gaia
+    o	Denboraldian gertatuko denaren azalpena eta Gaia gordeko da hemen.
+    o	Testu luzea (Paragrafo oso bat idatzi daiteke hemen)
+•	Id_Edukiak (Gako atzerritarra):
+    o	Denboraldi hori zein telesailetakoa den erlazionatzen du.
+    o	Zenbaki oso gisa jarri dugu formatua (Gako printzipala ere hala dago).
+5. Telesailak
+Telesailen datuak biltzen dituen taula da. Hauek dira bere atributuak:
+•	Id_Telesailak (Gako nagusia):
+    o	Telesail bakoitza banaka identifikatzeko balio du.
+    o	Zenbaki osoa (Auto-zenbaketa) gisa jarri dugu formatua.
+•	Izena:
+    o	Telesailaren izenburua gordetzen du.
+    o	Testu labur gisa jarri dugu formatua.
+•	Bistaratzea:
+    o	Pelikula konkretu bakoitza zenbat aldiz bistaratu den zenbatzen du.
+    o	Zenbaki oso gisa jarri dugu formatua.
+
+6. Dokumentalak
+Dokumentalen erregistroa kudeatzeko taula da. Hauek dira bere atributuak:
+•	Id_Edukiak (Gako nagusia):
+    o	Eduki konkretu bat dokumentala dela esango du.
+    o	Zenbaki oso gisa jarri dugu formatua (Gako printzipala ere hala dago).
+•	Izena
+    o	Dokumentalaren izena gordetzen du.
+    o	Testu labur gisa jarri dugu formatua.
+•	Bistaratzeak
+    o	Dokumentala zenbat aldiz bistaratu den kontatzen du.
+    o	Zenbaki oso gisa jarri dugu formatua (Ezin da behin ere 1,5 aldiz bistaratu eduki bat adibidez).
+    o	Murrizketa: Bistaratzeak ezin dira inoiz negatiboak izan, beraz, datua beti 0 tik gora izateko murrizketa ezarri diogu.
+7. Erabiltzaileak
+Sistemako erabiltzaileen datuak gordetzen dituen taula da. Hauek dira bere atributuak:
+•	NAN (Gako nagusia):
+    o	Pertsona bakoitzaren identifikazio fiskal bakarra gordetzen du.
+    o	Testu labur gisa jarri dugu formatua, eta sarrera-maskara jarri diogu. NAN-ak beti egitura bera izango duenez, hau jarritakoan datuak zuzenean sartzea ahalbidetzen du, akatsak murriztuz.
+•	Izena:
+    o	Erabiltzailearen izena gordetzen da hemen.
+    o	Testu labur gisa jarri dugu formatua (30 karakterera murriztuta), izena ez baita oso luzea izaten.
+•	Abizena_1:
+    o	Erabiltzailearen lehen abizena gordetzen da hemen.
+    o	Testu labur gisa jarri dugu formatua (izena bezala, 30 karakterera murriztuta).
+•	Abizena_2:
+    o	Erabiltzailearen bigarren abizena gordetzen da hemen.
+    o	Testu labur gisa jarri dugu formatua (30 karakterera murriztuta).
+•	Posta Elektronikoa:
+    o	Erabiltzailearen harremanetarako emaila gordetzen du.
+    o	Testu labur gisa jarri dugu formatua (30 karakterera murriztuta).
+•	Jaiotze data:
+    o	Erabiltzailearen adina edo adin-tarteak kalkulatu ahal izateko data gordetzea.
+    o	Data/Ordua gisa jarri dugu formatua, sistemak data gisa interpretatu eta adin-filtroak egin ahal izateko.
+    o	18 urtetik beherakoek ezin izango dutenez gure Streaming plataforman erregistratu, daten murrizketa bat jarri diogu atal honi.
+8. Planak
+Kontratazio edo harpidetza planak kudeatzeko taula da. Hauek dira bere atributuak:
+•	Id_Plana (Gako nagusia):
+    o	Plan bakoitza modu bakarrean identifikatzeko eremua da.
+    o	Zenbaki osoa gisa jarri dugu formatua.
+•	Izena:
+    o	Planaren izena gordetzen du.
+    o	Testu labur gisa jarri dugu formatua.
+•	Prezioa:
+    o	Planaren kostua zehazten du.
+    o	Moneta gisa jarri dugu formatua, balio ekonomikoak eta dezimalak zuzenean kudeatzeko.
+9. Perfilak
+Erabiltzaile bakoitzaren profilak kudeatzeko taula da. Hauek dira bere atributuak:
+•	Id_Profilak (Gako nagusia):
+    o	Profil bakoitza banaka identifikatzeko balio du.
+    o	Zenbaki osoa (Auto-zenbaketa) gisa jarri dugu formatua.
+•	Izena:
+    o	Profilari eman zaion izena gordetzen du.
+    o	Testu labur gisa jarri dugu formatua.
+•	Rola:
+    o	Ze eduki mota erakutsiko duen finkatzen du.
+    o	Zerrenda desplegablea (Balio-zerrenda) jarri dugu formatu gisa: +3; +7; +12; +16; +18 aukerekin. Eduki bakoitzean balio estandarizatuak bakarrik sartzeko eta akatsak saihesteko. 
+•	NAN (Gako atzerritarra):
+    o	Profil hori zein erabiltzailearena den adierazten du.
+    o	Testu labur gisa jarri dugu formatua, erabiltzailearen taularekin erlazionatzeko.
+10. ErabiltzailePlana
+Erabiltzaileek hautatutako planen erlazio-taula da. Hauek dira bere atributuak:
+•	NAN (Gako atzerritarra):
+    o	Plana kontratatu duen erabiltzailea zein den adierazten du.
+    o	Testu labur gisa jarri dugu formatua. (Gako nagusian bezala)
+•	Id_Plana (Gako nagusia):
+    o	Kontratatu de plana zein den adierazten du.
+    o	Zenbaki oso gisa jarri dugu formatua.
+•	Plan hasiera:
+    o	Kontratatutako planaren hasiera data gordetzen da.
+    o	Data formatuan gordeko dugu datu hau.
+•	Plan amaiera:
+    o	Kontratatutako planaren amaiera data gordetzen da.
+    o	Data formatuan gordeko dugu datu hau.
+11. Ikusi
+Perfil konkretu batek eduki konkretu bat zenbat aldiz bistaratu duen adierazten du:
+•	Id_Perfilak (Gako atzerritarra):
+    o	Zein perfiletaz hitz egiten hari garen zehazten du.
+    o	Zenbaki osoa gisa jarri dugu formatua.
+•	Id_Edukiak (Gako atzerritarra):
+    o	Ikusi den edukia zein den zehazten du.
+    o	Zenbaki oso gisa jarri dugu formatua.
+•	Bistaratzeak:
+    o	Perfilak edukia zenbat aldiz bistaratu duen erregistratzen du.
+    o	Testu labur gisa jarri dugu formatua.

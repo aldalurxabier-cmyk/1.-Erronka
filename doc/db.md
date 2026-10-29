@@ -43,7 +43,7 @@ Atal honetan, gure orain arte egin ditugun Entitate erlazio diagrama, eredu erla
 
 1. Edukiak: 
 
-- Proiektuan dauden ikus-entzunezko eduki nagusiak kudeatzeko taula da. Hauek dira bere atributuak:
+Proiektuan dauden ikus-entzunezko eduki nagusiak kudeatzeko taula da. Hauek dira bere atributuak:
 
 •	Id_Edukiak - (Gako nagusia)
 
@@ -99,13 +99,15 @@ Zenbaki oso gisa jarri dugu formatua (Gako printzipala ere hala dago).
 
 Dokumentalaren izena gordetzen du.
 
-    o	Testu labur gisa jarri dugu formatua.
+Testu labur gisa jarri dugu formatua.
 
 •	Bistaratzeak
 
-    o	Dokumentala zenbat aldiz bistaratu den kontatzen du.
-    o	Zenbaki oso gisa jarri dugu formatua (Ezin da behin ere 1,5 aldiz bistaratu eduki bat adibidez).
-    o	Murrizketa: Bistaratzeak ezin dira inoiz negatiboak izan, beraz, datua beti 0 tik gora izateko murrizketa ezarri diogu.
+Dokumentala zenbat aldiz bistaratu den kontatzen du.
+
+Zenbaki oso gisa jarri dugu formatua (Ezin da behin ere 1,5 aldiz bistaratu eduki bat adibidez).
+
+Murrizketa: Bistaratzeak ezin dira inoiz negatiboak izan, beraz, datua beti 0 tik gora izateko murrizketa ezarri diogu.
 
 4. Denboraldiak:
 
@@ -113,23 +115,27 @@ Dokumentalaren izena gordetzen du.
 
 •	Id_denboraldia (Gako nagusia):
 
-    o	Denboraldi bakoitza bakartzeko eremua da.
-    o	Zenbaki osoa (Auto-zenbaketa) gisa jarri dugu formatua.
+Denboraldi bakoitza bakartzeko eremua da.
+
+Zenbaki osoa (Auto-zenbaketa) gisa jarri dugu formatua.
 
 •	Izena / Zenbakia
 
-    o	Denboraldiaren izena edo zenbatgarrena den idazten du. 
-    o	Testu laburra, 30 karaktere.
+Denboraldiaren izena edo zenbatgarrena den idazten du. 
+
+Testu laburra, 30 karaktere.
 
 •	Gaia
 
-    o	Denboraldian gertatuko denaren azalpena eta Gaia gordeko da hemen.
-    o	Testu luzea (Paragrafo oso bat idatzi daiteke hemen)
+Denboraldian gertatuko denaren azalpena eta Gaia gordeko da hemen.
+
+Testu luzea (Paragrafo oso bat idatzi daiteke hemen)
 
 •	Id_Edukiak (Gako atzerritarra):
 
-    o	Denboraldi hori zein telesailetakoa den erlazionatzen du.
-    o	Zenbaki oso gisa jarri dugu formatua (Gako printzipala ere hala dago).
+Denboraldi hori zein telesailetakoa den erlazionatzen du.
+
+Zenbaki oso gisa jarri dugu formatua (Gako printzipala ere hala dago).
 
 5. Telesailak: 
 
@@ -137,16 +143,21 @@ Telesailen datuak biltzen dituen taula da. Hauek dira bere atributuak:
 
 •	Id_Telesailak (Gako nagusia):
 
-    o	Telesail bakoitza banaka identifikatzeko balio du.
-    o	Zenbaki osoa (Auto-zenbaketa) gisa jarri dugu formatua.
+Telesail bakoitza banaka identifikatzeko balio du.
+
+Zenbaki osoa (Auto-zenbaketa) gisa jarri dugu formatua.
+
 •	Izena:
 
-    o	Telesailaren izenburua gordetzen du.
-    o	Testu labur gisa jarri dugu formatua.
+Telesailaren izenburua gordetzen du.
+
+Testu labur gisa jarri dugu formatua.
+
 •	Bistaratzea:
 
-    o	Pelikula konkretu bakoitza zenbat aldiz bistaratu den zenbatzen du.
-    o	Zenbaki oso gisa jarri dugu formatua.
+Pelikula konkretu bakoitza zenbat aldiz bistaratu den zenbatzen du.
+
+Zenbaki oso gisa jarri dugu formatua.
 
 6. Dokumentalak:
 

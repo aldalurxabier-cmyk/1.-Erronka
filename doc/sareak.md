@@ -158,7 +158,7 @@ Prozedura: Zatiketa egin eta gero ateratako 54 bitak ipini ditugu lerro batean, 
 
 ![Mi foto](img/Sareak/Diferentziala.PNG)
 
-# 7. Web zerbitzaria eta gailu inalambrikoen arteko konexioa 
+# 7. Web zerbitzaria eta gailu inalanbrikoen arteko konexioa 
 
 Erronka honetan, helburu zehatz bat betetzea egokitu zaigu. Sortu dugun Web zerbitzarian ikusgai jarri dugun Web orria, zerbitzaritik kanpora aurkitzen diren gailu inalambrikoekin ikusi ahal izatea. Hau lortzeko, honako pauso hauek jarraitu ditugu:
 

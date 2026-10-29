@@ -34,9 +34,7 @@ ER diagrama amaitu eta gero, datu-basearen eredu erlazionala egin dugu.
 Ondoren, datu basearen normalizazioa egin dugu. Hiru forma normalak ( 1FN, 2FN eta 3FN ) aplikatuz.
 
 
-Normalizazioa eginda ↓
-
-[Sakatu hemen](normalizazioa/Normalizazioa.pdf)
+Normalizazioa eginda → [Sakatu hemen](normalizazioa/Normalizazioa.pdf)
 
 # 5. Datu basea Access-en implementatu 
 Atal honetan, gure orain arte egin ditugun Entitate erlazio diagrama, eredu erlazionala eta amaitzeko egindako normalizazioaren ondoren, gure datu base propioa sortzeko beharrezko datuak baditugu. Jarraian, access-ean sortu ditugun taluak eta barruko atribu bakoitza zer den, zertarako den eta zein murrizketa aplikatu ditugun aipatuko dugu.
